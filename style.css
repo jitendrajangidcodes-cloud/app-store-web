@@ -82,36 +82,50 @@ a {
 .wordmark {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 12px;
   text-decoration: none;
 }
 
 .wordmark .mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
   background: linear-gradient(155deg, var(--amber), #935414);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Fraunces", serif;
-  font-weight: 700;
-  font-size: 18px;
-  color: var(--amber-ink);
   flex-shrink: 0;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+.wordmark .mark svg {
+  width: 20px;
+  height: 20px;
+  display: block;
 }
 
 .wordmark .name {
-  font-family: "Fraunces", serif;
-  font-weight: 600;
-  font-size: 19px;
-  letter-spacing: -0.2px;
-  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
 
-.wordmark .name span {
-  color: var(--text-dim);
-  font-weight: 400;
+.wordmark .brand {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  color: var(--text);
+  line-height: 1;
+}
+
+.wordmark .byline {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 500;
+  font-size: 10.5px;
+  letter-spacing: 0.3px;
+  color: var(--text-faint);
+  line-height: 1;
 }
 
 .topbar-actions {
