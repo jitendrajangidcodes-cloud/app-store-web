@@ -1,0 +1,14 @@
+[
+  {
+    "id": "reminder",
+    "name": "Reminder",
+    "tagline": "Fires exact-time alarms that ring and vibrate even from a locked screen.",
+    "category": "Productivity",
+    "platform": "Android",
+    "icon": "assets/icons/reminder.png",
+    "repo": "jitendrajangidcodes-cloud/reminder-app-pub",
+    "packageId": "com.pnsjy.reminder_app",
+    "about": "Reminder behaves like an alarm clock, not a gentle notification nudge -- built for things you can't afford to miss. It rings and vibrates on a full-screen lock-screen alarm, offers Complete, Dismiss, and Snooze actions right from that screen, and supports daily, weekly, monthly, and yearly repeat rules with category organization. Sign in with Google to sync reminders and attached photos across devices via Drive.",
+    "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time."
+  }
+]
