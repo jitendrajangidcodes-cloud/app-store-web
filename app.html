@@ -76,6 +76,14 @@
       <span class="download-meta" data-stat="published"></span>
     </div>
 
+    ${
+      app.screenshots && app.screenshots.length
+        ? `<div class="screenshot-row">${app.screenshots
+            .map((s) => `<img src="${s.src}" alt="${s.alt}" loading="lazy">`)
+            .join("")}</div>`
+        : ""
+    }
+
     <div class="detail-grid">
       <div>
         <h2>About</h2>

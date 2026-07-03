@@ -482,6 +482,23 @@ footer.site-footer a {
   color: var(--text-faint);
 }
 
+.screenshot-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 40px;
+  scrollbar-width: thin;
+}
+
+.screenshot-row img {
+  height: 420px;
+  width: auto;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 34px var(--shadow);
+}
+
 .detail-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -566,5 +583,8 @@ footer.site-footer a {
   }
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+  .screenshot-row img {
+    height: 320px;
   }
 }
