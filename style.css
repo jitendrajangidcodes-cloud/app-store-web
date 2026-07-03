@@ -196,17 +196,24 @@ button:focus-visible {
 .hero-banner img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
 @media (max-width: 860px) {
+  /* display:block instead of a column flex container — flex items kept
+     fighting back to their content's intrinsic width (the image at full
+     resolution) no matter what width/min-width was set on them, pushing the
+     whole page into horizontal scroll. Plain block children always shrink
+     to the parent's width, which is all this stacked mobile layout needs. */
   .hero-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 28px;
+    display: block;
   }
   .hero {
     max-width: none;
+  }
+  .hero-banner {
+    margin-top: 28px;
   }
 }
 
