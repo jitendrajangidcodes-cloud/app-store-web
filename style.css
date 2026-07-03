@@ -87,20 +87,18 @@ a {
 }
 
 .wordmark .mark {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
-  background: linear-gradient(155deg, var(--amber), #935414);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 11px;
+  overflow: hidden;
   flex-shrink: 0;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1px 3px var(--shadow);
 }
 
-.wordmark .mark svg {
-  width: 20px;
-  height: 20px;
+.wordmark .mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -174,9 +172,42 @@ button:focus-visible {
 
 /* ── Hero ───────────────────────────────────────────────── */
 
-.hero {
+.hero-row {
+  display: flex;
+  align-items: center;
+  gap: 48px;
   padding: 52px 0 44px;
-  max-width: 640px;
+}
+
+.hero {
+  max-width: 560px;
+  flex-shrink: 0;
+}
+
+.hero-banner {
+  flex: 1;
+  min-width: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px var(--shadow), 0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  border: 1px solid var(--line);
+}
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 860px) {
+  .hero-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 28px;
+  }
+  .hero {
+    max-width: none;
+  }
 }
 
 .hero .eyebrow {
