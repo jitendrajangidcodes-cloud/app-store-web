@@ -194,14 +194,9 @@ button:focus-visible {
 }
 
 .hero-banner img {
-  display: none;
+  display: block;
   width: 100%;
   height: auto;
-}
-
-:root[data-theme="light"] .hero-banner .logo-light,
-:root[data-theme="dark"] .hero-banner .logo-dark {
-  display: block;
 }
 
 @media (max-width: 860px) {
