@@ -33,5 +33,16 @@
 # update/notifications) can't run on web, and Flutter web would downgrade the site.
 # Shared layer is the DATA (apps.json + releases.json), consumed by both.
 
-## Phase D — Deferred (needs user confirmation)
-### D1 — create store repo + publish store APK to Releases [BLOCKED-AWAITING-REPO-NAME]
+## Phase D — Distribution (DONE)
+### D1 — pnsjy-store repo created; signed v1.0.0+1 release published with APK [BUILT-AWAITING-VERIFY]
+#  - release signing via gitignored keystore (store-app/android/pnsjy-store.jks); NOT committed
+#  - store APK reachable (HTTP 200); site + self-update point at pnsjy-store Releases
+
+## Phase G — Icons / branding (DONE)
+### G1 — real per-app icons on site (appIconHTML) + app (AppIcon), letter-tile fallback [BUILT-AWAITING-VERIFY]
+### G2 — store launcher icon = PNSJY company mark (flutter_launcher_icons) [BUILT-AWAITING-VERIFY]
+### G3 — site store-cta badge = company mark [BUILT-AWAITING-VERIFY]
+
+## SHIPPED: pushed to main; Pages live; manifest workflow green; release published.
+## Remaining verification is on YOUR device: install the store APK and confirm
+## install/update/open, notifications, feedback links, and real icons render.
