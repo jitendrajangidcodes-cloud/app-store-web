@@ -46,6 +46,29 @@ async function fetchLatestRelease(repo) {
   }
 }
 
+// One release by exact tag. The hub keeps a stable tag per app/store, with the
+// human version in the release name, so latest-by-tag is deterministic even
+// though the hub holds several apps' releases.
+async function fetchReleaseByTag(repo, tag) {
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo}/releases/tags/${tag}`, {
+      headers: { Accept: "application/vnd.github+json" },
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    const asset = (data.assets || []).find((a) => a.name.endsWith(".apk")) || (data.assets || [])[0];
+    return {
+      version: (data.name || data.tag_name || "").replace(/^v/, ""),
+      notes: data.body || "",
+      publishedAt: data.published_at || null,
+      downloadUrl: asset ? asset.browser_download_url : null,
+      sizeBytes: asset ? asset.size : null,
+    };
+  } catch (e) {
+    return null;
+  }
+}
+
 // Short release history for the detail page's "Release notes" card -- shows
 // the latest expanded plus a couple of previous versions collapsed, all real
 // data (no fabricated version history).
@@ -176,9 +199,11 @@ function appIconHTML(app, size) {
 // FeedbackLinks so both surfaces file into the same inbox with the same labels.
 const FEEDBACK_REPO = "jitendrajangidcodes-cloud/app-store";
 
-// The store app itself is published here; the "Get the Store app" banner pulls
-// its live version/size/download straight from these Releases.
-const STORE_REPO = "jitendrajangidcodes-cloud/pnsjy-store";
+// Every APK lives in this hub repo. The store app's own build sits under the
+// stable "store" tag; the "Get the Store app" banner pulls its live version/
+// size/download straight from that release.
+const STORE_REPO = "jitendrajangidcodes-cloud/app-store";
+const STORE_TAG = "store";
 
 function feedbackUrl(type, app) {
   const titles = { feedback: "Feedback", suggestion: "Suggestion", bug: "Bug report" };

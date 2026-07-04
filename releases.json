@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-07-04T08:38:51.093Z",
+  "generatedAt": "2026-07-04T09:33:09.012Z",
   "apps": {
     "reminder": {
       "version": "2.18.23",
       "versionCode": null,
-      "notes": "Release v2.18.23\n\nFixes the Google sign-in popup showing on almost every app open. Android now uses a standards-based OAuth flow that stores a long-lived session after you sign in once (like WhatsApp), instead of repeatedly asking Android's Credential Manager to re-confirm your account on every cold start -- that repeated re-confirmation is exactly what was causing the small \"Signing in with...\" card at the bottom of the screen. You'll need to sign in one more time after this update (via your browser this time, not the old picker) -- after that, it should not ask again.",
-      "publishedAt": "2026-07-04T08:29:04Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.18.23/reminder_app.apk",
+      "notes": "Release v2.18.23\n\nFixes the Google sign-in popup showing on almost every app open. Android now uses a standards-based OAuth flow that stores a long-lived session after you sign in once (like WhatsApp), instead of repeatedly asking Android's Credential Manager to re-confirm your account on every cold start -- that repeated re-confirmation is exactly what was causing the small \"Signing in with...\" card at the bottom of the screen. You'll need to sign in one more time after this update (via your browser this time, not the old picker) -- after that, it should not ask again.\n",
+      "publishedAt": "2026-07-04T09:27:07Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/reminder/reminder_app.apk",
       "sizeBytes": 68667855
     },
     "cards": {
       "version": "2.4.2",
       "versionCode": null,
-      "notes": "Release v2.4.2",
-      "publishedAt": "2026-07-04T03:45:47Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/Cards-pub/releases/download/v2.4.2/Cards-v2.4.2.apk",
+      "notes": "Release v2.4.2\n",
+      "publishedAt": "2026-07-04T09:29:52Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/cards/Cards-v2.4.2.apk",
       "sizeBytes": 122720982
     }
   }

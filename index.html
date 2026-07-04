@@ -129,17 +129,17 @@
   </footer>
 </div>
 
-<script src="script.js?v=2"></script>
+<script src="script.js?v=3"></script>
 <script>
 (async function () {
   document.getElementById("nav-mark").innerHTML = pnsjyLogoHTML(30);
   document.getElementById("hero-logo").innerHTML = pnsjyLogoHTML(62);
 
-  fetchLatestRelease(STORE_REPO).then((rel) => {
+  fetchReleaseByTag(STORE_REPO, STORE_TAG).then((rel) => {
     const btn = document.getElementById("store-download");
     const meta = document.getElementById("store-meta");
     if (rel && rel.downloadUrl) {
-      btn.textContent = `⬇ Download Store APK · v${rel.version}`;
+      btn.textContent = `⬇ Download Store APK · v${rel.version.split("+")[0]}`;
       btn.href = rel.downloadUrl;
       btn.removeAttribute("aria-disabled");
       meta.textContent = `${formatSize(rel.sizeBytes)} · Android 8+ · direct APK`;

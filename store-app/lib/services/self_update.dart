@@ -13,7 +13,7 @@ class SelfUpdate {
     try {
       final res = await http.get(
         Uri.parse(
-            "https://api.github.com/repos/${Config.storeRepo}/releases/latest"),
+            "https://api.github.com/repos/${Config.storeRepo}/releases/tags/${Config.storeTag}"),
         headers: {"Accept": "application/vnd.github+json"},
       );
       if (res.statusCode != 200) return null;
@@ -26,8 +26,11 @@ class SelfUpdate {
                 : <String, dynamic>{},
           );
 
-      final tag = (data["tag_name"] as String? ?? "").replaceFirst("v", "");
-      final parts = tag.split("+");
+      // Version lives in the release name (the tag is the stable "store"); fall
+      // back to tag_name for older releases.
+      final name = (data["name"] as String? ?? data["tag_name"] as String? ?? "")
+          .replaceFirst("v", "");
+      final parts = name.split("+");
       final latest = ReleaseInfo(
         version: parts.first,
         versionCode: parts.length > 1 ? int.tryParse(parts[1]) : null,

@@ -1,0 +1,54 @@
+name: Sync releases
+
+# Mirrors each app's latest source APK into this repo's Releases (the hub), then
+# rebuilds releases.json from the hub. Mirror + manifest run in the same job, so
+# a new source release propagates to the site and store within one tick. Only
+# this repo is written, using the built-in GITHUB_TOKEN -- no cross-repo secret.
+on:
+  push:
+    branches: [main]
+    paths:
+      - apps.json
+      - scripts/sync-releases.sh
+      - scripts/build-manifest.mjs
+      - .github/workflows/sync-releases.yml
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-releases
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Mirror source APKs into hub releases
+        run: bash scripts/sync-releases.sh
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUB_REPO: ${{ github.repository }}
+      - name: Rebuild manifest from hub releases
+        run: node scripts/build-manifest.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUB_REPO: ${{ github.repository }}
+      - name: Commit refreshed manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet releases.json; then
+            git add releases.json
+            git commit -m "chore: refresh releases.json"
+            git push
+          else
+            echo "manifest unchanged"
+          fi

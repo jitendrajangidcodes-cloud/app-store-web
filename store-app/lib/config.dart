@@ -7,9 +7,11 @@ class Config {
   static const appsUrl = "$siteBase/apps.json";
   static const manifestUrl = "$siteBase/releases.json";
 
-  // The store's own repo, used only for self-update. Safe if it does not exist
-  // yet: the self-update check simply finds no newer release and stays quiet.
-  static const storeRepo = "jitendrajangidcodes-cloud/pnsjy-store";
+  // The store's own build lives in the same hub repo as every other APK, under
+  // the stable "store" release tag. Self-update reads that tag; safe if absent:
+  // the check simply finds no newer release and stays quiet.
+  static const storeRepo = "jitendrajangidcodes-cloud/app-store";
+  static const storeTag = "store";
   static const storePackageId = "com.pnsjy.store";
 
   // Feedback/suggestions/bug reports open a prefilled issue here. No backend,

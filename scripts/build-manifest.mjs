@@ -1,13 +1,15 @@
-// Regenerates releases.json from apps.json + each app's GitHub Releases.
-// Run in CI (see .github/workflows/manifest.yml) or locally with network.
-// GITHUB_TOKEN is optional; when set it lifts the API rate limit to 5000/hr.
-// No secrets are written to output — only public release metadata.
+// Regenerates releases.json from the HUB repo's own Releases. Each app has a
+// stable hub tag equal to its id (see scripts/sync-releases.sh); the human
+// version lives in the release NAME. Run in CI after the mirror step, or locally
+// with network. GITHUB_TOKEN is optional (lifts rate limit); no secrets are
+// written to output -- only public release metadata.
 
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const hub = process.env.HUB_REPO || "jitendrajangidcodes-cloud/app-store";
 const token = process.env.GITHUB_TOKEN || "";
 
 const headers = {
@@ -16,20 +18,20 @@ const headers = {
   ...(token ? { Authorization: `Bearer ${token}` } : {}),
 };
 
-// Flutter tags as v<name>+<code>. Split so the store can compare numeric
-// versionCode when present, and fall back to semver name otherwise.
-function parseTag(tag) {
-  const raw = (tag || "").replace(/^v/, "");
-  const [name, code] = raw.split("+");
-  return { version: name || raw, versionCode: code ? Number(code) : null };
+// Hub release name is v<name>+<code> or just <name>. Split so the store can
+// compare numeric versionCode when present, and fall back to the name otherwise.
+function parseVersion(raw) {
+  const s = (raw || "").replace(/^v/, "");
+  const [name, code] = s.split("+");
+  return { version: name || s, versionCode: code ? Number(code) : null };
 }
 
-async function fetchLatest(repo) {
-  const res = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, { headers });
+async function fetchHubTag(tag) {
+  const res = await fetch(`https://api.github.com/repos/${hub}/releases/tags/${tag}`, { headers });
   if (!res.ok) return null;
   const data = await res.json();
   const asset = (data.assets || []).find((a) => a.name.endsWith(".apk")) || (data.assets || [])[0];
-  const { version, versionCode } = parseTag(data.tag_name);
+  const { version, versionCode } = parseVersion(data.name || data.tag_name);
   return {
     version,
     versionCode,
@@ -45,13 +47,13 @@ const out = { generatedAt: new Date().toISOString(), apps: {} };
 
 for (const app of apps) {
   try {
-    const rel = await fetchLatest(app.repo);
-    if (rel) out.apps[app.id] = rel;
-    else console.warn(`no release for ${app.id} (${app.repo})`);
+    const rel = await fetchHubTag(app.id);
+    if (rel && rel.apkUrl) out.apps[app.id] = rel;
+    else console.warn(`no hub release for ${app.id} (tag ${app.id})`);
   } catch (e) {
     console.warn(`failed ${app.id}: ${e.message}`);
   }
 }
 
 await writeFile(join(root, "releases.json"), JSON.stringify(out, null, 2) + "\n");
-console.log(`wrote releases.json for ${Object.keys(out.apps).length}/${apps.length} apps`);
+console.log(`wrote releases.json for ${Object.keys(out.apps).length}/${apps.length} apps from ${hub}`);

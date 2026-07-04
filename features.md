@@ -16,3 +16,10 @@
 - Background update notifications (WorkManager, 6h) [BUILT-AWAITING-VERIFY]
 - Feedback / Suggest / Report bug -> prefilled GitHub issue, on site + app [BUILT-AWAITING-VERIFY]
 - Star ratings [DEFERRED — needs Firebase/DB]
+
+## Single-repo hub (app-store hosts every APK)
+- All app + store APKs mirrored into app-store Releases under stable tags [BUILT-AWAITING-VERIFY]
+- CI mirror (sync-releases.sh) idempotent; only moves bytes on a real bump [BUILT-AWAITING-VERIFY]
+- Manifest + APKs same-repo -> refreshed in one CI run, 30-min cron [BUILT-AWAITING-VERIFY]
+- Web, store app, and self-update all read from the one hub repo [BUILT-AWAITING-VERIFY]
+- No cross-repo token; app build repos untouched; keystore stays gitignored [VERIFIED]
