@@ -44,7 +44,14 @@
 ### G3 — site store-cta badge = company mark [BUILT-AWAITING-VERIFY]
 
 ## Phase H — Cache-busting (stale asset cache showed broken mobile layout)
-### H1 — version query on style.css/script.js in index.html + app.html [IN PROGRESS]
+### H1 — version query on style.css/script.js in index.html + app.html [BUILT-AWAITING-VERIFY]
+
+## Phase I — Release crash fix (crashed on launch, all devices)
+### I1 — ROOT CAUSE: R8 release shrinking stripped WorkManager's Room DB impl
+#  (NoSuchMethodException androidx.work.impl.WorkDatabase_Impl.<init>) at app startup
+### I2 — FIX: isMinifyEnabled=false, isShrinkResources=false for release [VERIFIED]
+#  Verified on Android 11 emulator: launches, MainActivity fully drawn, UI renders,
+#  real icons load, install-state correct. Fixed APK republished to v1.0.0+1.
 
 ## SHIPPED: pushed to main; Pages live; manifest workflow green; release published.
 ## Remaining verification is on YOUR device: install the store APK and confirm

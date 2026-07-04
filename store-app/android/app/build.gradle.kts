@@ -52,6 +52,11 @@ android {
         release {
             signingConfig = if (hasKeystore) signingConfigs.getByName("release")
             else signingConfigs.getByName("debug")
+            // R8 shrinking reflectively strips WorkManager's Room DB impl and
+            // crashes at launch. A self-distributed store gains little from
+            // shrinking (engine dominates size), so keep the release intact.
+            isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
 }
