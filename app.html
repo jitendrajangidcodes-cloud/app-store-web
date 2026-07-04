@@ -129,8 +129,11 @@
   const downloadBtn = root.querySelector("[data-download-btn]");
   const historyEl = root.querySelector("#release-history");
 
+  // Latest/download prefer the generated manifest (no rate limit); the multi-
+  // version notes list stays live but degrades to the manifest's single entry.
+  const manifestLatest = await getRelease(app);
   const history = await fetchReleaseHistory(app.repo, 3);
-  const latest = history[0];
+  const latest = history[0] || manifestLatest;
 
   if (latest && latest.downloadUrl) {
     versionEl.textContent = `v${latest.version}`;
@@ -142,7 +145,8 @@
     a.textContent = `⬇ Download APK · v${latest.version}`;
     downloadBtn.replaceWith(a);
 
-    historyEl.innerHTML = history
+    const historyList = history.length ? history : [manifestLatest];
+    historyEl.innerHTML = historyList
       .map(
         (rel, i) => `
         <div class="release-entry ${i === 0 ? "" : "old"}">

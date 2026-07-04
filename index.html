@@ -146,7 +146,7 @@
     grid.appendChild(card);
     attachTilt(card);
 
-    fetchLatestRelease(app.repo).then((release) => {
+    getRelease(app).then((release) => {
       const badge = card.querySelector("[data-version-badge]");
       if (release && release.version) {
         badge.textContent = `Get APK · ${formatSize(release.sizeBytes)}`;

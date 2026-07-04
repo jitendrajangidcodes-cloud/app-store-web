@@ -1,0 +1,31 @@
+import 'package:flutter/services.dart';
+import '../models/install_status.dart';
+
+// Thin wrapper over the Kotlin MethodChannel in MainActivity. This is the only
+// place that talks to the Android package layer.
+class Installer {
+  static const _channel = MethodChannel("com.pnsjy.store/installer");
+
+  Future<InstalledInfo> installedInfo(String packageId) async {
+    final res = await _channel.invokeMapMethod<String, dynamic>(
+      "installedInfo",
+      {"packageId": packageId},
+    );
+    if (res == null) return const InstalledInfo();
+    return InstalledInfo(
+      versionName: res["versionName"] as String?,
+      versionCode: (res["versionCode"] as num?)?.toInt(),
+    );
+  }
+
+  Future<bool> canInstall() async =>
+      await _channel.invokeMethod<bool>("canInstall") ?? false;
+
+  Future<bool> openApp(String packageId) async =>
+      await _channel.invokeMethod<bool>("openApp", {"packageId": packageId}) ?? false;
+
+  // Hands the downloaded file to the system installer. The OS shows its own
+  // confirm dialog -- the store cannot and does not bypass it.
+  Future<bool> installApk(String path) async =>
+      await _channel.invokeMethod<bool>("installApk", {"path": path}) ?? false;
+}

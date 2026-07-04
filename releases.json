@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-07-04T07:32:29.261Z",
+  "apps": {
+    "reminder": {
+      "version": "2.18.21",
+      "versionCode": null,
+      "notes": "Release v2.18.21\n\nNew: you can now disable a reminder instead of only deleting it -- disabled reminders stop firing but stay saved, and are managed from a new Disabled screen in the drawer.\n\nFix: a custom ringtone could sometimes fail to load and leave an alarm completely silent (vibration only). It now always falls back to the default alarm sound if the custom one fails, so an alarm can never go silent.",
+      "publishedAt": "2026-07-04T04:20:56Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.18.21/reminder_app.apk",
+      "sizeBytes": 68546326
+    },
+    "cards": {
+      "version": "2.4.2",
+      "versionCode": null,
+      "notes": "Release v2.4.2",
+      "publishedAt": "2026-07-04T03:45:47Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/Cards-pub/releases/download/v2.4.2/Cards-v2.4.2.apk",
+      "sizeBytes": 122720982
+    }
+  }
+}

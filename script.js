@@ -86,6 +86,35 @@ async function loadApps() {
   return res.json();
 }
 
+// releases.json is generated in CI from every app's Releases, so the listing
+// needs ONE fetch instead of one GitHub API call per app. Cached per page load.
+let _manifestPromise = null;
+function loadManifest() {
+  if (!_manifestPromise) {
+    _manifestPromise = fetch("releases.json")
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null);
+  }
+  return _manifestPromise;
+}
+
+// Prefer the manifest; fall back to the live API per app if it is missing or
+// stale. Returns the same shape as fetchLatestRelease (downloadUrl, not apkUrl).
+async function getRelease(app) {
+  const manifest = await loadManifest();
+  const m = manifest && manifest.apps ? manifest.apps[app.id] : null;
+  if (m && m.apkUrl) {
+    return {
+      version: m.version,
+      notes: m.notes || "",
+      publishedAt: m.publishedAt || null,
+      downloadUrl: m.apkUrl,
+      sizeBytes: m.sizeBytes || null,
+    };
+  }
+  return fetchLatestRelease(app.repo);
+}
+
 // ── Buddy tile brand component ──────────────────────────────────────────
 // One colored rounded tile per PNSJY letter, or a single-letter app icon
 // tile. `size` in px; `fontSize`/`eyeSize`/`eyeGap`/`eyeTop` scale with it

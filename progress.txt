@@ -1,0 +1,28 @@
+# PNSJY Store — build progress
+# Statuses: TODO / IN PROGRESS / BUILT-AWAITING-VERIFY / VERIFIED
+# Resume point if context is lost. Update immediately, never batch.
+
+## Phase A — Manifest generation (app-store repo)
+### A1 — scripts/build-manifest.mjs reads apps.json, fetches Releases, writes releases.json [BUILT-AWAITING-VERIFY] (ran locally: 2/2 apps OK)
+### A2 — .github/workflows/manifest.yml (push + schedule + 6h cron) regenerates releases.json [BUILT-AWAITING-VERIFY]
+### A3 — website (index.html/app.html) reads releases.json first, live API as fallback [BUILT-AWAITING-VERIFY]
+
+## Phase C — Distribution (app-store repo)
+### C1 — "Download the PNSJY Store app" hero entry on index.html [TODO]
+
+## Phase B — Flutter store app (store-app/)
+### B1 — scaffold Flutter project + pubspec [TODO]
+### B2 — theme/tokens + light/dark ThemeData mirroring web [TODO]
+### B3 — models: AppEntry, ReleaseInfo [TODO]
+### B4 — data: catalog repository (apps.json + releases.json) [TODO]
+### B5 — widgets: buddy tile, glow background, glass card, gradient button [TODO]
+### B6 — screens: catalog, detail (mirror web layout) [TODO]
+### B7 — services: installed-version lookup + Install/Update/Open state [TODO]
+### B8 — services: APK download + system installer intent (Kotlin channel + FileProvider) [TODO]
+### B9 — self-update: store checks its OWN Releases, offers one-tap update [TODO]
+### B10 — android manifest: permissions, queries, FileProvider [TODO]
+### B11 — flutter analyze + build apk gate [TODO]
+### B12 — background WorkManager check -> "update available" notification -> one-tap install (Play-Store-like) [TODO]
+
+## Phase D — Deferred (needs user confirmation)
+### D1 — create pnsjy-store repo + publish store APK to Releases [BLOCKED-AWAITING-REPO-NAME]
