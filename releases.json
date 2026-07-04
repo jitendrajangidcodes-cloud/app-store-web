@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-04T07:43:40.564Z",
+  "generatedAt": "2026-07-04T08:32:04.115Z",
   "apps": {
     "reminder": {
-      "version": "2.18.22",
+      "version": "2.18.23",
       "versionCode": null,
-      "notes": "Release v2.18.22\n\nFixes two real crashes caught by Crashlytics during v2.18.18's brief testing window:\n\n1. A rare startup race where a reminder's image thumbnail could be accessed before its storage directory was ready, crashing with \"ensureDir() must run before fileFor()\".\n2. A Google Sign-In configuration error on some devices could crash the whole app instead of just falling back to the cached session.",
-      "publishedAt": "2026-07-04T07:40:38Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.18.22/reminder_app.apk",
-      "sizeBytes": 68546326
+      "notes": "Release v2.18.23\n\nFixes the Google sign-in popup showing on almost every app open. Android now uses a standards-based OAuth flow that stores a long-lived session after you sign in once (like WhatsApp), instead of repeatedly asking Android's Credential Manager to re-confirm your account on every cold start -- that repeated re-confirmation is exactly what was causing the small \"Signing in with...\" card at the bottom of the screen. You'll need to sign in one more time after this update (via your browser this time, not the old picker) -- after that, it should not ask again.",
+      "publishedAt": "2026-07-04T08:29:04Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.18.23/reminder_app.apk",
+      "sizeBytes": 68667855
     },
     "cards": {
       "version": "2.4.2",
