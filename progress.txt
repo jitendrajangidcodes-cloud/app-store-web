@@ -43,6 +43,9 @@
 ### G2 — store launcher icon = PNSJY company mark (flutter_launcher_icons) [BUILT-AWAITING-VERIFY]
 ### G3 — site store-cta badge = company mark [BUILT-AWAITING-VERIFY]
 
+## Phase H — Cache-busting (stale asset cache showed broken mobile layout)
+### H1 — version query on style.css/script.js in index.html + app.html [IN PROGRESS]
+
 ## SHIPPED: pushed to main; Pages live; manifest workflow green; release published.
 ## Remaining verification is on YOUR device: install the store APK and confirm
 ## install/update/open, notifications, feedback links, and real icons render.
