@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-04T07:32:29.261Z",
+  "generatedAt": "2026-07-04T07:43:40.564Z",
   "apps": {
     "reminder": {
-      "version": "2.18.21",
+      "version": "2.18.22",
       "versionCode": null,
-      "notes": "Release v2.18.21\n\nNew: you can now disable a reminder instead of only deleting it -- disabled reminders stop firing but stay saved, and are managed from a new Disabled screen in the drawer.\n\nFix: a custom ringtone could sometimes fail to load and leave an alarm completely silent (vibration only). It now always falls back to the default alarm sound if the custom one fails, so an alarm can never go silent.",
-      "publishedAt": "2026-07-04T04:20:56Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.18.21/reminder_app.apk",
+      "notes": "Release v2.18.22\n\nFixes two real crashes caught by Crashlytics during v2.18.18's brief testing window:\n\n1. A rare startup race where a reminder's image thumbnail could be accessed before its storage directory was ready, crashing with \"ensureDir() must run before fileFor()\".\n2. A Google Sign-In configuration error on some devices could crash the whole app instead of just falling back to the cached session.",
+      "publishedAt": "2026-07-04T07:40:38Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.18.22/reminder_app.apk",
       "sizeBytes": 68546326
     },
     "cards": {
