@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-05T11:55:44.097Z",
+  "generatedAt": "2026-07-05T12:12:09.236Z",
   "apps": {
     "reminder": {
-      "version": "2.18.25",
+      "version": "2.18.26",
       "versionCode": null,
-      "notes": "Release v2.18.25\n\nLocation-based reminders (geofence trigger): pick a location by opening Google Maps and pasting the coordinates back (no Maps Platform API/billing needed), set a free-form radius, choose arrival / departure / both as the trigger. Behaves identically to time-based reminders once fired -- same ringing, snooze, and one-shot completion pipeline.\n\nAlso fixes a background-sync crash (SyncWorker missing getForegroundInfo override on expedited WorkManager requests).\n",
+      "notes": "Release v2.18.26\n\nGoogle Maps share links that only carry a place ID (Share > Copy link on a named business/place, rather than a dropped pin) now resolve automatically: an invisible WebView loads the link the same way a browser would, letting Google's own JS resolve the coordinates, instead of failing silently. Progress while pasting a location now shows a proper animated status (reading clipboard -> opening link -> looking up the place -> finding the address) instead of a bare spinner.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 69202865
+      "sizeBytes": 69825778
     },
     "cards": {
       "version": "2.4.2",
@@ -16,14 +16,6 @@
       "publishedAt": "2026-07-04T09:29:52Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/cards/Cards-v2.4.2.apk",
       "sizeBytes": 122720982
-    },
-    "ai-scanner": {
-      "version": "1.0.1",
-      "versionCode": 2,
-      "notes": "Adds the in-app \"Check for Updates\" tile (Settings). Everything else unchanged from v1.0.0.",
-      "publishedAt": "2026-07-05T09:51:29Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/ai-scanner/AI-Scanner-v1.0.1.apk",
-      "sizeBytes": 720973239
     }
   }
 }
