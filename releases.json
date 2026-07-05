@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T09:23:14.304Z",
+  "generatedAt": "2026-07-05T09:51:51.253Z",
   "apps": {
     "reminder": {
       "version": "2.18.25",
@@ -16,6 +16,14 @@
       "publishedAt": "2026-07-04T09:29:52Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/cards/Cards-v2.4.2.apk",
       "sizeBytes": 122720982
+    },
+    "ai-scanner": {
+      "version": "1.0.0",
+      "versionCode": 1,
+      "notes": "Pre-release: on-device OCR + AI summarization + semantic search over screenshots and shared links. Full UI redesign (onboarding, sectioned search results, item detail, settings, custom theme). Early build -- expect rough edges.",
+      "publishedAt": "2026-07-05T09:51:29Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/ai-scanner/AI-Scanner-v1.0.0.apk",
+      "sizeBytes": 720792419
     }
   }
 }

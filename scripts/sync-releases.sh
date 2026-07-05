@@ -17,6 +17,12 @@ hub_version() {
 for id in $(jq -r '.[].id' "$apps_json"); do
   repo="$(jq -r --arg id "$id" '.[] | select(.id==$id) | .repo' "$apps_json")"
 
+  # Apps published directly to the hub (repo == HUB) need no mirror step --
+  # `releases/latest` on the hub itself would return whichever app released
+  # most recently across ALL tags, not this app's release, so skip entirely
+  # and let build-manifest.mjs read the app's own tag straight from the hub.
+  if [ "$repo" = "$HUB" ]; then echo "ok $id: published directly to hub, no mirror needed"; continue; fi
+
   src="$(gh api "repos/$repo/releases/latest" 2>/dev/null || true)"
   if [ -z "$src" ]; then echo "skip $id: no source release ($repo)"; continue; fi
 
