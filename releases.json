@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T15:16:16.665Z",
+  "generatedAt": "2026-07-05T16:08:16.680Z",
   "apps": {
     "reminder": {
       "version": "2.18.27",
@@ -18,12 +18,12 @@
       "sizeBytes": 122720982
     },
     "ai-scanner": {
-      "version": "1.0.2",
-      "versionCode": 3,
-      "notes": "Better summaries: on-device entity extraction feeds concrete facts (dates, amounts, phone numbers, etc.) into the summarization prompt, and the prompt itself was rewritten (worked examples instead of a rule list) after live testing caught the small model echoing instruction formatting into its output. Also adds a stage-by-stage progress banner during ingestion so a slow first-run model load doesn't look like a hang.",
+      "version": "1.0.3",
+      "versionCode": 4,
+      "notes": "AI models are no longer bundled in the APK -- they now download once (first launch only) and are cached across all future updates. APK size: ~732MB -> ~218MB. Also fixes a crash in the model-download path (kotlinx-serialization plugin misconfiguration under AGP9).",
       "publishedAt": "2026-07-05T09:51:29Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/ai-scanner/AI-Scanner-v1.0.2.apk",
-      "sizeBytes": 731991753
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/ai-scanner/AI-Scanner-v1.0.3.apk",
+      "sizeBytes": 217922168
     }
   }
 }
