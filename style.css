@@ -791,6 +791,8 @@ button:focus-visible {
 }
 
 .app-card {
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   padding: 24px;
   border-radius: 22px;
@@ -805,6 +807,38 @@ button:focus-visible {
   will-change: transform;
   text-decoration: none;
   color: var(--text);
+}
+
+.beta-ribbon {
+  position: absolute;
+  top: 14px;
+  right: -34px;
+  transform: rotate(40deg);
+  background: linear-gradient(135deg, #ff5f2e, #ff2e6d);
+  color: #fff;
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  padding: 4px 40px;
+  box-shadow: 0 4px 12px rgba(255, 46, 109, 0.4);
+  pointer-events: none;
+}
+
+.beta-badge {
+  display: inline-block;
+  vertical-align: middle;
+  background: linear-gradient(135deg, #ff5f2e, #ff2e6d);
+  color: #fff;
+  font-family: "Sora", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(255, 46, 109, 0.35);
+  margin-left: 10px;
+  transform: translateY(-4px);
 }
 
 .app-card:hover {

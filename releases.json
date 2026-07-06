@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T05:38:50.157Z",
+  "generatedAt": "2026-07-06T06:55:27.970Z",
   "apps": {
     "reminder": {
       "version": "2.18.27",
@@ -18,12 +18,12 @@
       "sizeBytes": 122720982
     },
     "ai-scanner": {
-      "version": "1.0.3",
-      "versionCode": 4,
-      "notes": "AI models are no longer bundled in the APK -- they now download once (first launch only) and are cached across all future updates. APK size: ~732MB -> ~218MB. Also fixes a crash in the model-download path (kotlinx-serialization plugin misconfiguration under AGP9).",
+      "version": "1.0.4",
+      "versionCode": 5,
+      "notes": "Adds a duplicate-photo finder (Settings -> Find Duplicates): finds screenshots that are 100% byte-for-byte identical and lets you actually delete the extra copy to reclaim storage, not just remove it from the app's list. Only exact matches count -- no fuzzy/perceptual similarity. Deletion goes through Android's own system confirmation dialog; if you decline, nothing is touched.",
       "publishedAt": "2026-07-05T09:51:29Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/ai-scanner/AI-Scanner-v1.0.3.apk",
-      "sizeBytes": 217922168
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store/releases/download/ai-scanner/app-release.apk",
+      "sizeBytes": 218118948
     }
   }
 }
