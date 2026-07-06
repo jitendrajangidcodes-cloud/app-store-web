@@ -4,6 +4,7 @@
 - Catalog of Android apps from apps.json [VERIFIED]
 - Live version/download/release-notes per app from GitHub Releases [VERIFIED]
 - Light/dark theme with glass + glow design [VERIFIED]
+- PWA install support: manifest.json + sw.js + "Install app" button in topbar (index.html + app.html) [BUILT-AWAITING-VERIFY]
 
 ## PNSJY Store (in progress)
 - releases.json manifest generated in CI from apps.json + Releases [BUILT-AWAITING-VERIFY]

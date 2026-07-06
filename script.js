@@ -121,6 +121,37 @@ document.addEventListener("DOMContentLoaded", () => {
   if (btn) btn.addEventListener("click", toggleTheme);
 });
 
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("sw.js"));
+}
+
+let deferredInstallPrompt = null;
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  const btn = document.querySelector(".install-btn");
+  if (btn) btn.hidden = false;
+});
+
+window.addEventListener("appinstalled", () => {
+  deferredInstallPrompt = null;
+  const btn = document.querySelector(".install-btn");
+  if (btn) btn.hidden = true;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".install-btn");
+  if (!btn) return;
+  btn.addEventListener("click", async () => {
+    if (!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    btn.hidden = true;
+  });
+});
+
 async function fetchLatestRelease(repo) {
   try {
     const res = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, {

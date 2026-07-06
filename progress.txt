@@ -108,3 +108,9 @@
 ## SHIPPED: pushed to main; Pages live; manifest workflow green; release published.
 ## Remaining verification is on YOUR device: install the store APK and confirm
 ## install/update/open, notifications, feedback links, and real icons render.
+
+## Phase O — PWA install (site installable as an app, separate from the APK catalog)
+### O1 — manifest.json + assets/icons/{icon-192,icon-512,apple-touch-icon}.png [BUILT-AWAITING-VERIFY]
+### O2 — sw.js (no caching, network passthrough; only exists for installability) registered in script.js [BUILT-AWAITING-VERIFY]
+### O3 — manifest/apple-touch-icon/theme-color links added to index.html + app.html; style.css?v=3, script.js?v=7 [BUILT-AWAITING-VERIFY]
+### O4 — "Install app" button in topbar, shown on beforeinstallprompt, hidden after install/dismiss [BUILT-AWAITING-VERIFY]
