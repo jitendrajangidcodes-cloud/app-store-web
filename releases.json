@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T16:58:37.882Z",
+  "generatedAt": "2026-07-06T17:57:08.100Z",
   "apps": {
     "reminder": {
       "version": "2.18.27",
@@ -18,9 +18,9 @@
       "sizeBytes": 122720982
     },
     "ai-scanner": {
-      "version": "1.0.14",
-      "versionCode": 15,
-      "notes": "Adds a mandatory update check on launch: since this app is never Play-Store-distributed, nothing else silently pushes updates, so a blocking \"Update required\" screen now appears on launch whenever a newer version is available -- with download progress and the same one-time install-permission handoff as the existing manual updater.",
+      "version": "1.0.15",
+      "versionCode": 16,
+      "notes": "Diagnostic release: Find Duplicates now shows the real cause of a skipped delete instead of always saying \"permission declined\" -- surfaces exception text or the actual system-approved/requested count. Also fixes the vendored photo_manager plugin replying with the wrong id list on a system-approved delete.",
       "publishedAt": "2026-07-05T09:51:29Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/ai-scanner/app-release.apk",
       "sizeBytes": 218545596
