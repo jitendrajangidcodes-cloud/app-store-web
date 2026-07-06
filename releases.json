@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T17:57:08.100Z",
+  "generatedAt": "2026-07-06T18:17:14.342Z",
   "apps": {
     "reminder": {
       "version": "2.18.27",
@@ -18,12 +18,12 @@
       "sizeBytes": 122720982
     },
     "ai-scanner": {
-      "version": "1.0.15",
-      "versionCode": 16,
-      "notes": "Diagnostic release: Find Duplicates now shows the real cause of a skipped delete instead of always saying \"permission declined\" -- surfaces exception text or the actual system-approved/requested count. Also fixes the vendored photo_manager plugin replying with the wrong id list on a system-approved delete.",
+      "version": "1.0.16",
+      "versionCode": 17,
+      "notes": "Fixes the real cause found via v1.0.15's diagnostics: declined duplicates were older library entries whose files were already gone from disk, not a permission problem. Missing files are now labeled visibly, cleaned up instead of retried, and entries with a file that still exists get a real gallery id resolved so they use the same permission-popup delete as everything else. Adds a manual Recheck button to Find Duplicates.",
       "publishedAt": "2026-07-05T09:51:29Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/ai-scanner/app-release.apk",
-      "sizeBytes": 218545596
+      "sizeBytes": 218611132
     }
   }
 }
