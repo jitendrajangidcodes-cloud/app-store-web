@@ -804,7 +804,6 @@ button:focus-visible {
   flex-direction: column;
   gap: 16px;
   transition: transform 0.15s ease-out, border-color 0.2s;
-  will-change: transform;
   text-decoration: none;
   color: var(--text);
 }
@@ -1323,4 +1322,29 @@ button:focus-visible {
 .info-gate-card button:disabled {
   opacity: 0.6;
   cursor: default;
+}
+
+/* Touch devices (effectively: phones) recompute backdrop-filter blur every
+   frame for any blurred element on screen during a scroll -- .topbar is the
+   worst case since it's position: sticky and stays on screen for the whole
+   page, but every other glass panel below pays the same cost while it's
+   transiently in view. GPUs on typical Android phones handle this far worse
+   than desktop, which is what made scrolling feel janky/laggy there. Desktop
+   (pointer: fine, mouse) keeps the original blurred look unchanged. */
+@media (pointer: coarse) {
+  .topbar,
+  .app-card,
+  .store-cta,
+  .stat-tile,
+  .detail-head,
+  .about-card {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: var(--panel-solid);
+  }
+
+  .info-gate-backdrop {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
 }
