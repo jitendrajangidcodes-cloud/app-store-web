@@ -5,6 +5,18 @@ Distribution: this app has no separate source repo -- it lives inside the
 Releases under the stable tag `store` (see `../AGENTS.md`). Self-update reads
 that same tag directly (`lib/services/self_update.dart` / `lib/config.dart`).
 
+## v1.0.5+6 (2026-07-06)
+
+- Download logging (introduced inactive in v1.0.4) is now live: the Apps
+  Script endpoint is deployed and wired into `LogService._endpoint`. Verified
+  working end-to-end (Python `requests` POST returned `{"ok":true}`) after
+  fixing a real bug in the script itself (`LockService` acquisition ran
+  outside its try/catch, so any failure there returned Google's generic
+  error page instead of a usable response) -- see
+  `../scripts/download-log/Code.gs` history.
+
+- Hub: https://github.com/jitendrajangidcodes-cloud/app-store/releases/tag/store
+
 ## v1.0.4+5 (2026-07-05)
 
 - Fixed the install popup silently failing to appear: `installApk()` fired
