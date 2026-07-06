@@ -137,7 +137,16 @@
   // Latest/download prefer the generated manifest (no rate limit); the multi-
   // version notes list stays live but degrades to the manifest's single entry.
   const manifestLatest = await getRelease(app);
-  const history = await fetchReleaseHistory(app.repo, 3);
+  // fetchReleaseHistory queries /releases (repo-wide, no tag filter) -- fine
+  // for apps with their own dedicated repo, but for apps published directly
+  // to this hub (app.repo === HUB_REPO), that repo holds every hub app's
+  // releases mixed together (reminder, cards, ai-scanner, plus asset-only
+  // releases like ai-scanner-models), sorted with no name/tag filtering, and
+  // it takes assets[0] with no .apk check. That combination could return a
+  // completely different app's release, or a non-APK asset (e.g. a .tflite
+  // model file) as the "download". getRelease already resolves the correct
+  // tag-scoped release for these, so skip the untrustworthy path entirely.
+  const history = app.repo === HUB_REPO ? [] : await fetchReleaseHistory(app.repo, 3);
   const latest = history[0] || manifestLatest;
 
   if (latest && latest.downloadUrl) {
