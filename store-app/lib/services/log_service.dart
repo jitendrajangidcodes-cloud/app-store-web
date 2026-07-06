@@ -16,7 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// again. Fire-and-forget: a failed log never blocks or delays the install.
 class LogService {
   static const _endpoint =
-      'REPLACE_WITH_YOUR_APPS_SCRIPT_EXEC_URL';
+      'https://script.google.com/macros/s/AKfycbz6kXmKQZmDlJmqvmbyEnnX27BVTUhtUewPyUicVH8dfglagOOf8H2Pd7kjakwUv6BD/exec';
 
   static const _nameKey = 'log_name';
   static const _emailKey = 'log_email';

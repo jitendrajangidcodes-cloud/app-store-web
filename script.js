@@ -11,7 +11,7 @@ const HUB_REPO = "jitendrajangidcodes-cloud/app-store";
 // Scanner, Cards, Reminder) each separately promise "no analytics" and are
 // untouched. See scripts/download-log/ for the Apps Script + setup this
 // posts to; a failed/unconfigured log never blocks the actual download.
-const DOWNLOAD_LOG_URL = "REPLACE_WITH_YOUR_APPS_SCRIPT_EXEC_URL";
+const DOWNLOAD_LOG_URL = "https://script.google.com/macros/s/AKfycbz6kXmKQZmDlJmqvmbyEnnX27BVTUhtUewPyUicVH8dfglagOOf8H2Pd7kjakwUv6BD/exec";
 const DL_NAME_KEY = "dl_name";
 const DL_EMAIL_KEY = "dl_email";
 
