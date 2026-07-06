@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T16:38:38.837Z",
+  "generatedAt": "2026-07-06T16:44:59.557Z",
   "apps": {
     "reminder": {
       "version": "2.18.27",
@@ -18,8 +18,8 @@
       "sizeBytes": 122720982
     },
     "ai-scanner": {
-      "version": "1.0.12",
-      "versionCode": 13,
+      "version": "1.0.13",
+      "versionCode": 14,
       "notes": "Adds Export as Markdown on Item Detail: exports a screenshot's summary, extracted text, source link, and tags as a portable .md file with YAML front matter.",
       "publishedAt": "2026-07-05T09:51:29Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/ai-scanner/app-release.apk",
