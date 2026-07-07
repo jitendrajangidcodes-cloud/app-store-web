@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-07T17:29:20.092Z",
+  "generatedAt": "2026-07-07T17:47:10.821Z",
   "apps": {
     "reminder": {
-      "version": "2.19.0",
+      "version": "2.19.1",
       "versionCode": null,
-      "notes": "Release v2.19.0\n\nReliability fixes for alarms and updates:\n- Reminders now ring quieter during a phone call (still full volume over videos/music).\n- Lock-screen alarms are sticky: they stay up until you pick Complete, Dismiss, or Snooze, instead of sometimes collapsing into a notification banner.\n- The in-app updater no longer gets stuck or lost if you minimize the app mid-download -- it holds the download alive and re-syncs progress when you return.\n\n",
+      "notes": "Release v2.19.1\n\n- Google sign-in no longer nags: the Drive permission card no longer reappears every day or on every manual sync -- an existing grant is now reused silently.\n- Backup storage is tidier: the Sheet backup lives in a clearly named per-app folder, and the app adopts an existing backup instead of ever creating duplicates.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.0.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.1.apk",
       "sizeBytes": 69858686
     },
     "cards": {
