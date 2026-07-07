@@ -114,3 +114,14 @@
 ### O2 — sw.js (no caching, network passthrough; only exists for installability) registered in script.js [BUILT-AWAITING-VERIFY]
 ### O3 — manifest/apple-touch-icon/theme-color links added to index.html + app.html; style.css?v=3, script.js?v=7 [BUILT-AWAITING-VERIFY]
 ### O4 — "Install app" button in topbar, shown on beforeinstallprompt, hidden after install/dismiss [BUILT-AWAITING-VERIFY]
+
+## Phase P — Direct feedback -> GitHub issue (no GitHub account for users)
+# Users type feedback in an in-site/in-app form; a Cloudflare Worker holds the
+# token and files the issue into jitendrajangidcodes-cloud/app-store-web.
+# Backend: feedback.pnsjy.in Worker. Spam: Turnstile (web) + honeypot + KV rate-limit.
+### P1 — Worker DEPLOYED to app-store-feedback.jitendrajangid-codes.workers.dev; KV + both secrets set; end-to-end verified (honeypot/validation/captcha/issue-create all pass, test issue #2 closed) [VERIFIED]
+### P2 — web: feedback.js modal (type/message/optional-email, invisible Turnstile, honeypot) posting to Worker [BUILT-AWAITING-VERIFY]
+### P3 — web: index.html/app.html "Send feedback" button + Turnstile script; feedbackRowHTML removed, feedbackUrl kept as fallback [BUILT-AWAITING-VERIFY]
+### P4 — app: feedback_sheet.dart + feedback_service.dart (http POST, honeypot, no captcha) + config.feedbackEndpoint; analyze clean [BUILT-AWAITING-VERIFY]
+### P5 — app: feedback_card.dart opens sheet; feedback_links.dart deleted; mirrored to -pub; analyze clean [BUILT-AWAITING-VERIFY]
+### P6 — features.md updated; security audit clean (token only in Worker env; site key public by design) [BUILT-AWAITING-VERIFY]

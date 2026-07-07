@@ -15,7 +15,8 @@
 - One-tap system-installer APK install + update [TODO]
 - Store self-update from its own Releases [BUILT-AWAITING-VERIFY]
 - Background update notifications (WorkManager, 6h) [BUILT-AWAITING-VERIFY]
-- Feedback / Suggest / Report bug -> prefilled GitHub issue, on site + app [BUILT-AWAITING-VERIFY]
+- Feedback / Suggest / Report bug -> prefilled GitHub issue, on site + app [SUPERSEDED by direct-submit form below]
+- Direct in-site/in-app feedback form -> auto-filed GitHub issue via feedback.pnsjy.in Worker; no GitHub account, no login. Web spam: Turnstile + honeypot + rate-limit; app: honeypot + rate-limit [BUILT-AWAITING-VERIFY]
 - Star ratings [DEFERRED — needs Firebase/DB]
 
 ## Single-repo hub (app-store hosts every APK)

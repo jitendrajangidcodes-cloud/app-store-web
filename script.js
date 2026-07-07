@@ -330,11 +330,11 @@ function appIconHTML(app, size) {
     </div>`;
 }
 
-// ── Feedback (prefilled GitHub issues) ───────────────────────────────────
+// ── Feedback (prefilled GitHub issue — fallback only) ────────────────────
 
-// Feedback opens a prefilled GitHub issue on the app-store repo -- no backend,
-// no account data, GitHub handles identity and spam. Mirrors the store app's
-// FeedbackLinks so both surfaces file into the same inbox with the same labels.
+// The primary path is the in-page modal in feedback.js, which POSTs to the
+// feedback Worker so users never touch GitHub. feedbackUrl below stays as the
+// modal's fallback link when the Worker or Turnstile is unreachable.
 const FEEDBACK_REPO = "jitendrajangidcodes-cloud/app-store-web";
 
 // Every APK lives in this hub repo. The store app's own build sits under the
@@ -358,12 +358,6 @@ function feedbackUrl(type, app) {
     body: bodies[type],
   });
   return `https://github.com/${FEEDBACK_REPO}/issues/new?${params.toString()}`;
-}
-
-function feedbackRowHTML(app) {
-  const mk = (type, label) =>
-    `<a class="feedback-link" target="_blank" rel="noopener" href="${feedbackUrl(type, app)}">${label}</a>`;
-  return `${mk("suggestion", "Suggest a feature")}${mk("bug", "Report a bug")}${mk("feedback", "Send feedback")}`;
 }
 
 // ── Card tilt-on-hover ───────────────────────────────────────────────────

@@ -18,7 +18,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body>
 
@@ -47,7 +48,8 @@
   </div>
 </div>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=8"></script>
+<script src="feedback.js?v=1"></script>
 <script>
 (async function () {
   document.getElementById("nav-mark").innerHTML = pnsjyLogoHTML(30);
@@ -123,8 +125,8 @@
 
     <section class="about-card feedback-card">
       <h2>Feedback on ${app.name}</h2>
-      <p>Have an idea, hit a bug, or just want to say something? It opens a GitHub issue — no account data shared.</p>
-      <div class="feedback-row">${feedbackRowHTML(app)}</div>
+      <p>Have an idea, hit a bug, or just want to say something? It goes straight to the developer — no GitHub account needed.</p>
+      <button class="feedback-open-btn" type="button" data-feedback-open data-app-id="${app.id}" data-app-name="${app.name}">Send feedback</button>
     </section>
 
     <footer class="site-footer">

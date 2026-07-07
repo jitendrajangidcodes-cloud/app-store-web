@@ -19,7 +19,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" async defer></script>
 </head>
 <body>
 
@@ -123,8 +124,8 @@
 
   <section class="about-card feedback-card" id="feedback">
     <h2>Feedback & ideas</h2>
-    <p>Suggest an app or feature, report a bug, or send a note. Each opens a GitHub issue — no accounts, no tracking.</p>
-    <div class="feedback-row" id="feedback-row"></div>
+    <p>Suggest an app or feature, report a bug, or send a note. It goes straight to the developer — no GitHub account, no tracking.</p>
+    <button class="feedback-open-btn" type="button" data-feedback-open>Send feedback</button>
   </section>
 
   <footer class="site-footer" id="install-tip">
@@ -133,7 +134,8 @@
   </footer>
 </div>
 
-<script src="script.js?v=7"></script>
+<script src="script.js?v=8"></script>
+<script src="feedback.js?v=1"></script>
 <script>
 (async function () {
   document.getElementById("nav-mark").innerHTML = pnsjyLogoHTML(30);
@@ -203,8 +205,6 @@
       }
     });
   }
-
-  document.getElementById("feedback-row").innerHTML = feedbackRowHTML(null);
 
   const placeholder = document.createElement("div");
   placeholder.className = "app-card placeholder";
