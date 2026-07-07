@@ -118,10 +118,13 @@
 ## Phase P — Direct feedback -> GitHub issue (no GitHub account for users)
 # Users type feedback in an in-site/in-app form; a Cloudflare Worker holds the
 # token and files the issue into jitendrajangidcodes-cloud/app-store-web.
-# Backend: feedback.pnsjy.in Worker. Spam: Turnstile (web) + honeypot + KV rate-limit.
-### P1 — Worker DEPLOYED to app-store-feedback.jitendrajangid-codes.workers.dev; KV + both secrets set; end-to-end verified (honeypot/validation/captcha/issue-create all pass, test issue #2 closed) [VERIFIED]
-### P2 — web: feedback.js modal (type/message/optional-email, invisible Turnstile, honeypot) posting to Worker [BUILT-AWAITING-VERIFY]
-### P3 — web: index.html/app.html "Send feedback" button + Turnstile script; feedbackRowHTML removed, feedbackUrl kept as fallback [BUILT-AWAITING-VERIFY]
-### P4 — app: feedback_sheet.dart + feedback_service.dart (http POST, honeypot, no captcha) + config.feedbackEndpoint; analyze clean [BUILT-AWAITING-VERIFY]
-### P5 — app: feedback_card.dart opens sheet; feedback_links.dart deleted; mirrored to -pub; analyze clean [BUILT-AWAITING-VERIFY]
-### P6 — features.md updated; security audit clean (token only in Worker env; site key public by design) [BUILT-AWAITING-VERIFY]
+# Backend: workers.dev (pnsjy.in stays on GoDaddy). Spam: Turnstile (web) + honeypot + KV rate-limit.
+# Endpoint: https://app-store-feedback.jitendrajangid-codes.workers.dev/submit
+# Worker source backed up: github.com/jitendrajangidcodes-cloud/app-store-feedback-worker (private)
+### P1 — Worker DEPLOYED; KV + both secrets set; end-to-end verified (honeypot/validation/captcha/issue-create all pass, test issue #2 closed) [VERIFIED]
+### P2 — web: feedback.js modal (type/message/optional-email, invisible Turnstile, honeypot); LIVE on store.pnsjy.in [BUILT-AWAITING-VERIFY: user browser test]
+### P3 — web: "Send feedback" button + Turnstile script; feedbackRowHTML removed, feedbackUrl kept as fallback; LIVE [BUILT-AWAITING-VERIFY: user browser test]
+### P4 — app: feedback_sheet.dart + feedback_service.dart + config.feedbackEndpoint; SHIPPED private 56b64a2 / pub 0a2ffe1 [BUILT-AWAITING-VERIFY: needs new APK build+release to reach users]
+### P5 — app: feedback_card.dart opens sheet; feedback_links.dart deleted; mirrored to -pub; SHIPPED [BUILT-AWAITING-VERIFY: needs APK build+release]
+### P6 — features.md updated; security audit clean (token only in Cloudflare secret; site key public by design) [VERIFIED]
+SHIP | 2026-07-08 | web auto-pushed + android 56b64a2/0a2ffe1 | OK
