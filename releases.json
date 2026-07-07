@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T07:43:15.205Z",
+  "generatedAt": "2026-07-07T10:03:24.544Z",
   "apps": {
     "reminder": {
       "version": "2.18.31",
@@ -24,6 +24,14 @@
       "publishedAt": "2026-07-05T09:51:29Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/ai-scanner/app-release.apk",
       "sizeBytes": 218611132
+    },
+    "twinclean": {
+      "version": "1.0.0",
+      "versionCode": 1,
+      "notes": "Initial beta release. Exact duplicate-file finder (photos, videos, audio, docs) with SHA-256-verified matching, Smart Select, a 30-day recoverable Trash, and scheduled background scanning.",
+      "publishedAt": "2026-07-07T10:01:03Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean-v1.0.0%2B1.apk",
+      "sizeBytes": 58370312
     }
   }
 }
