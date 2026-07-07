@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T17:16:58.532Z",
+  "generatedAt": "2026-07-07T17:26:21.811Z",
   "apps": {
     "reminder": {
       "version": "2.19.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 218611132
     },
     "twinclean": {
-      "version": "1.1.0",
-      "versionCode": 2,
-      "notes": "Moved from Beta to a stable listing. Adds: open any file directly from the app to double-check before cleaning; a visible evidence checklist (size, SHA-256 checksum, byte-for-byte match) on every duplicate group; granular Trash restore (single file, whole group, or everything at once).",
+      "version": "1.2.0",
+      "versionCode": 3,
+      "notes": "Adds an in-app updater: TwinClean now checks for new versions on launch and installs updates directly, no browser or store needed. Since this is the first build with the updater, install it once manually -- future updates will prompt automatically inside the app.",
       "publishedAt": "2026-07-07T10:01:03Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean-v1.1.0%2B2.apk",
-      "sizeBytes": 58514948
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean-v1.2.0%2B3.apk",
+      "sizeBytes": 58875992
     }
   }
 }
