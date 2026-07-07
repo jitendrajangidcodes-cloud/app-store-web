@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-07T10:26:21.162Z",
+  "generatedAt": "2026-07-07T11:08:30.477Z",
   "apps": {
     "reminder": {
-      "version": "2.18.32",
+      "version": "2.18.33",
       "versionCode": null,
-      "notes": "Release v2.18.32\n\nReplaces the in-app map picker's Google Maps view with OpenStreetMap -- Google's mobile web build kept redirecting the embedded browser to a link it couldn't load. Pan the map until the center pin marks your spot, then tap \"Use this location\".\n\n",
+      "notes": "Release v2.18.33\n\nThe map picker now opens already centered on your current location instead of OpenStreetMap's default view -- OSM's own in-page \"locate me\" button can't work inside an embedded WebView, so the app fetches your position itself (same GPS lookup the geofence feature already uses) before opening the map.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.18.32.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.18.33.apk",
       "sizeBytes": 69842298
     },
     "cards": {
