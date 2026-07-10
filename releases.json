@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-10T05:39:00.308Z",
+  "generatedAt": "2026-07-10T09:42:00.675Z",
   "apps": {
     "reminder": {
-      "version": "2.19.2",
+      "version": "2.19.5",
       "versionCode": null,
-      "notes": "Fix: lock-screen alarms no longer collapse into a notification banner after a second.\n\nThe full-screen alarm now stays put over the lock screen (like the standard alarm-clock apps) so you can Snooze or Dismiss it directly, without it dropping to a banner that you have to tap to reopen. Root cause was the app asking the lock screen to dismiss itself on secure (PIN/pattern/fingerprint) locks, which pushed the alarm to the background.\n",
+      "notes": "- Fix: the reminder alarm now shows its notification and full-screen lock-screen alert again. A change in v2.19.3 could leave the alarm ringing with nothing on screen; this reverts it.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 69858678
+      "sizeBytes": 69875198
     },
     "cards": {
       "version": "2.4.2",
