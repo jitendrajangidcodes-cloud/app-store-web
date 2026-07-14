@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-14T15:38:21.393Z",
+  "generatedAt": "2026-07-14T17:18:20.589Z",
   "apps": {
     "reminder": {
-      "version": "2.19.13",
+      "version": "2.19.15",
       "versionCode": null,
-      "notes": "Makes the lock-screen alarm feel like a real alarm clock.\n\n- New slide-to-act control: slide left to Snooze, right to Complete, with Dismiss below -- a swipe can't be swallowed by the screen-wake glitch or triggered half-asleep by accident (the pattern Google and Samsung Clock use). Haptic feedback as you slide.\n- Samsung devices now get tailored setup guidance (One UI 'Never sleeping apps' + Battery Unrestricted) so alarms aren't throttled in the background.\n- Builds on v2.19.11's keep-screen-awake fix for the lock-screen alarm.\n",
+      "notes": "Fixes the alarm actions.\n\n- Snooze, Complete and Dismiss now work on the lock-screen alarm again. The dedicated alarm screen introduced in v2.19.14 wasn't wired to the alarm engine, so its buttons did nothing -- now fixed. The alarm still stays reliably over the lock screen.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 70006798
+      "sizeBytes": 70006998
     },
     "cards": {
       "version": "2.4.2",
