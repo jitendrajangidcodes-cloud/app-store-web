@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-14T11:56:04.962Z",
+  "generatedAt": "2026-07-14T13:59:22.009Z",
   "apps": {
     "reminder": {
-      "version": "2.19.12",
+      "version": "2.19.13",
       "versionCode": null,
-      "notes": "Fixes location reminders not firing at all.\n\n- Root cause found: on Android 12+ the geofence was rejected by Google Play services (DEVELOPER_ERROR) because its pending-intent was created immutable. Android 12+ requires a mutable pending-intent so Play services can deliver the location transition. Location reminders (and the Settings > Test location reminder) now actually register and fire.\n- Builds on v2.19.10/2.19.11: the app now also reports the real reason if a geofence still can't register, primes a fresh GPS fix so it fires for a stationary device, and uses a 150m test radius.\n",
+      "notes": "Makes the lock-screen alarm feel like a real alarm clock.\n\n- New slide-to-act control: slide left to Snooze, right to Complete, with Dismiss below -- a swipe can't be swallowed by the screen-wake glitch or triggered half-asleep by accident (the pattern Google and Samsung Clock use). Haptic feedback as you slide.\n- Samsung devices now get tailored setup guidance (One UI 'Never sleeping apps' + Battery Unrestricted) so alarms aren't throttled in the background.\n- Builds on v2.19.11's keep-screen-awake fix for the lock-screen alarm.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 69990414
+      "sizeBytes": 70006798
     },
     "cards": {
       "version": "2.4.2",
