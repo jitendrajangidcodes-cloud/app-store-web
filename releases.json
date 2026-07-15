@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-15T00:00:38.847Z",
+  "generatedAt": "2026-07-15T03:45:06.958Z",
   "apps": {
     "reminder": {
-      "version": "2.19.17",
+      "version": "2.19.18",
       "versionCode": null,
-      "notes": "Smarter permission setup for every phone.\n\n- The app now asks for and opens exactly the right permission page for your phone's brand and Android version -- exact-alarm and full-screen settings only on the versions that have them, plus the correct per-brand background/autostart screen (Samsung, Xiaomi, Oppo, Vivo, OnePlus, Huawei).\n- Notification status is now detected correctly on all Android versions.\n- Adds the 'Appear on top' permission that keeps the full-screen alarm reliable on Samsung/Xiaomi.\n",
+      "notes": "Fixes the lock-screen alarm collapsing back to the notification list on Oppo/Realme/Vivo/OnePlus (ColorOS/OriginOS). The full-screen alarm now stays up instead of flashing for a moment and disappearing. Added internal lifecycle logging for diagnosis.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
       "sizeBytes": 70007030
