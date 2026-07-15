@@ -128,3 +128,7 @@
 ### P5 — app: feedback_card.dart opens sheet; feedback_links.dart deleted; mirrored to -pub; SHIPPED [BUILT-AWAITING-VERIFY: needs APK build+release]
 ### P6 — features.md updated; security audit clean (token only in Cloudflare secret; site key public by design) [VERIFIED]
 SHIP | 2026-07-08 | web auto-pushed + android 56b64a2/0a2ffe1 | OK
+
+## Phase Q — Explicit beta flag (decouple BETA badge from category)
+### Q1 — apps.json: explicit "beta" per app (ai-scanner+twinclean true; reminder+cards false); ai-scanner category "Beta" -> "Utilities" [BUILT-AWAITING-VERIFY]
+### Q2 — index.html + app.html render BETA badge from app.beta, not category === "Beta" [BUILT-AWAITING-VERIFY]

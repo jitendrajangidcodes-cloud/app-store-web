@@ -1,6 +1,6 @@
 # Jitendra — App Store
 
-**Live site: https://jitendrajangidcodes-cloud.github.io/app-store/**
+**Live site: https://store.pnsjy.in**
 
 A personal catalog of apps built by Jitendra, browsable and installable directly — no store
 review, no accounts. There is also a native **PNSJY Store** Android app that installs and
@@ -9,7 +9,7 @@ updates every listed app like an app store, and keeps itself up to date.
 ## Single-repo hub
 
 This repository is the one public hub for distribution. Every APK — each listed app plus the
-store app itself — is published here as a GitHub Release under a stable tag (`reminder`,
+store app itself — is published here as a GitHub Release under a stable tag (e.g. `reminder`,
 `cards`, `store`). The website, the store app, and the store's self-update all read from this
 one repo, and `releases.json` is regenerated here whenever a new build is mirrored in — so the
 site and the store always reflect the latest shipped version.

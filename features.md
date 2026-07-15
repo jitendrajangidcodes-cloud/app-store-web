@@ -5,6 +5,7 @@
 - Live version/download/release-notes per app from GitHub Releases [VERIFIED]
 - Light/dark theme with glass + glow design [VERIFIED]
 - PWA install support: manifest.json + sw.js + "Install app" button in topbar (index.html + app.html) [BUILT-AWAITING-VERIFY]
+- BETA badge (card ribbon + detail badge) driven by explicit apps.json "beta" flag, decoupled from category [BUILT-AWAITING-VERIFY]
 
 ## PNSJY Store (in progress)
 - releases.json manifest generated in CI from apps.json + Releases [BUILT-AWAITING-VERIFY]
@@ -19,8 +20,8 @@
 - Direct in-site/in-app feedback form -> auto-filed GitHub issue via feedback.pnsjy.in Worker; no GitHub account, no login. Web spam: Turnstile + honeypot + rate-limit; app: honeypot + rate-limit [BUILT-AWAITING-VERIFY]
 - Star ratings [DEFERRED — needs Firebase/DB]
 
-## Single-repo hub (app-store hosts every APK)
-- All app + store APKs mirrored into app-store Releases under stable tags [BUILT-AWAITING-VERIFY]
+## Single-repo hub (app-store-web hosts every APK)
+- All app + store APKs mirrored into app-store-web Releases under stable tags [BUILT-AWAITING-VERIFY]
 - CI mirror (sync-releases.sh) idempotent; only moves bytes on a real bump [BUILT-AWAITING-VERIFY]
 - Manifest + APKs same-repo -> refreshed in one CI run, 30-min cron [BUILT-AWAITING-VERIFY]
 - Web, store app, and self-update all read from the one hub repo [BUILT-AWAITING-VERIFY]
