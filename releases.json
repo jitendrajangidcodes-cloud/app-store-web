@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-15T06:18:31.615Z",
+  "generatedAt": "2026-07-15T08:55:26.162Z",
   "apps": {
     "reminder": {
-      "version": "2.19.18",
+      "version": "2.19.19",
       "versionCode": null,
-      "notes": "Fixes the lock-screen alarm collapsing back to the notification list on Oppo/Realme/Vivo/OnePlus (ColorOS/OriginOS). The full-screen alarm now stays up instead of flashing for a moment and disappearing. Added internal lifecycle logging for diagnosis.\n",
+      "notes": "Fixes the lock-screen alarm collapsing back to the notification list on Oppo/Realme/Vivo/OnePlus (ColorOS/OriginOS). The full-screen alarm is now drawn as an overlay so the phone can no longer push it behind the lock screen -- it stays up until you Complete, Snooze or Dismiss. Make sure Appear on top is granted (the app now marks it required on these phones).\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 70007030
+      "sizeBytes": 70010518
     },
     "cards": {
       "version": "2.4.2",
