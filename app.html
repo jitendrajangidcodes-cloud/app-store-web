@@ -75,7 +75,7 @@
     <section class="detail-head">
       ${appIconHTML(app, 96)}
       <div class="titles">
-        <h1>${app.name} ${app.category === "Beta" ? `<span class="beta-badge">BETA</span>` : ""}</h1>
+        <h1>${app.name} ${app.beta ? `<span class="beta-badge">BETA</span>` : ""}</h1>
         <p class="tagline">${app.tagline}</p>
         <div class="detail-chips">
           <span class="chip-static accent" data-stat="version">…</span>

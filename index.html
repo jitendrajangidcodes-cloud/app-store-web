@@ -177,7 +177,7 @@
     card.className = "app-card";
     card.href = `app.html?id=${encodeURIComponent(app.id)}`;
     card.innerHTML = `
-      ${app.category === "Beta" ? `<span class="beta-ribbon">BETA</span>` : ""}
+      ${app.beta ? `<span class="beta-ribbon">BETA</span>` : ""}
       <div class="row1">
         ${appIconHTML(app, 58)}
         <div class="titles">
