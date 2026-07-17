@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T13:35:39.926Z",
+  "generatedAt": "2026-07-17T13:48:07.247Z",
   "apps": {
     "reminder": {
       "version": "2.19.30",
@@ -26,9 +26,9 @@
       "sizeBytes": 218611132
     },
     "mirrordrive": {
-      "version": "0.13.1",
-      "versionCode": 26,
-      "notes": "# MirrorDrive 0.13.1\n\n### Features\n- No new app features in this release. It carries the same functionality as 0.13.0 (now-playing indicator, mini-player on the mapping screen, swipe-to-delete files) and exists to make sure the update reaches devices still on 0.12.0.\n\n### Bug fixes\n- A newly released version now appears in the app store immediately after release, instead of taking up to half an hour to show up.\n",
+      "version": "0.13.2",
+      "versionCode": 27,
+      "notes": "# MirrorDrive 0.13.2\n\n### Features\n- No new features. This release fixes the in-app updater and one playback behavior.\n\n### Bug fixes\n- The in-app update check now actually works on a real phone. It previously gave up after 8 seconds while the network request itself could take up to 20, so on a normal mobile connection the check was abandoned before it finished and the update prompt never appeared. The check is now non-blocking: the app opens immediately and the update screen appears as soon as a new version is found.\n- Deleting a file that is currently playing now stops playback at the same time, instead of continuing to play a file that no longer exists.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
       "sizeBytes": 106726242
