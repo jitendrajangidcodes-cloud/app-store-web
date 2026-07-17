@@ -53,6 +53,22 @@
     "screenshots": []
   },
   {
+    "id": "mirrordrive",
+    "name": "MirrorDrive",
+    "tagline": "Two-way folder sync between your phone and Google Drive, on your schedule.",
+    "category": "Utilities",
+    "beta": true,
+    "platform": "Android",
+    "color": "#5FE06A",
+    "requiresAccount": true,
+    "icon": "assets/icons/mirrordrive.png",
+    "repo": "jitendrajangidcodes-cloud/app-store-web",
+    "packageId": "com.pnsjy.mirrordrive",
+    "about": "MirrorDrive pairs a folder on your phone with a folder on Google Drive and keeps them in sync -- two-way, upload-only, or download-only, your choice per mapping. Sync runs on a schedule in the background (interval or a fixed daily time, with Wi-Fi-only and charging-only options) or on demand, with a per-mapping file browser, categorized sync history, and a Duplicate files screen that finds byte-identical copies across all your mappings so you can review and clean them up. Built-in audio and video playback for anything synced. Uses Google's restricted drive.file scope -- MirrorDrive only ever sees files and folders it created or that you explicitly picked, never your whole Drive.",
+    "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "screenshots": []
+  },
+  {
     "id": "twinclean",
     "name": "TwinClean",
     "tagline": "Finds exact duplicate files and lets you clean them safely.",
