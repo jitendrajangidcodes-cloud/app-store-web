@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T13:34:24.969Z",
+  "generatedAt": "2026-07-17T13:35:39.926Z",
   "apps": {
     "reminder": {
       "version": "2.19.30",
@@ -26,9 +26,9 @@
       "sizeBytes": 218611132
     },
     "mirrordrive": {
-      "version": "0.13.0",
-      "versionCode": 25,
-      "notes": "# MirrorDrive 0.13.0\n\n### Features\n- The file list now shows what is playing: the track the audio player currently has loaded is highlighted with a Playing/Paused label, and the per-mapping screen now shows the mini-player bar so you can see and control playback without leaving it.\n- You can now delete a synced file directly from the file list: swipe a file row left and confirm. It removes the file from this device and moves the Drive copy to Trash (recoverable for about 30 days).\n\n### Bug fixes\n- Playing a file no longer leaves you with no indication of what is playing or where to control it.\n- The app previously had no in-app way to delete an individual synced file; now it does.\n",
+      "version": "0.13.1",
+      "versionCode": 26,
+      "notes": "# MirrorDrive 0.13.1\n\n### Features\n- No new app features in this release. It carries the same functionality as 0.13.0 (now-playing indicator, mini-player on the mapping screen, swipe-to-delete files) and exists to make sure the update reaches devices still on 0.12.0.\n\n### Bug fixes\n- A newly released version now appears in the app store immediately after release, instead of taking up to half an hour to show up.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
       "sizeBytes": 106726242
