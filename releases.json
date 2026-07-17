@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-17T07:20:12.187Z",
+  "generatedAt": "2026-07-17T09:27:43.426Z",
   "apps": {
     "reminder": {
-      "version": "2.19.26",
+      "version": "2.19.28",
       "versionCode": null,
-      "notes": "Switched from the custom monospace theme to the system default font. Made tab headers and the bottom nav bar more prominent: page titles are now pinned (no longer scroll away) with a distinct surface and border, pushed-screen headers (Done/Disabled/History/Sync/Editor) match, and the active tab now shows a clear highlight pill instead of just a color change.\n",
+      "notes": "Fixed the bottom nav bar: the add button used to float above the row while the other icons sat inline, looking misaligned -- now all five buttons (today/upcoming/add/categories/settings) share one baseline and span the full width evenly. Inactive tab icons are more visible now. Also cleaned up the Upcoming/Categories/Settings page titles (dropped the trailing slash styling).\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 69818634
+      "sizeBytes": 69819446
     },
     "cards": {
       "version": "2.4.2",
