@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-17T13:20:20.273Z",
+  "generatedAt": "2026-07-17T13:34:24.969Z",
   "apps": {
     "reminder": {
-      "version": "2.19.29",
+      "version": "2.19.30",
       "versionCode": null,
-      "notes": "Alarm ring screen redesign and power-button snooze\n\n### Features\n\n- Power button now snoozes a ringing alarm. Pressing power while the alarm is showing on the lock\n  screen snoozes it for the duration set in Settings > auto-snooze, instead of only blanking the\n  screen while the alarm keeps ringing. The alarm no longer re-lights the screen afterwards.\n- The alarm ring screen controls were re-ordered by how often each action is actually wanted. The\n  snooze duration stepper is now the snooze button itself: tap the centre to snooze, use minus and\n  plus to adjust. It sits with the other controls instead of floating in the middle of the screen\n  away from the button it drove.\n- Complete is now the full-width primary button, and Dismiss is a quieter outlined row beneath it,\n  so dismissing an occurrence no longer visually outranks completing it.\n- The empty vertical gap between the clock and the buttons is gone; the clock, category and title\n  now centre in the space above the controls.\n\n### Bug fixes\n\nNo user-facing bug fixes in this release.\n\n",
+      "notes": "Fix unreachable install button on the update screen\n\n### Features\n\n- The What's New notes on the update screen now scroll, and Download & install is always visible.\n\n### Bug fixes\n\n- Fixed the update screen becoming unusable when release notes were long: the install button was\n  pushed off the bottom of the screen with no way to scroll to it.\n- Release notes now render as clean bullets instead of showing raw markdown headings.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.29.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.30.apk",
       "sizeBytes": 69819370
     },
     "cards": {
