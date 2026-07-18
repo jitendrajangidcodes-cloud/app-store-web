@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T09:58:35.112Z",
+  "generatedAt": "2026-07-18T10:58:40.844Z",
   "apps": {
     "reminder": {
       "version": "2.19.32",
@@ -18,12 +18,12 @@
       "sizeBytes": 122720982
     },
     "ai-scanner": {
-      "version": "1.2.0",
-      "versionCode": 20,
-      "notes": "# AI Scanner 1.2.0 — scan any folder you choose, clean duplicates first, export for the team\n\nYou now decide exactly where AI Scanner looks. Point it at any folder, let it clear out exact duplicates before it starts, then watch it understand each image one at a time.\n\n### Features\n\n- Choose your scan folder. Pick any folder on your device and AI Scanner scans it, including every subfolder inside it. Your choice is remembered and can be changed anytime in Settings. (Android; iPhone keeps scanning your Screenshots.)\n- Duplicate cleanup before scanning. Before the first scan of a folder, AI Scanner finds byte-for-byte identical copies and shows them grouped so you can delete the extras first. It is fully optional — review, clean up, or skip and scan anyway.\n- Scan everything once, then only what's new. The first time, every image in the folder is scanned one by one with clear progress — the current image, its name, and exactly what stage it's on — and you can stop anytime. After that, only newly added images are scanned.\n- Export for dev review. A new Settings button bundles every scanned image together with its on-device AI review into a single ZIP you can share, so the team can use it to keep improving the app.\n\n### Bug fixes\n\n- No user-facing bug fixes in this release.\n",
+      "version": "1.2.1",
+      "versionCode": 21,
+      "notes": "# AI Scanner 1.2.1 — deleted photos no longer come back, plus rescan controls\n\nA folder with 20 photos was scanning as 120 when 100 \"deleted\" photos were still sitting in the trash. Fixed, plus new ways to rescan and reset.\n\n### Features\n\n- Rescan folder now. A new Settings action re-checks your folder: it picks up newly added photos and drops any you've deleted, without touching the rest.\n- Reset & rescan. Clears everything the app has scanned and scans your folder from scratch, including the duplicate check. Your photos are never touched.\n- Scan image button. The home button is now a clearly labelled \"Scan image\" — tap it to pick any single image from anywhere on your device and scan just that one.\n\n### Bug fixes\n\n- Deleted photos are no longer scanned. Photos you delete go to the trash but stay on disk for a while; the app was counting those as if they were still there (a folder of 20 could show as 120). Trashed, binned and hidden files are now ignored, so the count matches what's really in your folder.\n- Deleting a photo now removes it from the app. Entries whose photo has been deleted or trashed are cleared automatically on the next scan, so what you see always matches what's on disk.\n",
       "publishedAt": "2026-07-05T09:51:29Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/ai-scanner/ai-scanner.apk",
-      "sizeBytes": 219250696
+      "sizeBytes": 219250784
     },
     "mirrordrive": {
       "version": "0.13.2",
