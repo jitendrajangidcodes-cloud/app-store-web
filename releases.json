@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-18T19:27:33.178Z",
+  "generatedAt": "2026-07-18T19:27:52.219Z",
   "apps": {
     "reminder": {
       "version": "2.19.33",
@@ -40,6 +40,14 @@
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean-v1.3.1%2B5.apk",
       "sizeBytes": 60057144
+    },
+    "localsender": {
+      "version": "1.0.0",
+      "versionCode": 1,
+      "notes": "Local Sender 1.0.0 - first release\n\nLAN-only, end-to-end encrypted messaging and file sharing between Android, iOS,\nmacOS, and Windows devices on the same Wi-Fi. No internet, no cloud, no account.\n\n### Features\n- Finds nearby devices on the same Wi-Fi (mDNS), or connect by typed IP address.\n- Pair with a matching 6-digit code on both devices; identity keys pinned after.\n- End-to-end encryption on everything: signed X25519 handshake, AES-256-GCM.\n- 1-to-1 chat and group rooms (rooms fan out pairwise, still end-to-end).\n- Send any file, streamed in chunks with a SHA-256 integrity check.\n- Per-Wi-Fi profiles: peers, chats and history scoped per network, auto-switching.\n\n### Bug fixes\n- First release, so no prior bugs to fix.\n",
+      "publishedAt": "2026-07-18T19:25:33Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/localsender/localsender.apk",
+      "sizeBytes": 52537011
     }
   }
 }
