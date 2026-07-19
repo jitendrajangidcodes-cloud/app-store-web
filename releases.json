@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T05:56:47.017Z",
+  "generatedAt": "2026-07-19T06:00:36.724Z",
   "apps": {
     "reminder": {
       "version": "2.19.38",
@@ -42,12 +42,12 @@
       "sizeBytes": 60057144
     },
     "localsender": {
-      "version": "1.0.2",
-      "versionCode": 3,
-      "notes": "Local Sender 1.0.2 - macOS self-update and reinstall fix\n\nAdds real in-app updates on macOS and publishes a macOS build to the store, so\ndesktop and Android both stay current from within the app.\n\n### Features\n- macOS in-app update: the app now downloads the new version, replaces itself,\n  and relaunches automatically. No more opening a browser.\n- The store now carries a macOS build alongside the Android APK, and the update\n  check picks the right one for the device it is running on.\n- Update check is platform-aware and skips a release that has no build for the\n  current platform.\n\n### Bug fixes\n- Update checker no longer offers an Android-only asset to desktop, or a desktop\n  asset to Android.\n",
+      "version": "1.0.3",
+      "versionCode": 4,
+      "notes": "Local Sender 1.0.3 - profiles, chat polish, stronger encryption\n\nA big update: set your name and photo, a cleaner chat with timestamps, easier\nphoto sharing, and hardened end-to-end encryption.\n\nIMPORTANT: the pairing handshake changed for security, so both devices must be\non 1.0.3 to pair. Update every device.\n\n### Features\n- Your profile: set a display name and photo in Settings; paired devices see it.\n- Photos and names of the devices you chat with now appear in the chat header,\n  the Devices list, and the Chats list.\n- Chat shows a time on every message plus Today / Yesterday / date separators.\n- Redesigned chat bubbles and a dedicated photo button for quick image sharing;\n  received images show a thumbnail and open on tap.\n- Connection state moved into the chat header (Online / Offline) - the old\n  bottom bar is gone.\n\n### Bug fixes\n- Stronger end-to-end encryption: the pairing handshake now commits to its keys\n  before revealing them, which blocks an on-network attacker from tricking two\n  devices into showing matching codes.\n- The encrypted channel now rejects replayed or injected frames.\n- The device identity key is no longer kept as a plaintext file when the system\n  secure store is available; any old plaintext copy is removed on next launch.\n- A connected device can no longer push messages or files before both sides have\n  confirmed the pairing code.\n",
       "publishedAt": "2026-07-18T19:25:33Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/localsender/localsender.apk",
-      "sizeBytes": 53765279
+      "sizeBytes": 54142279
     }
   }
 }
