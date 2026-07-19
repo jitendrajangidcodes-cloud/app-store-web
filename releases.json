@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-19T05:35:51.913Z",
+  "generatedAt": "2026-07-19T05:37:30.786Z",
   "apps": {
     "reminder": {
-      "version": "2.19.36",
+      "version": "2.19.37",
       "versionCode": null,
-      "notes": "Easier setup and verification on strict phone makers. New 'Test alarm in 1 minute' button in the permissions screen so you can lock the phone and confirm the alarm actually appears. Phone-maker (Xiaomi/Vivo/Oppo/OnePlus/Huawei) guidance now also covers keeping location reminders alive, and Huawei/Honor shows a note that background reminders may still be limited by the system.\n",
+      "notes": "Reminder v2.19.37\n\n### Features\n- Location picker now uses a native Google Map. Pan the map under the pin, watch a live circle show the exact geofence radius as you drag the slider, search for any address, and tap the button to jump to your current location.\n\n### Bug fixes\n- After an update installs, the downloaded APK and its \"download complete\" notification are now cleared automatically instead of lingering.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 69650678
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.37.apk",
+      "sizeBytes": 70263786
     },
     "cards": {
       "version": "2.4.2",
