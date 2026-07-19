@@ -14,10 +14,9 @@
     "about": "Reminder behaves like an alarm clock, not a gentle notification nudge -- built for things you can't afford to miss. It rings and vibrates on a full-screen lock-screen alarm, offers Complete, Dismiss, and Snooze actions right from that screen, and supports daily, weekly, monthly, and yearly repeat rules with category organization. Sign in with Google to sync reminders and attached photos across devices via Drive.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": [
-      { "src": "assets/screenshots/reminder-home.jpg", "alt": "Home screen with today's reminders, greeting, and next reminder preview" },
-      { "src": "assets/screenshots/reminder-drawer.jpg", "alt": "Navigation drawer with Settings, History, Sync history, and categories" },
-      { "src": "assets/screenshots/reminder-editor.jpg", "alt": "New reminder editor with priority, category, date, time, and repeat rule" },
-      { "src": "assets/screenshots/reminder-settings.jpg", "alt": "Settings screen with account, sync, and about sections" }
+      { "src": "assets/screenshots/reminder-home.jpg", "alt": "Home screen with greeting, today/overdue/this-week counts, and the tab bar" },
+      { "src": "assets/screenshots/reminder-editor.jpg", "alt": "New reminder editor with priority, category, Date & Time or Location trigger, and repeat rule" },
+      { "src": "assets/screenshots/reminder-settings.jpg", "alt": "Settings screen with reminder tone, ring-in-silent, time format, and alarm behavior" }
     ]
   },
   {
