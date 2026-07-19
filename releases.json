@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T04:50:28.036Z",
+  "generatedAt": "2026-07-19T05:18:09.004Z",
   "apps": {
     "reminder": {
       "version": "2.19.36",
@@ -42,9 +42,9 @@
       "sizeBytes": 60057144
     },
     "localsender": {
-      "version": "1.0.1",
-      "versionCode": 2,
-      "notes": "Local Sender 1.0.1 - pairing fixes and in-app update\n\nFixes the pairing flow so you can actually chat after connecting, and adds\nin-app updates so future versions install from within the app.\n\n### Features\n- Tap a connected device to open its chat directly (no more re-pairing).\n- Paired devices now always appear in the Chats tab, even before any messages.\n- Devices you have paired with before reconnect automatically, without showing\n  the code again.\n- Devices advertise their identity so the app can tell a known device from a new one.\n- In-app update: the app checks the store on launch and can download and install\n  a newer version for you.\n\n### Bug fixes\n- macOS: the app could discover devices but never accept connections because the\n  identity load hung under the sandbox, so the server never started. Fixed.\n- Fixed a loop where confirming the pairing code led back to the code screen with\n  no way to start chatting.\n",
+      "version": "1.0.2",
+      "versionCode": 3,
+      "notes": "Local Sender 1.0.2 - macOS self-update and reinstall fix\n\nAdds real in-app updates on macOS and publishes a macOS build to the store, so\ndesktop and Android both stay current from within the app.\n\n### Features\n- macOS in-app update: the app now downloads the new version, replaces itself,\n  and relaunches automatically. No more opening a browser.\n- The store now carries a macOS build alongside the Android APK, and the update\n  check picks the right one for the device it is running on.\n- Update check is platform-aware and skips a release that has no build for the\n  current platform.\n\n### Bug fixes\n- Update checker no longer offers an Android-only asset to desktop, or a desktop\n  asset to Android.\n",
       "publishedAt": "2026-07-18T19:25:33Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/localsender/localsender.apk",
       "sizeBytes": 53765279
