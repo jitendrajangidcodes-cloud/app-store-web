@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T14:48:37.947Z",
+  "generatedAt": "2026-07-19T14:50:02.436Z",
   "apps": {
     "reminder": {
       "version": "2.19.39",
@@ -42,12 +42,12 @@
       "sizeBytes": 60057144
     },
     "localsender": {
-      "version": "1.0.8",
-      "versionCode": 9,
-      "notes": "Local Sender 1.0.8 - update install fixes (Mac and Android)\n\nFixes updates that downloaded but failed to install. No messaging or pairing\nchanges; pairs with 1.0.7.\n\n### Features\n- If a Mac update cannot replace the app automatically, the new version is now\n  placed in your Downloads and revealed in Finder so you can drag it into\n  Applications to finish.\n\n### Bug fixes\n- Mac updates no longer fail at the install step: system tools are now called by\n  full path, so a normally-launched app can extract and swap the update.\n- Update errors now show the real reason instead of a generic message, so a\n  failure can actually be acted on.\n- Android now tells you to allow \"Install unknown apps\" (with a Retry) when the\n  installer cannot open, instead of appearing to do nothing.\n",
+      "version": "1.0.9",
+      "versionCode": 10,
+      "notes": "Local Sender 1.0.9 - Google Drive backup fixed on Android\n\nBackup now uses the native Google sign-in on phones instead of a browser. No\nmessaging or pairing changes; pairs with 1.0.7 and later.\n\n### Features\n- On Android and iPhone, Google Drive backup now signs in with the native Google\n  account picker - no browser, no localhost page.\n\n### Bug fixes\n- Android backup no longer opens a browser that returns to a \"localhost\" page\n  that could not complete the sign-in. Desktop backup is unchanged.\n",
       "publishedAt": "2026-07-18T19:25:33Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/localsender/localsender.apk",
-      "sizeBytes": 55270484
+      "sizeBytes": 55285421
     }
   }
 }
