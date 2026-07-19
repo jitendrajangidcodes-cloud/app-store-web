@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-19T04:30:41.888Z",
+  "generatedAt": "2026-07-19T04:50:28.036Z",
   "apps": {
     "reminder": {
-      "version": "2.19.35",
+      "version": "2.19.36",
       "versionCode": null,
-      "notes": "Reliability hardening across Android 10-15 and phone makers. Xiaomi/MIUI: a new direct shortcut to the 'Show on lock screen' and 'Display pop-up in background' settings (fixes the alarm flashing then collapsing on the lock screen). Location reminders: safer background start so a denied start never stops the reminder. Plus exact-alarm and custom-ringtone compatibility fixes for Android 10-12. Full audit recorded in docs/android-compat-checklist.md.\n",
+      "notes": "Easier setup and verification on strict phone makers. New 'Test alarm in 1 minute' button in the permissions screen so you can lock the phone and confirm the alarm actually appears. Phone-maker (Xiaomi/Vivo/Oppo/OnePlus/Huawei) guidance now also covers keeping location reminders alive, and Huawei/Honor shows a note that background reminders may still be limited by the system.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 69650602
+      "sizeBytes": 69650678
     },
     "cards": {
       "version": "2.4.2",
