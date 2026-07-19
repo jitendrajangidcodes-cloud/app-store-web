@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-19T05:37:30.786Z",
+  "generatedAt": "2026-07-19T05:46:03.478Z",
   "apps": {
     "reminder": {
-      "version": "2.19.37",
+      "version": "2.19.38",
       "versionCode": null,
-      "notes": "Reminder v2.19.37\n\n### Features\n- Location picker now uses a native Google Map. Pan the map under the pin, watch a live circle show the exact geofence radius as you drag the slider, search for any address, and tap the button to jump to your current location.\n\n### Bug fixes\n- After an update installs, the downloaded APK and its \"download complete\" notification are now cleared automatically instead of lingering.\n\n",
+      "notes": "Reminder v2.19.38\n\n### Features\n- Redesigned location picker with an interactive map. Pan the map under the pin, watch a circle show the exact geofence radius as you drag the slider, search for any address, and tap the button to jump to your current location. No account or setup needed.\n\n### Bug fixes\n- The location picker map now works out of the box with no setup, replacing the previous map that could render blank tiles.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.37.apk",
-      "sizeBytes": 70263786
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.38.apk",
+      "sizeBytes": 69834309
     },
     "cards": {
       "version": "2.4.2",
