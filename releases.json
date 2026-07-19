@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-19T06:00:36.724Z",
+  "generatedAt": "2026-07-19T07:06:38.074Z",
   "apps": {
     "reminder": {
       "version": "2.19.38",
@@ -42,12 +42,12 @@
       "sizeBytes": 60057144
     },
     "localsender": {
-      "version": "1.0.3",
-      "versionCode": 4,
-      "notes": "Local Sender 1.0.3 - profiles, chat polish, stronger encryption\n\nA big update: set your name and photo, a cleaner chat with timestamps, easier\nphoto sharing, and hardened end-to-end encryption.\n\nIMPORTANT: the pairing handshake changed for security, so both devices must be\non 1.0.3 to pair. Update every device.\n\n### Features\n- Your profile: set a display name and photo in Settings; paired devices see it.\n- Photos and names of the devices you chat with now appear in the chat header,\n  the Devices list, and the Chats list.\n- Chat shows a time on every message plus Today / Yesterday / date separators.\n- Redesigned chat bubbles and a dedicated photo button for quick image sharing;\n  received images show a thumbnail and open on tap.\n- Connection state moved into the chat header (Online / Offline) - the old\n  bottom bar is gone.\n\n### Bug fixes\n- Stronger end-to-end encryption: the pairing handshake now commits to its keys\n  before revealing them, which blocks an on-network attacker from tricking two\n  devices into showing matching codes.\n- The encrypted channel now rejects replayed or injected frames.\n- The device identity key is no longer kept as a plaintext file when the system\n  secure store is available; any old plaintext copy is removed on next launch.\n- A connected device can no longer push messages or files before both sides have\n  confirmed the pairing code.\n",
+      "version": "1.0.4",
+      "versionCode": 5,
+      "notes": "Local Sender 1.0.4 - encrypted Google Drive backup and restore\n\nBack up everything to your own Google account and restore it on any device,\nend-to-end encrypted. Pairs with 1.0.3 - no need to re-pair.\n\n### Features\n- Google Drive backup in Settings: your chats, rooms, device profiles, trusted\n  devices and app settings are sealed on your device with AES-256-GCM before\n  they ever leave it, then stored in your Google account's private app area.\n- Restore on any device by signing in with the same Google account. Your device\n  keeps its own identity key, so already-paired devices stay recognised.\n- One account, many devices: the same Google ID backs up every device\n  independently - each device keeps its own identity, only your data is shared.\n- Backup is \"Google sign-in only\": no separate password to remember or lose.\n\n### Bug fixes\n- The backup key lives in your account's private app-data area, which no other\n  app and no website can read; Google Drive only ever holds an unreadable blob.\n- Nothing about your device identity or pairing secrets is ever uploaded.\n",
       "publishedAt": "2026-07-18T19:25:33Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/localsender/localsender.apk",
-      "sizeBytes": 54142279
+      "sizeBytes": 54798103
     }
   }
 }
