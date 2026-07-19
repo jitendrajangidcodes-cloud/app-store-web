@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-19T14:02:35.101Z",
+  "generatedAt": "2026-07-19T14:17:54.210Z",
   "apps": {
     "reminder": {
-      "version": "2.19.38",
+      "version": "2.19.39",
       "versionCode": null,
-      "notes": "Reminder v2.19.38\n\n### Features\n- Redesigned location picker with an interactive map. Pan the map under the pin, watch a circle show the exact geofence radius as you drag the slider, search for any address, and tap the button to jump to your current location. No account or setup needed.\n\n### Bug fixes\n- The location picker map now works out of the box with no setup, replacing the previous map that could render blank tiles.\n\n",
+      "notes": "Cut battery drain on the no-SIM/Wi-Fi location fallback\n\nThe location-reminder GPS fallback used when a phone has no SIM and no Wi-Fi\n(so Play Services geofencing can't run) was taking a high-accuracy GPS fix on a\nfixed timer regardless of whether the phone was actually moving -- a device\nsitting still all day still burned GPS every 20s-5min. It is now motion-gated:\nwhen every target is farther than 1.5km away it stops polling GPS entirely and\narms the hardware significant-motion sensor (near-zero power) plus a 20-minute\nsafety poll, so a stationary phone uses almost no battery until it actually\nmoves. Close to a geofence boundary it keeps tight, distance-adaptive polling\n(30/60/120s) so crossings are still caught on time.\n\n### Features\n\n- No user-facing feature changes. Adds an internal, emulator-driven screenshot\n  automation harness (integration_test + scripts/screenshots.sh) used to keep\n  the app-store hub visuals in sync; it is not part of the shipped app.\n\n### Bug fixes\n\n- Location reminders no longer drain the battery while the phone is stationary\n  with no SIM and no Wi-Fi. The GPS-polling fallback is now gated on the\n  hardware motion sensor and only polls when the device is moving or near a\n  target, instead of on a fixed high-accuracy timer.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.38.apk",
-      "sizeBytes": 69834309
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.39.apk",
+      "sizeBytes": 69850693
     },
     "cards": {
       "version": "2.4.2",
