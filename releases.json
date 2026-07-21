@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-21T17:54:05.777Z",
+  "generatedAt": "2026-07-21T18:46:11.003Z",
   "apps": {
     "reminder": {
-      "version": "2.19.41",
+      "version": "2.19.42",
       "versionCode": null,
-      "notes": "Release v2.19.41\n\n### Features\nNo new user-facing features in this release.\n\n### Bug fixes\nCross-device alarm mirror actually works now. Two devices signed into the same Google account\nringing the same reminder: acting on one (Complete / Dismiss / Snooze) now reliably stops the\nother within a second or two. The previous version relied on a Drive auth token that a background\nsync only refreshed every ~4 hours but expired after 40 minutes, so in practice the mirror had no\nusable token for almost every real alarm firing and silently did nothing. It's rebuilt on Firestore\nrealtime signaling instead, with no dependency on that token cache. Google Sign-In is re-enabled\n(it had been temporarily switched off after an unrelated system-UI interruption risk that no\nlonger applies to this new signaling path).\n\n",
+      "notes": "Release v2.19.42\n\n### Features\nSettings > Debug now has mirror diagnostics: a \"Send test signal\" button that pings Firestore\ndirectly (independent of any real alarm), a live \"last ping\" readout so a second signed-in device\ncan confirm it received it, and a \"View diagnostics log\" screen showing a step-by-step trail of\nthe cross-device alarm-mirror pipeline (uid resolution, Firestore writes/reads, remote actions\napplied) on that device -- no adb/logcat needed to see why a signal did or didn't get through.\n\n### Bug fixes\nNo new fixes in this release -- this is diagnostic tooling to help pin down why the mirror\n(shipped in v2.19.41) is still not reliably stopping the other device's alarm for at least one\nuser, before making another change to the signaling logic itself.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.41.apk",
-      "sizeBytes": 72212028
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.42.apk",
+      "sizeBytes": 72244952
     },
     "cards": {
       "version": "2.5.0",
