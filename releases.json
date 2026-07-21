@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-21T10:27:57.428Z",
+  "generatedAt": "2026-07-21T12:08:57.492Z",
   "apps": {
     "reminder": {
-      "version": "2.19.40",
+      "version": "2.19.41",
       "versionCode": null,
-      "notes": "Multi-device sync, both new switches on by default.\n\n- Live sync (Settings > Live sync): an add, edit or delete on one device now shows up on your other devices within seconds while the app is open, instead of waiting for the next open or the ~4 hour background sync.\n- Simultaneous edits on two devices no longer overwrite each other - each reminder now merges on its own, and a delete stays deleted.\n- Mirror alarm actions (Settings > Mirror alarm actions): when the same alarm rings on two devices, Complete, Dismiss or Snooze on one now stops the other within a few seconds. This existed before but almost never ran; it works now.\n- Battery-conscious: the sync check only runs while the app is on screen, downloads nothing unless something actually changed, and slows itself down when nothing is happening.\n\n",
+      "notes": "Release v2.19.41\n\n### Features\nNo new user-facing features in this release.\n\n### Bug fixes\nCross-device alarm mirror actually works now. Two devices signed into the same Google account\nringing the same reminder: acting on one (Complete / Dismiss / Snooze) now reliably stops the\nother within a second or two. The previous version relied on a Drive auth token that a background\nsync only refreshed every ~4 hours but expired after 40 minutes, so in practice the mirror had no\nusable token for almost every real alarm firing and silently did nothing. It's rebuilt on Firestore\nrealtime signaling instead, with no dependency on that token cache. Google Sign-In is re-enabled\n(it had been temporarily switched off after an unrelated system-UI interruption risk that no\nlonger applies to this new signaling path).\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
-      "sizeBytes": 70080069
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.41.apk",
+      "sizeBytes": 72212028
     },
     "cards": {
       "version": "2.5.0",
