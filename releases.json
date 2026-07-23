@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-23T06:32:57.779Z",
+  "generatedAt": "2026-07-23T08:37:38.496Z",
   "apps": {
     "reminder": {
-      "version": "2.19.44",
+      "version": "2.19.45",
       "versionCode": null,
-      "notes": "Release v2.19.44\n\n### Features\nReminders, categories and deletions now sync between devices in realtime over Firestore, the\nsame instant channel the cross-device alarm actions already use. Add, edit or delete a reminder\non one phone and every other phone signed into the same Google account -- 2, 3 or more -- updates\nwithin a second while its app is open, and each device re-arms its own native alarms for whatever\nchanged (so an edited time actually takes effect everywhere, not just in the list). A device that\nwas closed catches up automatically the moment it's reopened -- no manual \"Sync now\" needed. This\nreplaces the old Drive-file poll that only checked every 15-60 seconds.\n\n### Bug fixes\nFixed: the ~4-hour background sync applied other devices' reminder edits to the database but never\nre-armed the native alarm for them, so a time change synced in the background wouldn't actually\nfire at the new time until the app was next opened. The background job now reschedules alarms for\npulled changes, matching the foreground path.\n\n",
+      "notes": "Cross-device alarms: reminders and snooze now ring on all your phones\n\nThis release closes the gap where a reminder created (or snoozed) on one phone\ndid not ring on your other phones when their app was closed. Both phones now get\nthe alarm on time.\n\n### Features\n- Reminders you create on one device now ring on your other devices on time,\n  even when the app is fully closed there. A signed-in device sends a lightweight\n  wake to the others the moment a reminder is added or changed, so each one arms\n  its own alarm within seconds instead of waiting for a background sync.\n- Snoozing on one device now carries across to your other devices and re-rings\n  everywhere at the snoozed time.\n- A snooze is now saved on the reminder itself, so it survives a reboot and syncs\n  like any other change, rather than living only as a local alarm on one phone.\n\n### Bug fixes\n- Fixed: a reminder created on one device could fail to ring on a second device\n  that had the app closed.\n- Fixed: snoozing on one device did not re-ring on the other devices.\n- Fixed: editing a reminder while it was snoozed could keep it firing at the old\n  snooze time instead of the newly saved time.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.44.apk",
-      "sizeBytes": 72326872
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.45.apk",
+      "sizeBytes": 72595767
     },
     "cards": {
       "version": "2.5.0",
