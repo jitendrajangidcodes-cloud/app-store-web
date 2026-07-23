@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-23T03:55:03.036Z",
+  "generatedAt": "2026-07-23T05:44:55.907Z",
   "apps": {
     "reminder": {
-      "version": "2.19.43",
+      "version": "2.19.44",
       "versionCode": null,
-      "notes": "Release v2.19.43\n\n### Features\nNo new features in this release.\n\n### Bug fixes\nDiagnosed further: cross-device Snooze stops the other device's ringing (confirmed working) but\nthat device doesn't re-ring 5 minutes later, unlike the device where Snooze was actually tapped.\nThe re-arm call on Complete/Dismiss/Snooze was previously unguarded -- any exception there (e.g. an\nexact-alarm permission check failing on that specific device) silently aborted before the screen\neven exited, with zero trace. It's now wrapped and logged to the on-device diagnostics log\n(Settings > Debug > View diagnostics log) instead of failing silently, and the alarm screen always\nexits cleanly regardless. This doesn't guess at a fix yet -- it's instrumentation to see the actual\nerror on the next test.\n\n",
+      "notes": "Release v2.19.44\n\n### Features\nReminders, categories and deletions now sync between devices in realtime over Firestore, the\nsame instant channel the cross-device alarm actions already use. Add, edit or delete a reminder\non one phone and every other phone signed into the same Google account -- 2, 3 or more -- updates\nwithin a second while its app is open, and each device re-arms its own native alarms for whatever\nchanged (so an edited time actually takes effect everywhere, not just in the list). A device that\nwas closed catches up automatically the moment it's reopened -- no manual \"Sync now\" needed. This\nreplaces the old Drive-file poll that only checked every 15-60 seconds.\n\n### Bug fixes\nFixed: the ~4-hour background sync applied other devices' reminder edits to the database but never\nre-armed the native alarm for them, so a time change synced in the background wouldn't actually\nfire at the new time until the app was next opened. The background job now reschedules alarms for\npulled changes, matching the foreground path.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.43.apk",
-      "sizeBytes": 72244952
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.44.apk",
+      "sizeBytes": 72326872
     },
     "cards": {
       "version": "2.5.0",
