@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-24T00:07:09.659Z",
+  "generatedAt": "2026-07-24T03:54:39.886Z",
   "apps": {
     "reminder": {
-      "version": "2.19.47",
+      "version": "2.19.49",
       "versionCode": null,
-      "notes": "Reliability update for using Reminder across multiple phones and Google accounts:\n\n- Switching Google accounts no longer mixes one account's reminders into another.\n- Fixed alarms that could keep ringing on a phone after the reminder was deleted or changed on another device.\n- Stronger conflict handling so edits made on two phones don't overwrite each other because of clock differences.\n- Recurring reminders keep advancing correctly after you act on them from the lock screen or notification, even when several fire close together.\n- Snoozed location reminders now re-ring reliably; a one-time reminder that came due while your phone was off now shows a \"missed\" notice.\n- Fewer redundant background wakes and syncs (better battery).\n\n",
+      "notes": "Fixes a \"ghost\" alarm: completing (or snoozing/dismissing) a reminder on one phone now reliably stops it ringing on your other phone too.\n\nPreviously, when a reminder rang on a phone that was closed, that phone's alarm screen could start before its account session was ready, so it never received the action you took on the other phone and kept ringing. It now waits for the session before deciding, so cross-device Complete / Dismiss / Snooze arrive every time.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
       "sizeBytes": 72644971
