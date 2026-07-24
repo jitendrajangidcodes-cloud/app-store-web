@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-24T03:54:39.886Z",
+  "generatedAt": "2026-07-24T06:29:07.411Z",
   "apps": {
     "reminder": {
-      "version": "2.19.49",
+      "version": "2.19.50",
       "versionCode": null,
-      "notes": "Fixes a \"ghost\" alarm: completing (or snoozing/dismissing) a reminder on one phone now reliably stops it ringing on your other phone too.\n\nPreviously, when a reminder rang on a phone that was closed, that phone's alarm screen could start before its account session was ready, so it never received the action you took on the other phone and kept ringing. It now waits for the session before deciding, so cross-device Complete / Dismiss / Snooze arrive every time.\n\n",
+      "notes": "Reminders now show the full-screen alarm on every phone -- even one that's unlocked and in use -- instead of just a small banner.\n\nThis also fixes cross-device control while unlocked: snoozing, completing, or dismissing a reminder on one phone now reliably stops it ringing on your other phone too.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
       "sizeBytes": 72644971
