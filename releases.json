@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-24T09:05:35.260Z",
+  "generatedAt": "2026-07-24T11:18:30.959Z",
   "apps": {
     "reminder": {
-      "version": "2.19.51",
+      "version": "2.19.54",
       "versionCode": null,
-      "notes": "Deeper multi-device reliability fixes (part 1 of a series):\n\n- Deleting your reminders on one phone no longer lets them reappear from the cloud on your phones.\n- Restoring a cloud backup now sticks across all your phones instead of being silently undone.\n- Actions taken from the lock-screen alarm or a notification (complete/snooze/dismiss) now sync correctly even if a phone's clock is slightly off.\n- Switching Google accounts no longer risks mixing the previous account's reminders into the new one.\n\n",
+      "notes": "Reliability fixes for multi-device and settings (part 4):\n\n- A returning phone now reconnects to live sync and stays wake-able without needing a restart.\n- Signing out cleanly stops that phone from being woken for the old account.\n- Picking a system ringtone on one phone no longer changes (or silences) the tone on your other phones.\n- Changing time format or home layout now updates instantly on your other phone.\n- Fixed a rare \"ghost\" alarm that could ring the default tone after the system restarted the app.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
       "sizeBytes": 72874347
