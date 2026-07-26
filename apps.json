@@ -14,9 +14,18 @@
     "about": "Reminder behaves like an alarm clock, not a gentle notification nudge -- built for things you can't afford to miss. It rings and vibrates on a full-screen lock-screen alarm, offers Complete, Dismiss, and Snooze actions right from that screen, and supports daily, weekly, monthly, and yearly repeat rules with category organization. Sign in with Google to sync reminders and attached photos across devices via Drive.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": [
-      { "src": "assets/screenshots/reminder-home.jpg", "alt": "Home screen with greeting, today/overdue/this-week counts, and the tab bar" },
-      { "src": "assets/screenshots/reminder-editor.jpg", "alt": "New reminder editor with priority, category, Date & Time or Location trigger, and repeat rule" },
-      { "src": "assets/screenshots/reminder-settings.jpg", "alt": "Settings screen with reminder tone, ring-in-silent, time format, and alarm behavior" }
+      {
+        "src": "assets/screenshots/reminder-home.jpg",
+        "alt": "Home screen with greeting, today/overdue/this-week counts, and the tab bar"
+      },
+      {
+        "src": "assets/screenshots/reminder-editor.jpg",
+        "alt": "New reminder editor with priority, category, Date & Time or Location trigger, and repeat rule"
+      },
+      {
+        "src": "assets/screenshots/reminder-settings.jpg",
+        "alt": "Settings screen with reminder tone, ring-in-silent, time format, and alarm behavior"
+      }
     ]
   },
   {
@@ -97,6 +106,22 @@
     "packageId": "com.pnsjy.local_sender",
     "about": "Local Sender lets your devices talk directly over the same Wi-Fi with no internet, cloud, or account. Discover nearby devices, pair by confirming a matching 6-digit code on both screens, then chat one-to-one or in group rooms and send any file. Everything is end-to-end encrypted with a signed X25519 handshake and AES-256-GCM, and files are checksum-verified on arrival. Conversations and paired devices are scoped per Wi-Fi network and switch automatically as you move between them.",
     "requirements": "Android 8.0 (Oreo) or newer. Both devices must be on the same Wi-Fi network. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "screenshots": []
+  },
+  {
+    "id": "bchat",
+    "name": "BChat",
+    "tagline": "Chat over Bluetooth with no internet, no SIM and no account.",
+    "category": "Communication",
+    "beta": true,
+    "platform": "Android",
+    "color": "#0E7A5F",
+    "requiresAccount": false,
+    "icon": "assets/icons/bchat.png",
+    "repo": "jitendrajangidcodes-cloud/app-store-web",
+    "packageId": "com.pnsjy.bchat",
+    "about": "BChat is a messenger that works with no internet, no SIM and no server. Nearby phones running BChat form a Bluetooth mesh and relay for each other, so someone out of direct Bluetooth range is still reachable through the devices in between. Private chats use Noise XX sessions with mutual authentication and forward secrecy, every message is signed, and the identifier your phone puts on the air rotates so a passive listener cannot track you. There is no account: your identity is a key pair generated on the device. This is an early beta -- text chat, the public Nearby room, multi-hop relay and receipts work; groups, photos, voice notes and the Wi-Fi transport are not in this build yet.",
+    "requirements": "Android 8.0 (Oreo) or newer, with Bluetooth. Needs the nearby-devices permission to find other phones, and runs a notification while the mesh is active. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": []
   }
 ]
