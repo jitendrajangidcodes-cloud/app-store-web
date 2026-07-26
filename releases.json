@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-26T16:19:43.325Z",
+  "generatedAt": "2026-07-26T16:21:55.361Z",
   "apps": {
     "reminder": {
       "version": "2.19.60",
@@ -48,6 +48,14 @@
       "publishedAt": "2026-07-18T19:25:33Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/localsender/localsender.apk",
       "sizeBytes": 55802639
+    },
+    "bchat": {
+      "version": "0.1.0-beta.1",
+      "versionCode": 1,
+      "notes": "BChat 0.1.0-beta.1 — first beta\n\nText chat over a Bluetooth mesh. No internet, no SIM, no server, no account.\nNearby phones relay for each other, so someone out of direct Bluetooth range is\nstill reachable through the devices in between.\n\nThis is an early beta: expect rough edges, and expect to reinstall as the wire\nprotocol changes.\n\n### Features\n- 1:1 private chat, encrypted with Noise XX (mutual authentication, forward secrecy)\n- Public Nearby room that every device in range can read; every message is signed\n- Multi-hop relay with TTL bounds, duplicate suppression and message fragmentation\n- Nearby peer list showing direct versus relayed peers and hop distance\n- Message requests: a first message from a stranger waits for Accept or Block\n- Delivery and read receipts, with the hop count shown on delivered messages\n- Sender outbox: a message to someone out of range keeps retrying for 24 hours\n- Rotating on-air identifiers, so a passive listener cannot track a device over time\n- Safety-number verification per contact\n- Background mesh service with a pause switch and four power modes\n- Encrypted local message database\n\n### Bug fixes\n- None. First release.\n\n### Not in this build\n- Groups, photos, voice notes and file transfer\n- The Wi-Fi LAN transport\n- iOS\n\n### Known limits\n- Multi-hop relay is verified in simulation and on an emulator, not yet across three\n  physical phones.\n- Battery use in the higher power modes has not been measured on real hardware.\n",
+      "publishedAt": "2026-07-26T16:19:27Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
+      "sizeBytes": 60230069
     }
   }
 }
