@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-26T12:39:04.901Z",
+  "generatedAt": "2026-07-26T12:52:43.547Z",
   "apps": {
     "reminder": {
-      "version": "2.19.59",
+      "version": "2.19.60",
       "versionCode": null,
-      "notes": "Alarm actions mirror over your Wi-Fi, with no account and no internet\n\nF62. v2.19.58 fixed alarms arming on the second phone. This fixes the other\nhalf: an action taken on one phone reaching the other.\n\n### Features\n\n- Complete, Dismiss and Snooze now travel directly across your local network as\n  well as through the cloud. On the same Wi-Fi this needs no sign-in, no\n  internet and no server, and arrives in milliseconds instead of seconds.\n  Whichever path gets there first, the two phones still settle on exactly one\n  outcome for a firing.\n- The messages are encrypted with a key only your own devices hold, carry no\n  reminder titles or notes, and anything that cannot be authenticated is\n  discarded -- so nothing else on the network can act on your alarms.\n- The app now records why a sign-in session could not be restored instead of\n  failing silently.\n\n### Bug fixes\n\n- An action taken on one phone often never reached the other. The cloud mirror\n  needs a signed-in session and a reachable service at the exact moment an alarm\n  is ringing, and the two-device test showed both failing: one phone's alarm\n  screen could not resolve its sign-in session at all, even after waiting twenty\n  seconds, and the other could not reach the service mid-alarm. The local\n  network path depends on neither.\n- One phone had to sign in again on every single app open rather than restoring\n  its saved session, which is why its alarm screen never had one to use. The\n  cause is now recorded so it can be fixed separately; the mirror no longer\n  depends on it either way.\n\n",
+      "notes": "Reminder edits replicate over your Wi-Fi too\n\nF62 phase E. The previous release put alarm actions on the local network; this\none puts the reminders themselves there.\n\n### Features\n\n- Add, edit or delete a reminder on one phone and the other picks it up and\n  re-arms its alarms straight away, with no sign-in, no internet and no server\n  involved -- only that both phones are on the same Wi-Fi. This works even on a\n  device that cannot keep its sign-in session, which the cloud path depends on.\n- Incoming changes go through the same merge the cloud sync already uses, so two\n  phones editing at once settle exactly as they always have.\n- Every mirrored action now records which path delivered it, over Wi-Fi or\n  through the cloud, so a problem can be traced without guesswork.\n\n### Bug fixes\n\n- An edit made on one phone could take a long time to reach the other, or not\n  arrive at all, whenever the cloud path was unavailable or the sign-in session\n  could not be restored. The local path does not depend on either.\n- A batch of changes too large to send in one piece is now left to the cloud\n  sync instead of being split up, and is not marked as sent until it has\n  actually gone out, so nothing is dropped quietly.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.59.apk",
-      "sizeBytes": 73121347
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.60.apk",
+      "sizeBytes": 73154115
     },
     "cards": {
       "version": "2.5.0",
