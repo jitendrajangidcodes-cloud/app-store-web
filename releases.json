@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T18:23:06.366Z",
+  "generatedAt": "2026-07-27T18:38:27.505Z",
   "apps": {
     "reminder": {
       "version": "2.19.61",
@@ -50,12 +50,12 @@
       "sizeBytes": 55802639
     },
     "bchat": {
-      "version": "0.1.0-beta.3",
-      "versionCode": 3,
-      "notes": "BChat 0.1.0-beta.3 — chat actions, reactions and notifications\n\nThe chat surface catches up with what people expect from a messenger: hold a message to reply,\nreact, edit, forward or delete it, hold a chat to pin, mute, archive or delete it, and get a\nnotification when something arrives while you are elsewhere.\n\n### Features\n- Delete a chat, or clear its messages while keeping the conversation\n- Pin, mute and archive chats, with an Archived screen\n- Block a contact: their packets are dropped as they arrive, and the block survives peer-id\n  rotation because it hangs off the contact key rather than the on-air identifier\n- Reply to a message by holding it or swiping it, with the quoted original shown in the bubble\n- Emoji reactions, applied locally at once and synced to the other side as small mesh events\n- Edit your own message, and delete for everyone as well as for yourself\n- Forward a message into another chat, and copy its text\n- Star messages, with a Starred messages screen\n- Notifications for messages that arrive while you are not looking at that chat, suppressed when\n  the chat is muted or already on screen, and tapping one opens the chat\n\n### Bug fixes\n- Block in Message requests only deleted the chat and did not block the sender, so the same person\n  could open a new request the moment they were back in range\n- Delete-for-everyone and edit events were applied to any message the sender named. A contact could\n  therefore rewrite or erase a message written by somebody else. The receiver now checks authorship,\n  since a session proves who sent a packet and not who wrote the message\n- Reactions, edits and deletes have no receipt to retire them, so a delivered one stayed in the\n  outbox and was resent on every drain until it expired\n- Deleting a message or chat left its reactions behind in the database\n\n### Known limits\n- Photos, voice notes, groups, file transfer and the Wi-Fi LAN transport are still not in this\n  build.\n- Multi-hop relay remains verified in simulation only; it needs a third device.\n- Everything here is verified by 118 unit tests and an emulator run. The Bluetooth engine has met a\n  real radio only in the beta.2 field test, so treat the two-phone check list as the real gate.\n- iOS is not built yet.\n",
+      "version": "0.1.0-beta.4",
+      "versionCode": 4,
+      "notes": "BChat 0.1.0-beta.4 — plain language and fewer things to figure out\n\nThis release is about making the app usable by someone who has never heard of a mesh network. The\napp used to name things the way the protocol underneath it does; now it names them the way a person\nwould, and the two places where you had to know how it worked before you could use it are gone.\n\n### Features\n- Everything is said in plain words. No links, relays, mesh, handshakes, advertising, fingerprints\n  or hops in anything you read. The Nearby room is now Everyone nearby, \"3 direct links\" is\n  \"Connected to 3 phones near you\", and a relayed message says it arrived via 2 phones\n- Tapping someone in Nearby opens the chat and sets up the secure connection on the way in, instead\n  of leaving the row doing nothing until you found the Connect button\n- Settings leads with your profile, Stay reachable and Battery use, in words that say what they do.\n  The Bluetooth readout and the diagnostics log moved to Settings, Advanced, where they are still\n  one tap away when something needs reporting\n- The safety number is now called a safety code, and the screen explains what comparing it protects\n  you from\n\n### Bug fixes\n- A chat you started was titled with the other person's 64-character key instead of their name. It\n  is now named after the person, and a chat created before they were identified is renamed as soon\n  as they are\n- Search results and starred messages showed that same key as the subtitle instead of the chat name\n\n### Known limits\n- Photos, voice notes, groups, file transfer and the Wi-Fi LAN transport are still not in this\n  build.\n- Multi-hop relay remains verified in simulation only; it needs a third device.\n- Verified by 120 unit tests and an emulator run, not on the two phones.\n- iOS is not built yet.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 61263689
+      "sizeBytes": 61264021
     }
   }
 }
