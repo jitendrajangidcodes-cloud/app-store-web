@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T05:25:34.387Z",
+  "generatedAt": "2026-07-27T07:01:24.995Z",
   "apps": {
     "reminder": {
       "version": "2.19.60",
@@ -50,12 +50,12 @@
       "sizeBytes": 55802639
     },
     "bchat": {
-      "version": "0.1.0-beta.1",
-      "versionCode": 1,
-      "notes": "BChat 0.1.0-beta.1 — first beta\n\nText chat over a Bluetooth mesh. No internet, no SIM, no server, no account.\nNearby phones relay for each other, so someone out of direct Bluetooth range is\nstill reachable through the devices in between.\n\nThis is an early beta: expect rough edges, and expect to reinstall as the wire\nprotocol changes.\n\n### Features\n- 1:1 private chat, encrypted with Noise XX (mutual authentication, forward secrecy)\n- Public Nearby room that every device in range can read; every message is signed\n- Multi-hop relay with TTL bounds, duplicate suppression and message fragmentation\n- Nearby peer list showing direct versus relayed peers and hop distance\n- Message requests: a first message from a stranger waits for Accept or Block\n- Delivery and read receipts, with the hop count shown on delivered messages\n- Sender outbox: a message to someone out of range keeps retrying for 24 hours\n- Rotating on-air identifiers, so a passive listener cannot track a device over time\n- Safety-number verification per contact\n- Background mesh service with a pause switch and four power modes\n- Encrypted local message database\n\n### Bug fixes\n- None. First release.\n\n### Not in this build\n- Groups, photos, voice notes and file transfer\n- The Wi-Fi LAN transport\n- iOS\n\n### Known limits\n- Multi-hop relay is verified in simulation and on an emulator, not yet across three\n  physical phones.\n- Battery use in the higher power modes has not been measured on real hardware.\n",
+      "version": "0.1.0-beta.2",
+      "versionCode": 2,
+      "notes": "BChat 0.1.0-beta.2 — connection fixes from the first field test\n\nFixes the three problems reported from testing beta.1 on two phones: Connect did\nnothing, devices sometimes did not appear, and one phone sometimes showed up as\ntwo rows.\n\n### Features\n- Diagnostics log in Settings (\"View diagnostics log\"): every radio, handshake\n  and delivery step, with live link roles, router counters and one-tap copy so a\n  problem on a phone can be reported without a cable\n- Connect now shows its real state: connecting, or Retry after a failure\n- Nearby keeps one row per device across identifier rotation, and devices that\n  leave disappear on their own\n\n### Bug fixes\n- Connect did nothing when both phones connected to each other at the same\n  moment: the receiving side registered the connection for receiving but not for\n  replying, so the handshake was never answered\n- A handshake that lost its first message stayed stuck forever, and further taps\n  on Connect returned without sending anything. Handshakes now time out, retry\n  twice, and a tap always forces a fresh attempt\n- When both phones started a handshake simultaneously, the side that won the\n  tie-break fed the peer's opening message into its own session and killed the\n  handshake\n- One phone appearing as two rows: rows were keyed on identifiers that rotate by\n  design. Devices now carry a per-session tag that survives rotation\n- Devices flickering in and out: the app advertised before its Bluetooth service\n  was fully registered, so a fast peer found nothing and disconnected\n- Bluetooth writes now use the negotiated packet size instead of the 20-byte\n  floor, and a failed notification is retried instead of dropped\n\n### Known limits\n- Multi-hop relay across three phones is still verified only in simulation.\n- Groups, photos, voice notes, file transfer and the Wi-Fi transport are not in\n  this build.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 60230069
+      "sizeBytes": 60426925
     }
   }
 }
