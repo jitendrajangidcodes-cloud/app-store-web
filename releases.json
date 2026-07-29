@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T17:49:17.621Z",
+  "generatedAt": "2026-07-29T18:31:43.275Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -50,12 +50,12 @@
       "sizeBytes": 55802639
     },
     "bchat": {
-      "version": "0.3.0-beta.3",
-      "versionCode": 9,
-      "notes": "BChat 0.3.0-beta.3 — you can add people again\n\nInstall this over 0.3.0-beta.2, which could not start a conversation at all.\n\nThe relay still listens only on the Tailscale network. A phone not on that\nnetwork cannot send or receive.\n\n### Features\n\n- Add someone by code. Tap the button on the chat list to show your QR code,\n  scan theirs, or paste the link they sent you. Pasting always works, so a phone\n  with no camera or a refused camera permission is never stuck.\n- Your code contains your keys rather than a name the server looks up, so adding\n  a contact never asks the server who anyone is.\n\n### Bug fixes\n\n- 0.3.0-beta.2 had no way to start a conversation. The screen that used to add\n  people was removed with Bluetooth and nothing replaced it, so a fresh install\n  could not message anyone. That is what this release fixes.\n- The empty chat list still told people to open Nearby, a screen that no longer\n  exists.\n\n### Known gaps in this build\n\n- Notifications still do not arrive while the app is closed.\n- The server is not reachable from the open internet yet, though this has now\n  been proven to work and needs one setup command.\n- Groups, multi-device linking and encrypted backup work on the server but have\n  no screens.\n",
+      "version": "0.3.0-beta.4",
+      "versionCode": 10,
+      "notes": "BChat 0.3.0-beta.4 - private delivery beyond one device\n\nThis beta completes BChat's public-relay privacy architecture. Message and file\ncontent remains end-to-end encrypted, delivered content is retained only on\nuser devices, and the relay removes bounded pending ciphertext after recipient\nacknowledgement.\n\n### Features\n\n- Public TLS relay with bounded offline ciphertext and encrypted resumable file\n  storage that is deleted after authenticated device delivery.\n- Data-only FCM wake-up so a closed Android app can collect and decrypt pending\n  messages without exposing message content to Google.\n- Accountless QR device linking, signed device revocation, remote local-data\n  wipe, and encrypted contact/group state transfer without copying history.\n- Secure group messaging with membership key rotation and bounded prior epochs.\n- Device-local encrypted attachments, configurable retention, storage usage,\n  readable key-free JSON export, and privacy lifecycle cleanup.\n- Encrypted profile photos and a complete profile screen.\n- Native SMS and messaging-app invite sharing with tap-to-open Android links.\n\n### Bug fixes\n\n- Invalid first-device authorisations no longer create relay account state.\n- The certificate-chain root device can no longer be accidentally unlinked.\n- Oversized linked-device snapshots are split into bounded relay-safe chunks.\n- Remote unlink now clears messages, files, keys, trust pins and profile data in\n  both foreground and closed-app execution.\n- Onboarding no longer asks for obsolete Bluetooth permissions.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 82663867
+      "sizeBytes": 84281209
     }
   }
 }
