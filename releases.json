@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T04:20:57.600Z",
+  "generatedAt": "2026-07-29T05:23:28.178Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -50,12 +50,12 @@
       "sizeBytes": 55802639
     },
     "bchat": {
-      "version": "0.3.0-beta.2",
-      "versionCode": 8,
-      "notes": "BChat 0.3.0-beta.2 — files up to 50 MB, sessions that survive a restart\n\nInstall this over 0.3.0-beta.1. It fixes a defect in that build serious enough\nthat beta.1 should not be used: conversations silently ended every time the app\nwas closed.\n\nThe relay still listens only on the Tailscale network. A phone that is not on\nthat network cannot send or receive.\n\n### Features\n\n- Attachments up to 50 MB. Files are encrypted with a key of their own, uploaded\n  to the server in resumable 1 MB pieces, and announced in a message carrying\n  the id and the key. The server stores bytes it cannot read, and a large upload\n  no longer blocks messages behind it.\n- The size limit is checked when you pick the file, not after it uploads, so an\n  oversized file costs you no data.\n- A new app icon. The old one was a Bluetooth rune, which described a transport\n  the app no longer has.\n\n### Bug fixes\n\n- Sessions are now kept on disk. In beta.1 they lived only in memory, so closing\n  the app silently ended every conversation until both phones re-handshaked, and\n  anything that arrived in between could not be decrypted. The app looked like\n  it was working the whole time. This is the reason to install this build.\n- Ratchet state is written before a message is sent, so a crash between the two\n  cannot cause a message key to be reused.\n- Stored session state that will not load is discarded rather than partly\n  restored, because continuing under a half-loaded ratchet reuses message keys.\n- Onboarding still offered \"chat over Bluetooth, no internet, no SIM\", and media\n  still talked about waiting to share Wi-Fi. Both described the old app.\n\n### Known gaps in this build\n\n- Notifications still do not arrive while the app is closed. This needs push,\n  which needs a Firebase project that has to be created interactively.\n- The server is not reachable from the open internet yet.\n- Multi-device linking, username sign-in and encrypted backup are built and\n  tested on the server but have no screens.\n- Groups work on the server but have no client side.\n",
+      "version": "0.3.0-beta.3",
+      "versionCode": 9,
+      "notes": "BChat 0.3.0-beta.3 — you can add people again\n\nInstall this over 0.3.0-beta.2, which could not start a conversation at all.\n\nThe relay still listens only on the Tailscale network. A phone not on that\nnetwork cannot send or receive.\n\n### Features\n\n- Add someone by code. Tap the button on the chat list to show your QR code,\n  scan theirs, or paste the link they sent you. Pasting always works, so a phone\n  with no camera or a refused camera permission is never stuck.\n- Your code contains your keys rather than a name the server looks up, so adding\n  a contact never asks the server who anyone is.\n\n### Bug fixes\n\n- 0.3.0-beta.2 had no way to start a conversation. The screen that used to add\n  people was removed with Bluetooth and nothing replaced it, so a fresh install\n  could not message anyone. That is what this release fixes.\n- The empty chat list still told people to open Nearby, a screen that no longer\n  exists.\n\n### Known gaps in this build\n\n- Notifications still do not arrive while the app is closed.\n- The server is not reachable from the open internet yet, though this has now\n  been proven to work and needs one setup command.\n- Groups, multi-device linking and encrypted backup work on the server but have\n  no screens.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 65824124
+      "sizeBytes": 82663867
     }
   }
 }
