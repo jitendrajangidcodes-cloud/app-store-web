@@ -111,7 +111,7 @@
   {
     "id": "bchat",
     "name": "BChat",
-    "tagline": "Chat over Bluetooth with no internet, no SIM and no account.",
+    "tagline": "Private messaging with end-to-end encryption and no phone number.",
     "category": "Communication",
     "beta": true,
     "platform": "Android",
@@ -120,8 +120,8 @@
     "icon": "assets/icons/bchat.png",
     "repo": "jitendrajangidcodes-cloud/app-store-web",
     "packageId": "com.pnsjy.bchat",
-    "about": "BChat is a messenger that works with no internet, no SIM and no server. Nearby phones running BChat form a Bluetooth mesh and relay for each other, so someone out of direct Bluetooth range is still reachable through the devices in between. Private chats use Noise XX sessions with mutual authentication and forward secrecy, every message is signed, and the identifier your phone puts on the air rotates so a passive listener cannot track you. There is no account: your identity is a key pair generated on the device. This is an early beta -- text chat, the public Nearby room, multi-hop relay and receipts work; groups, photos, voice notes and the Wi-Fi transport are not in this build yet.",
-    "requirements": "Android 8.0 (Oreo) or newer, with Bluetooth. Needs the nearby-devices permission to find other phones, and runs a notification while the mesh is active. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "about": "BChat is a messenger with no phone number and no account to sign up for: your identity is a key pair generated on your device. Messages travel through a relay server that holds them until the other person comes online, so they arrive whether or not both phones are awake at the same time. Conversations are end-to-end encrypted with the Signal Double Ratchet over a Noise XX handshake, so the server moves sealed payloads it cannot read, and a key recovered from a phone does not open the messages that came before it. Delivery receipts come from the server; read receipts are encrypted end to end, so the server cannot tell whether a message was read. This is an early beta. Text chat, replies, reactions, edits, deletes, receipts and presence work. Attachments are limited to 40 KB in this build, notifications do not arrive while the app is closed, and multi-device linking and encrypted backup have no screens yet.",
+    "requirements": "Android 8.0 (Oreo) or newer, and a network connection. IMPORTANT: this build reaches its relay only over a private Tailscale network. A phone that is not on that network cannot send or receive. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
     "screenshots": []
   }
 ]
