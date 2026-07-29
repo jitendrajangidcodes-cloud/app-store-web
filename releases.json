@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T02:21:25.627Z",
+  "generatedAt": "2026-07-29T02:31:23.346Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -10,12 +10,12 @@
       "sizeBytes": 73285187
     },
     "cards": {
-      "version": "2.5.0",
+      "version": "2.5.1",
       "versionCode": null,
-      "notes": "Cards 2.5.0 — Background update checks, and no more double-downloading updates\n\n### Features\n- Cards now checks for updates periodically in the background (about every 6 hours) and posts a notification when one is found, in addition to the existing manual \"Check for Updates\" in Settings. Tapping the notification opens the app; the download and install still happen from the Settings sheet.\n\n### Bug fixes\n- The update downloader now persists its in-flight DownloadManager id and re-attaches to a still-running download instead of deleting the partial file and starting over — fixes re-downloading the same update from zero after backgrounding or reopening the app mid-update.\n- The update sheet now re-syncs its progress on resume instead of occasionally showing a frozen progress bar.\n\n",
+      "notes": "Release v2.5.1\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.0.apk",
-      "sizeBytes": 122837048
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.1.apk",
+      "sizeBytes": 123110009
     },
     "ai-scanner": {
       "version": "1.4.1",
