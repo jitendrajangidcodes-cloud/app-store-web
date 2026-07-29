@@ -5,6 +5,13 @@ This file tracks changes to the `app-store-web` hub repo itself (the website,
 individual app's APK releases. Each listed app has its own `RELEASE.md` in its
 own repo for that.
 
+## 2026-07-29 -- Local Sender retired from the catalog
+
+Removed Local Sender from `apps.json`, which removes it from both the website
+and native PNSJY Store catalog. Its historical `localsender` GitHub release and
+APK remain archived and directly accessible; only active store support and
+listing were removed.
+
 ## 2026-07-05 -- Direct-to-hub publishing pattern added
 
 Added a second, simpler release pattern alongside the existing per-app

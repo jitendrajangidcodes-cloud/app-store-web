@@ -146,8 +146,9 @@ read from this one repo; no cross-repo token; app build repos untouched.
 ### F7 — Direct-to-hub publishing pattern
 An app whose `apps.json` `repo` equals this hub publishes its release straight into the hub's
 Releases (no separate `-pub` mirror repo); `sync-releases.sh` skips the mirror step for it.
-Reminder + Cards remain mirrored (they have their own `-pub` repos); ai-scanner, mirrordrive,
-twinclean, localsender are direct-to-hub.
+Reminder + Cards remain mirrored (they have their own `-pub` repos); ai-scanner, mirrordrive and
+twinclean are direct-to-hub. Local Sender's archived hub release remains available but is no
+longer listed in the catalog.
 *Status: BUILT-AWAITING-VERIFY*
 
 ### F8 — Direct in-site feedback → auto-filed GitHub issue

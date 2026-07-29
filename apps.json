@@ -93,22 +93,6 @@
     "screenshots": []
   },
   {
-    "id": "localsender",
-    "name": "Local Sender",
-    "tagline": "Send messages and files between your devices on the same Wi-Fi, end-to-end encrypted.",
-    "category": "Utilities",
-    "beta": true,
-    "platform": "Android",
-    "color": "#3D5AFE",
-    "requiresAccount": false,
-    "icon": "assets/icons/localsender.png",
-    "repo": "jitendrajangidcodes-cloud/app-store-web",
-    "packageId": "com.pnsjy.local_sender",
-    "about": "Local Sender lets your devices talk directly over the same Wi-Fi with no internet, cloud, or account. Discover nearby devices, pair by confirming a matching 6-digit code on both screens, then chat one-to-one or in group rooms and send any file. Everything is end-to-end encrypted with a signed X25519 handshake and AES-256-GCM, and files are checksum-verified on arrival. Conversations and paired devices are scoped per Wi-Fi network and switch automatically as you move between them.",
-    "requirements": "Android 8.0 (Oreo) or newer. Both devices must be on the same Wi-Fi network. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
-    "screenshots": []
-  },
-  {
     "id": "bchat",
     "name": "BChat",
     "tagline": "Private messaging with end-to-end encryption and no phone number.",
