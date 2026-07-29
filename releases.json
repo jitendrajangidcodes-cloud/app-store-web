@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T19:22:14.245Z",
+  "generatedAt": "2026-07-29T19:39:34.771Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -42,12 +42,12 @@
       "sizeBytes": 60317239
     },
     "bchat": {
-      "version": "0.3.0-beta.4",
-      "versionCode": 10,
-      "notes": "BChat 0.3.0-beta.4 - private delivery beyond one device\n\nThis beta completes BChat's public-relay privacy architecture. Message and file\ncontent remains end-to-end encrypted, delivered content is retained only on\nuser devices, and the relay removes bounded pending ciphertext after recipient\nacknowledgement.\n\n### Features\n\n- Public TLS relay with bounded offline ciphertext and encrypted resumable file\n  storage that is deleted after authenticated device delivery.\n- Data-only FCM wake-up so a closed Android app can collect and decrypt pending\n  messages without exposing message content to Google.\n- Accountless QR device linking, signed device revocation, remote local-data\n  wipe, and encrypted contact/group state transfer without copying history.\n- Secure group messaging with membership key rotation and bounded prior epochs.\n- Device-local encrypted attachments, configurable retention, storage usage,\n  readable key-free JSON export, and privacy lifecycle cleanup.\n- Encrypted profile photos and a complete profile screen.\n- Native SMS and messaging-app invite sharing with tap-to-open Android links.\n\n### Bug fixes\n\n- Invalid first-device authorisations no longer create relay account state.\n- The certificate-chain root device can no longer be accidentally unlinked.\n- Oversized linked-device snapshots are split into bounded relay-safe chunks.\n- Remote unlink now clears messages, files, keys, trust pins and profile data in\n  both foreground and closed-app execution.\n- Onboarding no longer asks for obsolete Bluetooth permissions.\n",
+      "version": "0.3.0-beta.5",
+      "versionCode": 11,
+      "notes": "Reliable invites and centralized diagnostics\n\n### Features\n\n- Adds opt-in, privacy-safe centralized diagnostics with bounded offline retry, stable issue deduplication, repeat counts, and a live Google Sheet triage view.\n- Adds accurate live relay lifecycle states and actionable reconnect information in the app and Diagnostics screen.\n- Adds fleet-compatible app identification so multiple apps can safely share one diagnostics registry over time.\n\n### Bug fixes\n\n- Fixes invite links shared through native messaging apps not being recognized.\n- Fixes tapped deep links only prefilling the invite instead of importing the contact.\n- Fixes successful invite navigation appearing to do nothing and makes import failures visible and retryable.\n- Fixes Diagnostics showing a stale disconnected state while the relay was connecting or retrying.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 84281209
+      "sizeBytes": 84629169
     }
   }
 }
