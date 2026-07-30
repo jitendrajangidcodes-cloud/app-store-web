@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T05:44:42.385Z",
+  "generatedAt": "2026-07-30T07:16:26.413Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -42,9 +42,9 @@
       "sizeBytes": 60317239
     },
     "bchat": {
-      "version": "0.3.0-beta.7",
-      "versionCode": 13,
-      "notes": "Polished messaging reliability and usability\n\n### Features\n\n- Reorganized Settings into clear account, notification, privacy, storage, help, and about sections.\n- Added readable and accessible sent, delivered, read, waiting, and failed message indicators.\n- Added accurate live background-notification readiness and cold-launch notification routing.\n\n### Bug fixes\n\n- Kept the connection warning below Android system UI so its message remains readable.\n- Prevented late acknowledgements from moving read messages back to delivered or sent.\n- Queued encrypted delivery and read receipts for retry when a connection is temporarily unavailable.\n- Kept the background worker alive through relay authentication and message processing.\n",
+      "version": "0.3.0-beta.8",
+      "versionCode": 14,
+      "notes": "Make message delivery failures visible automatically\n\n### Features\n\n- Send privacy-safe delivery diagnostics automatically when diagnostic sharing is enabled.\n- Classify relay failures so connection problems can be diagnosed without copying device logs.\n\n### Bug fixes\n\n- Avoid requesting notification permission from Android's headless background isolate.\n- Report secure-session negotiation, repeated decryption, relay connection, notification setup, and background collection failures without including messages, contacts, peer identifiers, ciphertext, or keys.\n- Keep diagnostic reporting best-effort so it can never interrupt messaging.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
       "sizeBytes": 84630129
