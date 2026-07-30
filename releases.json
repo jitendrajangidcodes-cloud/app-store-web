@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-30T13:20:41.009Z",
+  "generatedAt": "2026-07-30T14:02:42.450Z",
   "apps": {
     "reminder": {
-      "version": "2.19.62",
+      "version": "2.19.63",
       "versionCode": null,
-      "notes": "Reliability fixes from the v2.19.61 two-device logs\n\n### Features\n- The diagnostics log now records the exact time each alarm was armed for, a one-line roster of every armed reminder and its next fire time after each reconcile, and a line each time the background worker starts. A missed reminder can now be traced to whether this device was holding an alarm for that moment at all.\n- Duplicate copies of a LAN message are dropped on arrival. Each action was sent three times for reliability and applied three times on the receiving phone.\n\n### Bug fixes\n- Location reminders are no longer reported as having a missing alarm on every check. The check could only see clock alarms, so a perfectly healthy geofence was re-armed endlessly and the health counter permanently showed a failure that was not there.\n- Instant Wi-Fi sync of reminder edits between phones now works. It was sending the entire database in one message on every change, which was far too large to fit, so nothing was ever delivered over Wi-Fi and every edit waited for the cloud.\n- Snoozing or completing a reminder no longer loses track of the alarm it just set. The app could hold an alarm it did not know about, so a reminder deleted or completed on the other phone could still ring here.\n\n",
+      "notes": "Improve reminder reliability diagnostics\n\n### Features\n\n- Add optional privacy-safe delivery telemetry for comparing reminder scheduling and firing across devices.\n- Add a clear Reliability & Privacy section with diagnostics controls in Settings.\n- Record anonymous schedule type, recurrence, expected time, watchdog state, background work, alarm start, and actions.\n- Keep Up Next and Upcoming in one correct effective date/time order, including snoozed reminders.\n- Show more reminders with a compact Today summary and denser cards containing richer schedule and status details.\n\n### Bug fixes\n\n- Preserve reminder correlation across devices with stable anonymous references while excluding reminder text, account details, and locations.\n- Ensure alarm-start reporting does not depend on Firebase session restoration.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.62.apk",
-      "sizeBytes": 73285187
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.63.apk",
+      "sizeBytes": 73498147
     },
     "cards": {
       "version": "2.5.1",
