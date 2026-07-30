@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T11:10:32.828Z",
+  "generatedAt": "2026-07-30T11:54:05.505Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -42,12 +42,12 @@
       "sizeBytes": 60317239
     },
     "bchat": {
-      "version": "0.3.0-beta.9",
-      "versionCode": 15,
-      "notes": "Recover messages after encrypted session mismatch\n\n### Features\n\n- Add a recipient-authenticated relay rejection path for ciphertext that cannot be opened under an obsolete secure session.\n- Preserve the sender outbox copy and automatically re-encrypt it after both devices establish a replacement session.\n\n### Bug fixes\n\n- Stop stale encrypted packets from remaining in the relay queue and poisoning every reconnect.\n- Prevent rejected ciphertext from producing a false delivered tick.\n- Make simultaneous secure-session replacement converge on a working ratchet.\n",
+      "version": "0.3.0-beta.10",
+      "versionCode": 16,
+      "notes": "BChat 0.3.0 beta 10\n\n### Features\n- Automatic encrypted-session recovery when the receiving device rejects stale ciphertext.\n- Backward-compatible relay capability negotiation for recovery receipts.\n\n### Bug fixes\n- Process incoming relay packets in order so simultaneous deliveries cannot corrupt the message ratchet.\n- Prevent concurrent outbox drains and duplicate encryption attempts that left messages pending.\n- Retry rejected messages immediately after replacing the broken session.\n- Ignore late handshake replies after a secure session is already established.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 84630129
+      "sizeBytes": 84630121
     }
   }
 }
