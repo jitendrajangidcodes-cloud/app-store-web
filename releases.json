@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-30T15:33:02.920Z",
+  "generatedAt": "2026-07-30T17:20:44.893Z",
   "apps": {
     "reminder": {
-      "version": "2.19.63",
+      "version": "2.19.64",
       "versionCode": null,
-      "notes": "Improve reminder reliability diagnostics\n\n### Features\n\n- Add optional privacy-safe delivery telemetry for comparing reminder scheduling and firing across devices.\n- Add a clear Reliability & Privacy section with diagnostics controls in Settings.\n- Record anonymous schedule type, recurrence, expected time, watchdog state, background work, alarm start, and actions.\n- Keep Up Next and Upcoming in one correct effective date/time order, including snoozed reminders.\n- Show more reminders with a compact Today summary and denser cards containing richer schedule and status details.\n\n### Bug fixes\n\n- Preserve reminder correlation across devices with stable anonymous references while excluding reminder text, account details, and locations.\n- Ensure alarm-start reporting does not depend on Firebase session restoration.\n\n",
+      "notes": "Cleaner settings and a simpler home screen\n\n### Features\n\n- Simplified the Today dashboard top section so the date, greeting, and stats read more clearly.\n- Improved the Today and Upcoming reminder cards to show richer time, snooze, and detail information in a denser layout.\n- Redesigned the Settings tab to feel cleaner and easier to scan, with a compact summary and a collapsed More section for lower-frequency options.\n\n### Bug fixes\n\n- Improved reminder ordering so Today and Upcoming use the same effective firing order, including snoozed reminders.\n- Kept diagnostics and reliability controls grouped more clearly so the opt-in telemetry setting is easier to find and review.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.63.apk",
-      "sizeBytes": 73498147
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.64.apk",
+      "sizeBytes": 73532247
     },
     "cards": {
       "version": "2.5.1",
