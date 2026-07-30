@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T02:40:06.504Z",
+  "generatedAt": "2026-07-30T04:13:11.351Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -42,12 +42,12 @@
       "sizeBytes": 60317239
     },
     "bchat": {
-      "version": "0.3.0-beta.5",
-      "versionCode": 11,
-      "notes": "Reliable invites and centralized diagnostics\n\n### Features\n\n- Adds opt-in, privacy-safe centralized diagnostics with bounded offline retry, stable issue deduplication, repeat counts, and a live Google Sheet triage view.\n- Adds accurate live relay lifecycle states and actionable reconnect information in the app and Diagnostics screen.\n- Adds fleet-compatible app identification so multiple apps can safely share one diagnostics registry over time.\n\n### Bug fixes\n\n- Fixes invite links shared through native messaging apps not being recognized.\n- Fixes tapped deep links only prefilling the invite instead of importing the contact.\n- Fixes successful invite navigation appearing to do nothing and makes import failures visible and retryable.\n- Fixes Diagnostics showing a stale disconnected state while the relay was connecting or retrying.\n",
+      "version": "0.3.0-beta.6",
+      "versionCode": 12,
+      "notes": "Recover inaccessible encrypted databases safely\n\n### Features\n\n- Validates the encrypted local database before chat repositories start.\n- Adds narrowly scoped recovery that creates a clean encrypted store only when SQLite confirms the existing file cannot be opened with its device key.\n- Disables Android cloud backup and device-transfer backup for BChat's device-only encrypted state to prevent ciphertext being restored without its Android Keystore key.\n- Reports successful database recovery through the privacy-safe centralized diagnostics flow.\n\n### Bug fixes\n\n- Fixes invite imports failing with SQLite code 26 after an inaccessible encrypted database was restored or left behind with a mismatched key.\n- Preserves healthy databases and refuses to delete data for unrelated database, migration, permission, or I/O failures.\n- Removes inaccessible database sidecars and dependent encrypted media during the authorized recovery so stale files cannot break the clean store.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 84629169
+      "sizeBytes": 84630129
     }
   }
 }
