@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-30T17:39:35.104Z",
+  "generatedAt": "2026-07-30T18:07:18.621Z",
   "apps": {
     "reminder": {
-      "version": "2.19.64",
+      "version": "2.20.0",
       "versionCode": null,
-      "notes": "Cleaner settings and a simpler home screen\n\n### Features\n\n- Simplified the Today dashboard top section so the date, greeting, and stats read more clearly.\n- Improved the Today and Upcoming reminder cards to show richer time, snooze, and detail information in a denser layout.\n- Redesigned the Settings tab to feel cleaner and easier to scan, with a compact summary and a collapsed More section for lower-frequency options.\n\n### Bug fixes\n\n- Improved reminder ordering so Today and Upcoming use the same effective firing order, including snoozed reminders.\n- Kept diagnostics and reliability controls grouped more clearly so the opt-in telemetry setting is easier to find and review.\n\n",
+      "notes": "Safer reminder deletion with an undo window\n\nDeleting a reminder no longer removes it the moment you tap Delete. After the\nconfirmation, the reminder disappears from your lists but is held for five\nseconds behind an Undo bar that counts down, and only then is it really\ndeleted. Undo puts it straight back, and nothing was ever written to the\ndatabase in between.\n\nRepeating reminders now ask what you actually want to remove: just the next\noccurrence, which is skipped so the series keeps running, or the whole\nreminder. The choice shows the exact date and time that would be skipped.\n\n### Features\n\n- Five-second undo window on every delete path: swipe, the long-press menu,\n  the Done list, and the Disabled list.\n- Repeating reminders ask \"this occurrence only\" versus \"all occurrences\",\n  with the next fire time named in the dialog.\n- Skipping one occurrence takes the same path a Dismiss takes when the alarm\n  rings, so the skip replicates to the account's other devices.\n- Deletes and skips are recorded in the diagnostics log (identifiers only, no\n  reminder text), so a reminder that disappears can be traced.\n\n### Bug fixes\n\nNo user-facing bug fixes in this release.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.19.64.apk",
-      "sizeBytes": 73532247
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.20.0.apk",
+      "sizeBytes": 73597783
     },
     "cards": {
       "version": "2.5.1",
