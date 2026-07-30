@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T13:07:10.903Z",
+  "generatedAt": "2026-07-30T13:15:23.471Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -40,14 +40,6 @@
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean.apk",
       "sizeBytes": 60317239
-    },
-    "bchat": {
-      "version": "0.3.0-beta.10",
-      "versionCode": 16,
-      "notes": "BChat 0.3.0 beta 10\n\n### Features\n- Automatic encrypted-session recovery when the receiving device rejects stale ciphertext.\n- Backward-compatible relay capability negotiation for recovery receipts.\n\n### Bug fixes\n- Process incoming relay packets in order so simultaneous deliveries cannot corrupt the message ratchet.\n- Prevent concurrent outbox drains and duplicate encryption attempts that left messages pending.\n- Retry rejected messages immediately after replacing the broken session.\n- Ignore late handshake replies after a secure session is already established.\n",
-      "publishedAt": "2026-07-26T16:19:27Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
-      "sizeBytes": 84630121
     }
   }
 }
