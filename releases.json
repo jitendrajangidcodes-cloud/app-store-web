@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T07:16:26.413Z",
+  "generatedAt": "2026-07-30T08:07:04.978Z",
   "apps": {
     "reminder": {
       "version": "2.19.62",
@@ -42,9 +42,9 @@
       "sizeBytes": 60317239
     },
     "bchat": {
-      "version": "0.3.0-beta.8",
-      "versionCode": 14,
-      "notes": "Make message delivery failures visible automatically\n\n### Features\n\n- Send privacy-safe delivery diagnostics automatically when diagnostic sharing is enabled.\n- Classify relay failures so connection problems can be diagnosed without copying device logs.\n\n### Bug fixes\n\n- Avoid requesting notification permission from Android's headless background isolate.\n- Report secure-session negotiation, repeated decryption, relay connection, notification setup, and background collection failures without including messages, contacts, peer identifiers, ciphertext, or keys.\n- Keep diagnostic reporting best-effort so it can never interrupt messaging.\n",
+      "version": "0.3.0-beta.9",
+      "versionCode": 15,
+      "notes": "Recover messages after encrypted session mismatch\n\n### Features\n\n- Add a recipient-authenticated relay rejection path for ciphertext that cannot be opened under an obsolete secure session.\n- Preserve the sender outbox copy and automatically re-encrypt it after both devices establish a replacement session.\n\n### Bug fixes\n\n- Stop stale encrypted packets from remaining in the relay queue and poisoning every reconnect.\n- Prevent rejected ciphertext from producing a false delivered tick.\n- Make simultaneous secure-session replacement converge on a working ratchet.\n",
       "publishedAt": "2026-07-26T16:19:27Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/bchat/bchat.apk",
       "sizeBytes": 84630129
