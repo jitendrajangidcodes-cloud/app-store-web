@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T10:46:14.648Z",
+  "generatedAt": "2026-08-03T12:09:48.635Z",
   "apps": {
     "reminder": {
       "version": "2.22.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 220049199
     },
     "mirrordrive": {
-      "version": "0.13.3",
-      "versionCode": 28,
-      "notes": "Show the app version and PNSJY branding in Settings\n\nSettings now ends with the current app version and the PNSJY store branding, so every\nPNSJY app presents the same footer.\n\n### Features\n\n- The Settings screen now shows the installed app version and a PNSJY brand footer as its\n  last two items, consistent across all PNSJY apps.\n\n### Bug fixes\n\nNo user-facing bug fixes in this release.\n",
+      "version": "0.13.4",
+      "versionCode": 29,
+      "notes": "Release v0.13.4+29\n\n### Features\n- F14 Mirror-delete switch: Added a toggle switch for \"Mirror deletes\" in the mapping creation/editing sheet. Users can now choose whether file deletions are propagated to the other side or kept local/soft-only.\n- F12 Standard ignore list: Integrated automatic filters in the local and Drive scanners to skip syncing system/development files (e.g. .git, node_modules, .DS_Store, Thumbs.db, .thumbnails) ensuring syncs are clean and resilient to locked files.\n- Premium file details sheet: Replaced the simple document details sheet with a rich status dashboard showing local vs Google Drive comparison (presence, size, modified time), MD5 checksum display + copy, and a file deletion action matching row-swipe deletion.\n\n### Bug fixes\n- None.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 106999713
+      "sizeBytes": 107131489
     },
     "twinclean": {
       "version": "1.3.2",
