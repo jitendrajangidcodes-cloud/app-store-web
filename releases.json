@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T12:20:50.079Z",
+  "generatedAt": "2026-08-03T13:05:22.156Z",
   "apps": {
     "reminder": {
       "version": "2.22.0",
@@ -26,9 +26,9 @@
       "sizeBytes": 220049199
     },
     "mirrordrive": {
-      "version": "0.13.5",
-      "versionCode": 30,
-      "notes": "Release v0.13.5+30\n\n### Features\n- None.\n\n### Bug fixes\n- Wrapped the top details and release notes on the Update gate screen inside a scrollable view. This prevents rendering overflow when release notes are long, ensuring the \"Download & install\" button stays visible and clickable on smaller screens.\n",
+      "version": "0.13.6",
+      "versionCode": 31,
+      "notes": "Release v0.13.6+31\n\n### Features\n- Background Duplicate Deletion: Refactored duplicate cleanup to execute asynchronously via WorkManager in a one-off background task. When deleting duplicate files, the app serializes pending deletions and immediately hands the process off to a background isolate. This prevents deletion from pausing or being suspended when the user minimizes or closes the app, improving the user experience for batch operations.\n\n### Bug fixes\n- None.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
       "sizeBytes": 107131489
