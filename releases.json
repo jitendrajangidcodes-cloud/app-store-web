@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T03:22:01.743Z",
+  "generatedAt": "2026-08-03T04:56:49.778Z",
   "apps": {
     "reminder": {
       "version": "2.22.0",
@@ -18,12 +18,12 @@
       "sizeBytes": 123110009
     },
     "ai-scanner": {
-      "version": "1.4.1",
-      "versionCode": 28,
-      "notes": "AI Scanner 1.4.1 — Background update checks, and no more double-downloading updates\n\n### Features\n- AI Scanner now checks for updates periodically in the background (about every 6 hours) and posts a notification when one is found, in addition to the existing manual \"Check for Updates\" in Settings. Tapping the notification opens the app; the download and install still happen from the Settings sheet.\n\n### Bug fixes\n- The update downloader now persists its in-flight DownloadManager id and re-attaches to a still-running download instead of deleting the partial file and starting over — fixes re-downloading the same update from zero after backgrounding or reopening the app mid-update.\n- The update sheet now re-syncs its progress on resume instead of occasionally showing a frozen progress bar.\n",
+      "version": "1.5.0",
+      "versionCode": 29,
+      "notes": "# AI Scanner 1.5.0 — Private screenshots stay private\n\nScreenshots that hold a one-time code, card number, password or ID number are now recognised on the\ndevice and kept out of sight until you ask for them. And when something goes wrong, Settings now\nhas a log of what the app actually did, ready to copy into a bug report.\n\n### Features\n\nPrivate items shield:\n- Codes, card numbers, passwords and ID numbers are detected as screenshots are scanned, entirely\n  on-device (pattern matching plus a checksum test on card-shaped numbers, so order and tracking\n  numbers are not flagged). Nothing is uploaded, as always.\n- Flagged items are blurred behind a lock in the Library grid, search results and Collections. The\n  item stays searchable and tappable — only its pixels are withheld from anyone looking over your\n  shoulder.\n- Opening one keeps the note and the extracted text hidden until you tap Show. The value is written\n  out in the note, so blurring only the picture would not have hidden it.\n- \"Export for dev review\" no longer includes them. That bundle is meant to leave the phone, and it\n  used to zip up every card and password screenshot along with everything else. The export's README\n  now states how many items were withheld.\n- Detection is a best guess, so any item can be marked or unmarked from its own screen, and your\n  decision survives later rescans.\n- Settings > Privacy holds the global on/off switch and \"Rescan for private content\", which checks\n  already-scanned items without re-reading your folder or running the AI model.\n\nDiagnostics log:\n- Settings > Troubleshooting shows a step-by-step trail of what the app did: startup, which folder\n  or album the scan read and how many images were new, permission refusals, model downloads and\n  their resumes, summarizer and embedding failures, update checks and share-sheet handoffs.\n- One tap copies or shares the whole log with the app version and Android version attached. That is\n  the bug report. Every one of those steps could previously fail silently with no way to see why.\n\n### Bug fixes\n\n- The dev-review export bundled private screenshots (cards, passwords, one-time codes) into a file\n  meant for sharing. It now excludes them.\n- Failures in the summarizer, the embedding step, the folder scan, storage permissions, the model\n  download, the update check and the share sheet were all swallowed silently. They are now recorded\n  in the diagnostics log.\n\nNote: screenshots scanned before this update are not marked private until you run\nSettings > Privacy > \"Rescan for private content\" once.\n",
       "publishedAt": "2026-07-05T09:51:29Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/ai-scanner/ai-scanner.apk",
-      "sizeBytes": 219737419
+      "sizeBytes": 220049199
     },
     "mirrordrive": {
       "version": "0.13.3",
