@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T13:05:22.156Z",
+  "generatedAt": "2026-08-03T13:34:05.412Z",
   "apps": {
     "reminder": {
       "version": "2.22.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 220049199
     },
     "mirrordrive": {
-      "version": "0.13.6",
-      "versionCode": 31,
-      "notes": "Release v0.13.6+31\n\n### Features\n- Background Duplicate Deletion: Refactored duplicate cleanup to execute asynchronously via WorkManager in a one-off background task. When deleting duplicate files, the app serializes pending deletions and immediately hands the process off to a background isolate. This prevents deletion from pausing or being suspended when the user minimizes or closes the app, improving the user experience for batch operations.\n\n### Bug fixes\n- None.\n",
+      "version": "0.13.7",
+      "versionCode": 32,
+      "notes": "Release v0.13.7+32\n\n### Features\n- Live Background Duplicate Deletion Progress: Added real-time progress feedback on the Duplicate files screen. When a background deletion is active, the app displays a status card showing deleted counts, total selected copies, a linear progress bar, and failures, automatically presenting a final success SnackBar upon completion.\n\n### Bug fixes\n- None.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 107131489
+      "sizeBytes": 107197025
     },
     "twinclean": {
       "version": "1.3.2",
