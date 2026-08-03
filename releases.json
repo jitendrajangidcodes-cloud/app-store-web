@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T13:42:57.040Z",
+  "generatedAt": "2026-08-03T13:47:45.231Z",
   "apps": {
     "reminder": {
       "version": "2.22.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 220049199
     },
     "mirrordrive": {
-      "version": "0.13.7",
-      "versionCode": 32,
-      "notes": "Release v0.13.7+32\n\n### Features\n- Live Background Duplicate Deletion Progress: Added real-time progress feedback on the Duplicate files screen. When a background deletion is active, the app displays a status card showing deleted counts, total selected copies, a linear progress bar, and failures, automatically presenting a final success SnackBar upon completion.\n\n### Bug fixes\n- None.\n",
+      "version": "0.13.8",
+      "versionCode": 33,
+      "notes": "Release v0.13.8+33\n\n### Features\n- Added Google Drive rename detection to avoid uploading modified/renamed files from scratch.\n- Added custom ignore pattern manager in Settings to filter sync folders/files line-by-line.\n- Added CPU wakelock to keep the phone awake during large background or interactive syncs.\n- Implemented Google Drive resumable streaming uploads in constant memory, preventing Out-Of-Memory (OOM) errors for large files.\n- Run duplicate files deletion in the background with a real-time progress card in the app.\n\n### Bug fixes\n- None.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 107197025
+      "sizeBytes": 107229929
     },
     "twinclean": {
       "version": "1.3.2",
