@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-04T05:58:17.999Z",
+  "generatedAt": "2026-08-04T06:19:02.400Z",
   "apps": {
     "reminder": {
-      "version": "2.23.0",
+      "version": "2.24.0",
       "versionCode": null,
-      "notes": "Release v2.23.0\n\n### Features\n- New App Logo: Implemented a modern 3D multicolor ribbon bell icon.\n- App Theme Overhaul: Aligned light and dark theme colors to match the new icon's electric blue, indigo, and slate palette.\n- Motion Gestures: Added optional gesture-based snooze and dismiss actions (flip to snooze, shake to dismiss).\n- Location Picker History: Added interactive saved locations chips with long-press delete and add-current capabilities in the map picker.\n- Actionable App Widgets: Added Complete and Snooze buttons directly onto the home-screen app widget rows with instant UI feedback and native alarm cancellation.\n\n### Bug fixes\n- Resolved minor layout and deprecation issues, updating obsolete withOpacity calls to withValues.\n- Fixed a possible issue in the widget rendering where row IDs were not mapped, allowing clean complete and snooze events back to the native scheduler.\n\n",
+      "notes": "Release v2.24.0\n\n### Features\n- Completely redesigned Categories tab as a grid view featuring themed category icons and inline Edit/Delete actions. Deletion warning checks for active reminders, automatically falling back to General category.\n- Completely redesigned Upcoming screen with chronological groupings (Overdue, Today, Tomorrow, This Week, Later, Location & Other) with item count badges for streamlined planning.\n- Added a premium segmented sliding view controller to smoothly switch between List View and Calendar View in the Upcoming tab.\n- Redesigned Status and Category filter scroll bars into high-contrast, outline-washed capsule chips that color-coordinate with category accent colors.\n- Implemented adaptive themed launcher icons on Android, dynamically setting a white background in light mode and a black background in dark mode.\n\n### Bug fixes\n- Resolved deprecated withOpacity calls, replacing them with modern withValues API to ensure compilation warning compliance.\n- Fixed a text baseline alignment rendering issue on the category grid card layout.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.23.0.apk",
-      "sizeBytes": 75830115
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.24.0.apk",
+      "sizeBytes": 75863315
     },
     "cards": {
       "version": "2.5.1",
