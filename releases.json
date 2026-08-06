@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-06T06:37:55.129505Z",
+  "generatedAt": "2026-08-06T07:16:58.611Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
-      "versionCode": 142,
-      "notes": "Reminder App v2.24.1 - Fleet Google Sheet Diagnostics & Store Icon Update\n\n### Features\n- Configured central Fleet Diagnostics Google Sheet reporting target (ID `19QEYKjBanEgzMckJgsNaZQVr8JDyXC4jRdRIOD2pKMg`, tab `reminder`).\n- Updated high-resolution store branding asset across app store distribution channels.\n\n### Bug fixes\n- Resolved Dart SDK compatibility constraints for Flutter 3.29.0 execution.\n- Fixed RadioListTile group bindings and null-aware element collection syntax.\n",
-      "publishedAt": "2026-08-06T06:37:48Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/reminder-app-pub/releases/download/v2.24.1/reminder-app-v2.24.1.apk",
+      "versionCode": null,
+      "notes": "Reminder App v2.24.1 - Fleet Google Sheet Diagnostics & Store Icon Update\n\n### Features\n- Configured central Fleet Diagnostics Google Sheet reporting target (ID `19QEYKjBanEgzMckJgsNaZQVr8JDyXC4jRdRIOD2pKMg`, tab `reminder`).\n- Updated high-resolution store branding asset across app store distribution channels.\n\n### Bug fixes\n- Resolved Dart SDK compatibility constraints for Flutter 3.29.0 execution.\n- Fixed RadioListTile group bindings and null-aware element collection syntax.\n\n",
+      "publishedAt": "2026-07-04T09:27:07Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.24.1.apk",
       "sizeBytes": 72598458
     },
     "cards": {
