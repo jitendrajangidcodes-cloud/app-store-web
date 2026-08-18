@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T06:49:39.804Z",
+  "generatedAt": "2026-08-18T06:52:57.289Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -10,12 +10,12 @@
       "sizeBytes": 72598458
     },
     "mirrordrive": {
-      "version": "0.13.8",
-      "versionCode": 33,
-      "notes": "Release v0.13.8+33\n\n### Features\n- Added Google Drive rename detection to avoid uploading modified/renamed files from scratch.\n- Added custom ignore pattern manager in Settings to filter sync folders/files line-by-line.\n- Added CPU wakelock to keep the phone awake during large background or interactive syncs.\n- Implemented Google Drive resumable streaming uploads in constant memory, preventing Out-Of-Memory (OOM) errors for large files.\n- Run duplicate files deletion in the background with a real-time progress card in the app.\n\n### Bug fixes\n- None.\n",
+      "version": "0.14.0",
+      "versionCode": 34,
+      "notes": "# MirrorDrive v0.14.0\n\n### Features\n- Rename detection now runs by default in two-way sync (previously gated behind an unrelated setting, so it never actually activated for most users — renames just created duplicates on Drive instead)\n- Custom ignore patterns now support standard wildcard matching, e.g. `screenshot_*.png`\n\n### Bug fixes\n- Fixed a security issue where a specially-named item in a shared Drive folder could cause files to be written or deleted outside the mapped sync folder\n- Release builds are now signed with a dedicated release key instead of a shared debug key\n- Fixed a case where an interrupted download could corrupt a file and then overwrite the good copy on Drive on the next sync\n- Fixed sync sometimes treating two different Drive files as the same file when they happened to share a name\n- Rename detection no longer risks reverting a rename made directly on Drive\n- Downloads now stream to disk instead of loading the whole file into memory, preventing out-of-memory risk on large files\n- Fixed a rare case where editing a file mid-upload could leave the sync index out of sync with what's actually on Drive\n- Google Docs/Sheets/Slides files in a synced folder are now skipped instead of failing every sync run\n- Drive folder scanning now runs in parallel instead of one subfolder at a time, speeding up sync on deeply nested folders\n\nNote: because release builds are now signed with a new key, this update cannot install automatically over an existing MirrorDrive install — it needs a manual reinstall (uninstall the old app, then install this APK) once. Every release after this one will update normally.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 107229929
+      "sizeBytes": 107961633
     },
     "twinclean": {
       "version": "1.3.2",
