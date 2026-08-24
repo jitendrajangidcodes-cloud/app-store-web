@@ -74,6 +74,23 @@
     "packageId": "com.pnsjy.taash_club",
     "about": "Taash Club brings three iconic Indian card games to mobile: Teen Patti (with Classic, Muflis, AK47, and Cut Joker variants), 13-Card Indian Rummy (with strict pure sequence validation and score tracking), and Teen Do Paanch (3-2-5 trick taking with trump bidding). Play solo against intelligent offline bots or create private tables to play multiplayer games with friends remotely using 6-character room codes. Features provably fair SHA-256 seed verification, customizable player avatars, chip bonuses, and table chat.",
     "requirements": "Android 8.0 (Oreo) or newer. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
-    "screenshots": []
+    "screenshots": [
+      {
+        "src": "assets/screenshots/taash-lobby.jpg",
+        "alt": "Taash Club Lobby with Teen Patti, 13 Card Rummy, and Teen Do Paanch 3-2-5 game modes"
+      },
+      {
+        "src": "assets/screenshots/taash-teenpatti.jpg",
+        "alt": "Teen Patti table gameplay with Chaal, Pack, Show actions and pot tracking"
+      },
+      {
+        "src": "assets/screenshots/taash-rummy.jpg",
+        "alt": "13-Card Indian Rummy table with auto-sorted pure sequences, sets, and joker melds"
+      },
+      {
+        "src": "assets/screenshots/taash-tdp.jpg",
+        "alt": "Teen Do Paanch 3-2-5 trick-taking table with trump bidding and quota progress meters"
+      }
+    ]
   }
 ]
