@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T13:21:13.926Z",
+  "generatedAt": "2026-08-24T13:22:43.418Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -24,6 +24,14 @@
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean.apk",
       "sizeBytes": 60317239
+    },
+    "taashclub": {
+      "version": "1.0.0",
+      "versionCode": 1,
+      "notes": "Taash Club 1.0.0 - Initial Release\n\n### Features\n- Native Flutter Android app with Teen Patti, Indian Rummy (13 cards), and Teen Do Paanch (3-2-5).\n- Offline solo gameplay with bot AI for playing anywhere without internet.\n- Real-time online multiplayer over WebSockets with table creation and private 6-character room codes.\n- Teen Patti game engine supporting Classic, Muflis (low-ball), AK47 (A, K, 4, 7 wild jokers), and Cut Joker variants.\n- Indian Rummy hand validator with pure sequence requirement, joker melds, auto-sorting, and discard/declare flows.\n- Teen Do Paanch 3-player trick-taking game with trump suit selection and 3:2:5 target quotas.\n- Provably fair verification tool with SHA-256 seed commit audits.\n- Player profiles with chip wallets, daily bonus claims, streak multipliers, and gameplay statistics.\n- Table chat with quick preset phrases and haptic feedback.\n- In-app update checker connected to the PNSJY hub.\n- Full offline support and committed portable debug keystore.\n\n### Bug fixes\n- Initial stable release.\n",
+      "publishedAt": "2026-08-24T13:20:56Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
+      "sizeBytes": 55413426
     }
   }
 }
