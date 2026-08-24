@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T17:52:20.942Z",
+  "generatedAt": "2026-08-24T18:09:06.730Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -26,12 +26,12 @@
       "sizeBytes": 60317239
     },
     "taashclub": {
-      "version": "1.0.0",
-      "versionCode": 1,
-      "notes": "Taash Club 1.0.0 - Initial Release\n\n### Features\n- Native Flutter Android app with Teen Patti, Indian Rummy (13 cards), and Teen Do Paanch (3-2-5).\n- Offline solo gameplay with bot AI for playing anywhere without internet.\n- Real-time online multiplayer over WebSockets with table creation and private 6-character room codes.\n- Teen Patti game engine supporting Classic, Muflis (low-ball), AK47 (A, K, 4, 7 wild jokers), and Cut Joker variants.\n- Indian Rummy hand validator with pure sequence requirement, joker melds, auto-sorting, and discard/declare flows.\n- Teen Do Paanch 3-player trick-taking game with trump suit selection and 3:2:5 target quotas.\n- Provably fair verification tool with SHA-256 seed commit audits.\n- Player profiles with chip wallets, daily bonus claims, streak multipliers, and gameplay statistics.\n- Table chat with quick preset phrases and haptic feedback.\n- In-app update checker connected to the PNSJY hub.\n- Full offline support and committed portable debug keystore.\n\n### Bug fixes\n- Initial stable release.\n",
+      "version": "1.0.1",
+      "versionCode": 3,
+      "notes": "Taash Club 1.0.1 - Modern App Icons & Remote Multiplayer Release\n\n### Features\n- Native Flutter Android app with Teen Patti, 13-Card Indian Rummy, and Teen Do Paanch (3-2-5).\n- Real-time online remote multiplayer with WebSocket networking and 6-character room codes.\n- Offline solo play mode against intelligent AI bots.\n- Teen Patti variants including Classic, Muflis (low-ball), AK47 (A, K, 4, 7 wild jokers), and Cut Joker.\n- 13-Card Indian Rummy with pure sequence validation, wildcard jokers, auto-sort, and score settlement.\n- Teen Do Paanch (3-2-5) trick-taking with trump suit bidding (Hukum, Paan, Eent, Chidi) and interactive card exchanges.\n- Modern luxury adaptive launcher icon with deep emerald felt canvas, 3D gold-foil playing cards, and support for all Android shapes across mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi densities.\n- Google Play Store-style listing on PNSJY App Store Web with high-resolution gameplay screenshots and category tabs.\n- Provably fair SHA-256 seed commit audit system and chip wallets with daily claim bonuses.\n- In-app update checker connected to the PNSJY App Store Hub.\n\n### Bug fixes\n- Fixed wire protocol message encoding and decoding for remote table creation and real-time multiplayer actions.\n- Fixed card suit parsing on incoming server messages.\n- Added adaptive icon XML definitions and launcher round icon compatibility for Android 8.0 through Android 15+.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 58345323
+      "sizeBytes": 59122259
     }
   }
 }
