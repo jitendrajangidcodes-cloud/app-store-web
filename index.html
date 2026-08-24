@@ -119,6 +119,12 @@
       <h2>All apps</h2>
       <span id="app-count"></span>
     </div>
+    <div class="category-tabs" id="category-tabs">
+      <button class="cat-pill active" data-cat="all">All</button>
+      <button class="cat-pill" data-cat="Games">Games</button>
+      <button class="cat-pill" data-cat="Productivity">Productivity</button>
+      <button class="cat-pill" data-cat="Utilities">Utilities</button>
+    </div>
     <div class="app-grid" id="app-grid"></div>
   </section>
 
@@ -172,9 +178,11 @@
       ? "download and install, done"
       : "need zero account to use";
 
+  const cards = [];
   for (const app of apps) {
     const card = document.createElement("a");
     card.className = "app-card";
+    card.dataset.category = app.category;
     card.href = `app.html?id=${encodeURIComponent(app.id)}`;
     card.innerHTML = `
       ${app.beta ? `<span class="beta-ribbon">BETA</span>` : ""}
@@ -195,6 +203,7 @@
     `;
     grid.appendChild(card);
     attachTilt(card);
+    cards.push({ el: card, category: app.category });
 
     getRelease(app).then((release) => {
       const badge = card.querySelector("[data-version-badge]");
@@ -213,6 +222,25 @@
     <div class="placeholder-title">Next release lands here<br>— added only when I say so</div>
   `;
   grid.appendChild(placeholder);
+
+  // Category filter tabs
+  const catPills = document.querySelectorAll(".cat-pill");
+  catPills.forEach((pill) => {
+    pill.addEventListener("click", () => {
+      catPills.forEach((p) => p.classList.remove("active"));
+      pill.classList.add("active");
+      const selected = pill.dataset.cat;
+
+      let visibleCount = 0;
+      cards.forEach(({ el, category }) => {
+        const matches = selected === "all" || category === selected;
+        el.style.display = matches ? "flex" : "none";
+        if (matches) visibleCount++;
+      });
+      placeholder.style.display = selected === "all" ? "flex" : "none";
+      countEl.textContent = `${visibleCount} published`;
+    });
+  });
 })();
 </script>
 </body>
