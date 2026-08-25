@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T12:53:00.721Z",
+  "generatedAt": "2026-08-25T13:47:40.752Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -26,12 +26,12 @@
       "sizeBytes": 60317239
     },
     "taashclub": {
-      "version": "1.0.1",
-      "versionCode": 3,
-      "notes": "Taash Club 1.0.1 - Modern App Icons & Remote Multiplayer Release\n\n### Features\n- Native Flutter Android app with Teen Patti, 13-Card Indian Rummy, and Teen Do Paanch (3-2-5).\n- Real-time online remote multiplayer with WebSocket networking and 6-character room codes.\n- Offline solo play mode against intelligent AI bots.\n- Teen Patti variants including Classic, Muflis (low-ball), AK47 (A, K, 4, 7 wild jokers), and Cut Joker.\n- 13-Card Indian Rummy with pure sequence validation, wildcard jokers, auto-sort, and score settlement.\n- Teen Do Paanch (3-2-5) trick-taking with trump suit bidding (Hukum, Paan, Eent, Chidi) and interactive card exchanges.\n- Modern luxury adaptive launcher icon with deep emerald felt canvas, 3D gold-foil playing cards, and support for all Android shapes across mdpi, hdpi, xhdpi, xxhdpi, and xxxhdpi densities.\n- Google Play Store-style listing on PNSJY App Store Web with high-resolution gameplay screenshots and category tabs.\n- Provably fair SHA-256 seed commit audit system and chip wallets with daily claim bonuses.\n- In-app update checker connected to the PNSJY App Store Hub.\n\n### Bug fixes\n- Fixed wire protocol message encoding and decoding for remote table creation and real-time multiplayer actions.\n- Fixed card suit parsing on incoming server messages.\n- Added adaptive icon XML definitions and launcher round icon compatibility for Android 8.0 through Android 15+.\n",
+      "version": "1.1.0",
+      "versionCode": 4,
+      "notes": "Taash Club 1.1.0 - Playable 3-2-5 vs Computer, and Rules You Can Argue With\n\n### Features\n- Rules page for every game, reached from the game card in the lobby. Teen Patti, Rummy and 3-2-5 each get their deal, their rankings or contracts, and the house rules a table can vary.\n- Feedback on any individual rule. If a rule is wrong, unclear, or simply not how your family plays, say so on that rule itself. Notes written offline are kept on the device and sent when you are next online, so a disagreement at the table is never lost.\n- Solo play against the computer now works for Teen Do Paanch (3-2-5): kaat is called, all ten tricks are played out, and the deal is settled against the 3-2-5 contracts.\n- Solo play against the computer now works for Rummy: draw from either pile, discard, drop, and declare, with the computer players drawing, discarding and declaring for themselves. If the cards run out before anyone declares, the deal is settled on the lowest count.\n\n### Bug fixes\n- Fixed 3-2-5 against the computer freezing immediately after the deal. The table appeared, cards were visible, and nothing further happened: the opening turn belonged to a computer player that was never asked to move.\n- Fixed Rummy against the computer dealing a hand and then ignoring every tap. Drawing, discarding, dropping and declaring all did nothing, because only Teen Patti had an offline engine behind it.\n- Fixed the 3-2-5 deck keeping one red and one black seven regardless of the table's house rule. It now keeps the pair the table actually chose, matching the server.\n- Fixed the 3-2-5 setting for sevens describing the opposite of what it does. \"Keep the black sevens\" in fact removed them; the option now names what is removed and which pair is left in play.\n- Fixed Teen Patti wild-card hands being scored differently depending on the order the cards were dealt. An Ace-low run built with a wild could be read as a pair, so the same three cards could win or lose.\n\n### Notes for existing players\n- This release is signed with a new key. Android will not install it over version 1.0.1, so uninstall the old app first and then install this one. Chips, profile and history live on the server and are restored when you sign in again.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 59122259
+      "sizeBytes": 60999107
     }
   }
 }
