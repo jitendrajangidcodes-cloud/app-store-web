@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:53:11.927Z",
+  "generatedAt": "2026-08-25T13:54:55.885Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -24,6 +24,14 @@
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean.apk",
       "sizeBytes": 60317239
+    },
+    "family": {
+      "version": "0.8.0-alpha",
+      "versionCode": null,
+      "notes": "﻿com.pnsjy.familylive · 67.9MB · release-signed · 213 tests\r\nAlso at **https://family.pnsjy.in/download/familylive.apk**\r\n\r\n## The service could never start\r\n\r\nThe plugin does not declare its own foreground service — its manifest carries only the boot and restart receivers — so the app has to declare it, and this app never did. **From Android 14, starting a location foreground service without a matching `foregroundServiceType` declaration throws.**\r\n\r\nThat is almost certainly why the phone never reported while every screen said sharing was on: permissions granted, session live, service unable to start, and nothing anywhere saying so.\r\n\r\n## What now covers the cases you listed\r\n\r\n| Case | How |\r\n| --- | --- |\r\n| Phone locked, app in background | a foreground service is the only mechanism Android offers, and it can now start |\r\n| App killed / swiped from recents | `stopWithTask=\"false\"` — sharing survives a child tidying their task list |\r\n| Phone restarted | auto-start on boot, which was already set and could not work while the service was undeclared |\r\n| No signal | fixes queued on disk, uploaded in order when the network returns |\r\n\r\n## You can now see whether it is actually working\r\n\r\nThe child's screen shows a card reading **\"This phone is reporting\"** or **\"This phone is NOT reporting\"**, read from the platform itself rather than the server. Every other signal came from the API, which can only say a session exists — it cannot know the service failed to start. That gap is what left a family believing a phone was tracked when it was not.\r\n\r\n## How to verify, in order\r\n1. Install on the child's phone, sign in, complete the permission gate — **including the battery exemption**.\r\n2. Check the child screen says **\"This phone is reporting\"**. If it does not, nothing else will work.\r\n3. Lock the phone, wait two minutes, look at the parent's map.\r\n4. Swipe the app out of recents, wait two minutes, look again.\r\n5. Restart the phone, wait a few minutes, look again.\r\n\r\nStep 2 is the one that used to fail silently.\r\n\r\n## Not in this build\r\nCheck-in, push notifications (skipped for now — alerts only show with the app open), iOS, and the backend still runs on the laptop.\r\n\r\n",
+      "publishedAt": "2026-08-25T13:53:06Z",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/family/familylive-v0.8.0-alpha.apk",
+      "sizeBytes": 67941083
     },
     "taashclub": {
       "version": "1.1.0",
