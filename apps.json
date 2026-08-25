@@ -61,6 +61,23 @@
     "screenshots": []
   },
   {
+    "id": "family",
+    "name": "FamilyLive",
+    "tagline": "Live location sharing for a family, with the alert that matters when a phone goes quiet.",
+    "category": "Family",
+    "beta": false,
+    "preRelease": true,
+    "platform": "Android",
+    "color": "#0EA5E9",
+    "requiresAccount": true,
+    "icon": "assets/icons/family.png",
+    "repo": "jitendrajangidcodes-cloud/app-store-web",
+    "packageId": "com.pnsjy.familylive",
+    "about": "FamilyLive shows where a family's phones are, live, on one map. A parent decides that a child's phone shares its location; it then shares continuously in the background. Location history is kept for a rolling window and nothing older is retained. The alert the app exists for is the quiet one: when a device stops reporting, the family is told, because a tracker that simply goes blank is worse than none. Invitations are per-family and expire; there is no public directory and no way to find a stranger. The admin surface is structurally incapable of returning coordinates.",
+    "requirements": "Android 8.0 (Oreo) or newer. Pre-release software under active development -- expect rough edges, and do not rely on it as your only safety measure. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "screenshots": []
+  },
+  {
     "id": "taashclub",
     "name": "Taash Club",
     "tagline": "Classic Indian card games -- Teen Patti, 13-Card Rummy, and Teen Do Paanch, solo or multiplayer.",

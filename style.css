@@ -879,6 +879,24 @@ button:focus-visible {
   pointer-events: none;
 }
 
+/* Pre-release is a stronger claim than beta, so it gets its own colour rather
+   than reusing the beta orange. Amber reads as "caution", not "new and fun" —
+   the point is that the build is unfinished, not that it is exciting. The
+   longer word also needs a tighter ribbon to stay on the card. */
+.beta-ribbon.prerelease {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.42);
+  font-size: 9.5px;
+  letter-spacing: 1.1px;
+  padding: 4px 34px;
+  right: -30px;
+}
+
+.beta-badge.prerelease {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+}
+
 .beta-badge {
   display: inline-block;
   vertical-align: middle;

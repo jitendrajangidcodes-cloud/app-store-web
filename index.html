@@ -119,11 +119,20 @@
       <h2>All apps</h2>
       <span id="app-count"></span>
     </div>
+    <!--
+      Apps and Games are the top split, the way a store shelf actually divides:
+      "Games" is the one category people arrive already knowing they do or do
+      not want. The finer categories stay on each card and on the app page, so
+      nothing is lost by not making every one of them a tab.
+
+      Pre-release is a filter rather than a category because it cuts across
+      both - it says how finished a thing is, not what kind of thing it is.
+    -->
     <div class="category-tabs" id="category-tabs">
       <button class="cat-pill active" data-cat="all">All</button>
-      <button class="cat-pill" data-cat="Games">Games</button>
-      <button class="cat-pill" data-cat="Productivity">Productivity</button>
-      <button class="cat-pill" data-cat="Utilities">Utilities</button>
+      <button class="cat-pill" data-cat="app">Apps</button>
+      <button class="cat-pill" data-cat="game">Games</button>
+      <button class="cat-pill" data-cat="prerelease">Pre-release</button>
     </div>
     <div class="app-grid" id="app-grid"></div>
   </section>
@@ -180,12 +189,22 @@
 
   const cards = [];
   for (const app of apps) {
+    const kind = app.category === "Games" ? "game" : "app";
     const card = document.createElement("a");
     card.className = "app-card";
     card.dataset.category = app.category;
+    card.dataset.kind = kind;
+    card.dataset.prerelease = app.preRelease ? "true" : "false";
     card.href = `app.html?id=${encodeURIComponent(app.id)}`;
+    // Pre-release outranks beta on the ribbon: it is the stronger warning, and
+    // two ribbons on one card would just cover the icon.
+    const ribbon = app.preRelease
+      ? `<span class="beta-ribbon prerelease">PRE-RELEASE</span>`
+      : app.beta
+        ? `<span class="beta-ribbon">BETA</span>`
+        : "";
     card.innerHTML = `
-      ${app.beta ? `<span class="beta-ribbon">BETA</span>` : ""}
+      ${ribbon}
       <div class="row1">
         ${appIconHTML(app, 58)}
         <div class="titles">
@@ -203,7 +222,7 @@
     `;
     grid.appendChild(card);
     attachTilt(card);
-    cards.push({ el: card, category: app.category });
+    cards.push({ el: card, kind, preRelease: !!app.preRelease });
 
     getRelease(app).then((release) => {
       const badge = card.querySelector("[data-version-badge]");
@@ -232,13 +251,20 @@
       const selected = pill.dataset.cat;
 
       let visibleCount = 0;
-      cards.forEach(({ el, category }) => {
-        const matches = selected === "all" || category === selected;
+      cards.forEach(({ el, kind, preRelease }) => {
+        const matches =
+          selected === "all" ||
+          (selected === "prerelease" ? preRelease : kind === selected);
         el.style.display = matches ? "flex" : "none";
         if (matches) visibleCount++;
       });
       placeholder.style.display = selected === "all" ? "flex" : "none";
-      countEl.textContent = `${visibleCount} published`;
+      // "published" is the wrong word for the pre-release shelf - nothing there
+      // is finished, and calling it published is what makes someone trust it.
+      countEl.textContent =
+        selected === "prerelease"
+          ? `${visibleCount} in testing`
+          : `${visibleCount} published`;
     });
   });
 })();
