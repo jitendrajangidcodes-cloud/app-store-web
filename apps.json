@@ -83,6 +83,7 @@
     "tagline": "Classic Indian card games -- Teen Patti, 13-Card Rummy, and Teen Do Paanch, solo or multiplayer.",
     "category": "Games",
     "beta": false,
+    "preRelease": true,
     "platform": "Android",
     "color": "#0D5C3A",
     "requiresAccount": false,
