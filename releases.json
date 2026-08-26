@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T12:26:23.053Z",
+  "generatedAt": "2026-08-26T12:35:44.175Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -26,12 +26,12 @@
       "sizeBytes": 60317239
     },
     "family": {
-      "version": "0.14.0",
-      "versionCode": 15,
-      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## Sharing is now switched on from the phone doing the sharing\n\nThe child's screen has a **Start sharing my location** button. That is the only place it can be: the server refuses to start a session for anyone except the person whose location it is. Nobody gets tracked without switching it on themselves.\n\nA parent can **stop** sharing at any time, from the map. They cannot start it. That asymmetry is the point — stopping sharing is never the dangerous direction.\n\n## Bug fixes\n\n- **Fixed the Share button on the parent's map doing nothing.** 0.13.0 put the control on the parent's side, where the server was always going to refuse it. The button is now on the child's screen, and the parent keeps a Stop button that appears only while sharing is actually on.\n- **Fixed the child's screen describing the opposite of the truth.** It said \"A parent turns this on and off. It can start again at any moment, and you will not be asked\", and \"You cannot switch this off from this app. Only a parent can.\" Neither was true — a parent cannot start sharing at all, and the child can always stop it. Telling a child their location might start flowing without their say-so, when the app makes that impossible, is both frightening and wrong. It now says what actually happens.\n- **Fixed a false \"This phone is NOT reporting\" alarm** appearing while sharing was switched off, directly beneath the app's own card saying nothing was being sent.\n\n## Verified before publishing\n\n`flutter analyze` clean, 213 tests passing, APK signed with the usual release key and 4 KB aligned.\n\n---\n\nAPK: `familylive.apk` · version 0.14.0 (build 15) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
+      "version": "0.15.0",
+      "versionCode": 16,
+      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## The app now tells you when there is a new version\n\nFamilyLive ships outside the Play Store, so nothing was ever going to tell a phone that an update existed. Until this release the app never looked either — a fix could be published and a family would keep running the old build indefinitely, never knowing.\n\nA small bar appears at the top when a newer version is out, with the version, the download size, and an Update button that hands the file to Android's installer. It is a bar and not a wall: an app you rely on should not refuse to show you the map until you have updated.\n\n**This is the last release you will have to go looking for.** From here the app tells you.\n\n## Notes\n\n- It compares the build number the store publishes against the one installed, rather than comparing version text, so a release titled differently from its manifest cannot confuse it.\n- The check never blocks app start. If the store cannot be reached, the app opens exactly as before and simply does not mention updates.\n- Dismissing the bar hides it for that launch only. An update worth mentioning once is worth mentioning next time too.\n\n## Verified before publishing\n\n`flutter analyze` clean, 213 tests passing, APK signed with the usual release key and 4 KB aligned.\n\n---\n\nAPK: `familylive.apk` · version 0.15.0 (build 16) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
       "publishedAt": "2026-08-25T13:53:06Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/family/familylive.apk",
-      "sizeBytes": 71414456
+      "sizeBytes": 71674471
     },
     "taashclub": {
       "version": "1.1.0",
