@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T15:25:02.885Z",
+  "generatedAt": "2026-08-26T15:46:00.129Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -26,12 +26,12 @@
       "sizeBytes": 60317239
     },
     "family": {
-      "version": "0.17.0",
-      "versionCode": 18,
-      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## Bug fixes\n\n- **Fixed being signed out over and over.** \"Your session expired. Sign in again\" appeared regularly, and it was not Google's doing — the app was signing itself out.\n\n  Sessions are kept alive with a token that is exchanged for a fresh one each time, and the server treats a token presented twice as a stolen one and ends the session. The app makes several requests at once, so the moment the short-lived part of a session expired they all failed together and each asked for a new token using the same old one. The first exchange worked; the rest looked exactly like a replayed token, and the server did what it should and closed the session. It happened every single time a session came up for renewal.\n\n  The app now renews once and lets every waiting request share the result.\n\n- **Fixed a session renewal being able to hang indefinitely** on a connection that had gone away, instead of failing so it could be retried.\n\n## Verified before publishing\n\nCovered by a test that fails against the previous build: four simultaneous expiries now produce exactly one renewal. Full suite of 215 tests passing, `flutter analyze` clean, APK signed with the usual release key.\n\n---\n\nAPK: `familylive.apk` · version 0.17.0 (build 18) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
+      "version": "0.18.0",
+      "versionCode": 19,
+      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## Features\n\n### You can ask a child to share\nTap a child and choose **Ask them to share**. Their phone shows the request, and they can **Allow** or say **Not now**. Allowing sends their position straight away and starts sharing, so you can follow rather than being handed one dot that is already out of date.\n\nNothing starts until they agree. You can stop sharing at any time; only they can start it. That is the whole point — nobody in this family gets followed without saying yes first.\n\n### Everyone is told apart at a glance\nEach child now has their own colour and initials, on the map pin, on the accuracy circle and in the list. With more than one child sharing, three \"Recent\" pins used to be three identical dots and the only way to tell them apart was to read the labels on top of each other.\n\nThe colour belongs to the person, not to their place in the list, so nobody changes colour when a sibling joins or stops sharing.\n\n### Your own position on the map\nA plain \"You\" dot, so you can see where a child is relative to you instead of working it out from street names. **Your location is never uploaded and never shared with anyone** — it is drawn on your phone and stays there.\n\n### Directions to a child\nOpens your usual maps app, routed to where they are now. A route cannot follow someone who is moving, so reopen it to catch up — the app says so rather than pretending otherwise.\n\n## Bug fixes\n\n- **The refresh button now behaves like a button.** It spins while it is actually working and tells you when it has finished. Before, it did nothing visible at all: a slow connection, a dead one and a successful refresh looked exactly the same.\n\n## Notes\n\n- A child sees a request while the app is open. If their phone has it closed they will see it next time they open it — alerts for this are the next thing to add.\n\n## Verified before publishing\n\n`flutter analyze` clean, 215 tests passing, APK signed with the usual release key and aligned.\n\n---\n\nAPK: `familylive.apk` · version 0.18.0 (build 19) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
       "publishedAt": "2026-08-25T13:53:06Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/family/familylive.apk",
-      "sizeBytes": 71674471
+      "sizeBytes": 71772967
     },
     "taashclub": {
       "version": "1.1.0",
