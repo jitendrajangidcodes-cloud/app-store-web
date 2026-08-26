@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T04:10:34.964Z",
+  "generatedAt": "2026-08-26T04:25:41.261Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -26,7 +26,7 @@
       "sizeBytes": 60317239
     },
     "family": {
-      "version": "0.9.0-alpha",
+      "version": "0.9.0",
       "versionCode": 9,
       "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\n### Bug fixes\n\n- **Google sign-in now works.** It could not have worked in any previous release: the certificate the release APKs were signed with was never registered with Google, and the server was never told which OAuth client to accept. Google is the only way into this app, so between them those two made it unusable. Both are fixed.\n- **Installing now works.** Every release since 0.1.0 reported itself as version 0.1.0, build 1, because the version was never bumped. Android refuses to install a build carrying the same build number as the one already on the phone, which is what produced *\"There was a problem parsing the package\"*. The version now tracks the release.\n\n### Features\n\n- A real app icon — a location pin on the FamilyLive blue, with a proper adaptive icon so launchers that crop to a circle or a squircle do not cut the point off the pin.\n\n### Before you install\n\nThis release is signed with a **new key**, so Android will not install it over an older FamilyLive. **Uninstall the old app first**, then install this one. Your family, devices and location history live on the server and come back when you sign in.\n\nThe previous signing key existed on one machine, was never backed up, and could not be recovered. The new one is stored in the private source repository so a rebuild is possible from any machine.\n\n### Known limitations\n\n- Push notifications are still dormant: alerts reach an open app over the WebSocket, but not a closed one.\n\n---\n\nAPK: `familylive.apk` · version 0.9.0 (build 9) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
       "publishedAt": "2026-08-25T13:53:06Z",
