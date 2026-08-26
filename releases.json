@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T16:00:36.203Z",
+  "generatedAt": "2026-08-26T16:07:22.865Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -26,9 +26,9 @@
       "sizeBytes": 60317239
     },
     "family": {
-      "version": "0.18.0",
-      "versionCode": 19,
-      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## Features\n\n### You can ask a child to share\nTap a child and choose **Ask them to share**. Their phone shows the request, and they can **Allow** or say **Not now**. Allowing sends their position straight away and starts sharing, so you can follow rather than being handed one dot that is already out of date.\n\nNothing starts until they agree. You can stop sharing at any time; only they can start it. That is the whole point — nobody in this family gets followed without saying yes first.\n\n### Everyone is told apart at a glance\nEach child now has their own colour and initials, on the map pin, on the accuracy circle and in the list. With more than one child sharing, three \"Recent\" pins used to be three identical dots and the only way to tell them apart was to read the labels on top of each other.\n\nThe colour belongs to the person, not to their place in the list, so nobody changes colour when a sibling joins or stops sharing.\n\n### Your own position on the map\nA plain \"You\" dot, so you can see where a child is relative to you instead of working it out from street names. **Your location is never uploaded and never shared with anyone** — it is drawn on your phone and stays there.\n\n### Directions to a child\nOpens your usual maps app, routed to where they are now. A route cannot follow someone who is moving, so reopen it to catch up — the app says so rather than pretending otherwise.\n\n## Bug fixes\n\n- **The refresh button now behaves like a button.** It spins while it is actually working and tells you when it has finished. Before, it did nothing visible at all: a slow connection, a dead one and a successful refresh looked exactly the same.\n\n## Notes\n\n- A child sees a request while the app is open. If their phone has it closed they will see it next time they open it — alerts for this are the next thing to add.\n\n## Verified before publishing\n\n`flutter analyze` clean, 215 tests passing, APK signed with the usual release key and aligned.\n\n---\n\nAPK: `familylive.apk` · version 0.18.0 (build 19) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
+      "version": "0.19.0",
+      "versionCode": 20,
+      "notes": "## Bug fixes\n\n- **Fixed the app being told there was no update when there was one.** The list of published versions is cached for ten minutes by the network it comes from, and the app was reading whichever copy it was handed. So for at least ten minutes after a release — and longer if a phone or network held the file — checking for updates confidently reported that the current version was the newest. The app now always asks for a fresh copy.\n\n  An update check that answers wrongly is worse than one that does not run: it stops you looking.\n",
       "publishedAt": "2026-08-25T13:53:06Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/family/familylive.apk",
       "sizeBytes": 71772967
