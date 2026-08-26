@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T11:02:14.232Z",
+  "generatedAt": "2026-08-26T11:51:07.702Z",
   "apps": {
     "reminder": {
       "version": "2.24.1",
@@ -26,12 +26,12 @@
       "sizeBytes": 60317239
     },
     "family": {
-      "version": "0.12.0",
-      "versionCode": 13,
-      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## Push notifications now work\n\nAlerts reach your phone even when FamilyLive is closed. Until this release they could only reach an app that was already open — which is not an alert, it is a screen you have to be looking at.\n\nYou will be asked once to allow notifications. If you say no, everything else still works; you just have to open Activity to see what happened.\n\nWhat gets pushed:\n\n- A child arrived at, or left, a place\n- A child's phone went quiet\n- An emergency\n- A location request that timed out\n\n## Notes\n\n- Sign out and the phone stops receiving alerts immediately. A notification token is a standing permission to interrupt someone, and it is given up with the session rather than left behind.\n- If a place is paused, it sends nothing.\n- Push failing never blocks the app. A phone that cannot register still shows the map and still reports its position.\n\n## Verified before publishing\n\nInstalled as an upgrade on an Android 15 emulator and launched, with `FirebaseApp initialization successful` in the log and an empty crash buffer — the check that matters for this release, because a missing Firebase config fails at launch rather than at build time. The server reports `configured: true, provider: fcm`, and a test send was accepted by Google's servers.\n\nNot yet verified: a real notification arriving on a real phone. That needs two devices in one family and a place to cross.\n\n---\n\nAPK: `familylive.apk` · version 0.12.0 (build 13) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
+      "version": "0.13.0",
+      "versionCode": 14,
+      "notes": "**Pre-release.** Under active development — do not rely on it as your only safety measure.\n\nInstalls over 0.9.1 and later normally. Coming from **0.8.0 or older, uninstall first** — those were signed with a different key.\n\n## Sharing can now be turned on\n\nA parent can start and stop a child's location sharing from the map: tap **Share** next to their name, choose how long, done. **Stop** ends it immediately.\n\nThis was not possible before, and it is why a family could finish every setup step — invite accepted, all four permissions granted — and still sit on \"Not sharing\" forever. Nothing in the app ever asked the server to start a session, so nobody could switch it on.\n\nDurations come from the server, so the app can never offer a length the server would quietly cut short. \"Until I turn it off\" is there for the ordinary case where there is no reason to pick a number.\n\n## Bug fixes\n\n- **Fixed a false \"This phone is NOT reporting\" alarm on the child's screen.** With sharing switched off, the background service is *supposed* to be stopped — but the warning fired anyway, in red, directly beneath the app's own card saying nothing was being sent. Two panels contradicting each other, with the alarming one wrong. That is how a person learns to ignore the warning that matters, so it now stays quiet unless sharing is genuinely on and the service genuinely is not running.\n\n## Known limitations\n\n- Push notifications reach a closed app, but no one has yet watched an arrival alert land on a locked screen end to end.\n\n## Verified before publishing\n\n`flutter analyze` clean, full test suite passing, APK signed with the usual release key and 4 KB / 16 KB aligned.\n\n---\n\nAPK: `familylive.apk` · version 0.13.0 (build 14) · Android 7.0+\nSigning certificate SHA-1: `c8:de:b7:d1:49:82:d6:b7:82:bf:6a:fd:cc:51:ca:f0:61:9f:88:b2`\n",
       "publishedAt": "2026-08-25T13:53:06Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/family/familylive.apk",
-      "sizeBytes": 71398004
+      "sizeBytes": 71414388
     },
     "taashclub": {
       "version": "1.1.0",
