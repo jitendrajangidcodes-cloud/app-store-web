@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-08-26T13:20:59.541Z",
+  "generatedAt": "2026-08-26T14:12:07.593Z",
   "apps": {
     "reminder": {
-      "version": "2.24.1",
+      "version": "2.25.0",
       "versionCode": null,
-      "notes": "Reminder App v2.24.1 - Fleet Google Sheet Diagnostics & Store Icon Update\n\n### Features\n- Configured central Fleet Diagnostics Google Sheet reporting target (ID `19QEYKjBanEgzMckJgsNaZQVr8JDyXC4jRdRIOD2pKMg`, tab `reminder`).\n- Updated high-resolution store branding asset across app store distribution channels.\n\n### Bug fixes\n- Resolved Dart SDK compatibility constraints for Flutter 3.29.0 execution.\n- Fixed RadioListTile group bindings and null-aware element collection syntax.\n\n",
+      "notes": "## Bug fixes\n\n- **Fixed repeating reminders firing years before their start date.** A reminder set for a date in the future with a repeat rule — \"check the car battery, 1 April 2029, every day\" — rang the next morning, and every morning after that. The start date was read, passed to the repeat logic, and then ignored by every rule except intervals, so daily, weekly, monthly and yearly all counted from today and the chosen date only ever set the time of day.\n\n- **Every reminder now takes over the screen, whatever its priority.** Normal reminders arrived as a quiet notification in the tray that was easy to miss entirely — and a missed reminder is indistinguishable from a broken one. Priority now decides how insistent the alert is and whether it survives quiet hours, never whether you are interrupted at all.\n\n  This needed the notification channel to be recreated. Android fixes a channel's importance when it first makes it and ignores every later change, so raising it in the app alone would have shipped a fix that did nothing on any phone that already had Reminder installed.\n\n- **Location reminders now leave a trace in the diagnostics log.** Every other part of the app records what it did — scheduling, syncing, alarms, the watchdog — and geofencing recorded nothing, so \"location reminders don't work\" produced a log in which location was the one thing invisible. It now says whether a place was registered, or refused for want of \"Allow all the time\" location, or rejected by Play services and why.\n\n## Features\n\n- **New app icon.** The old one was a six-colour gradient bell on a white tile: nothing held its shape at the size a launcher actually draws, and the white tile disappeared into light wallpapers. It is now a single bell on the app's indigo, legible small.\n\n## Notes\n\n- If location reminders are not firing, the usual cause is Location permission set to \"While using the app\". Android will not deliver a place alert without **Allow all the time**, and the app refuses to save a location reminder without it rather than creating one that silently never fires.\n\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.24.1.apk",
-      "sizeBytes": 72598458
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder_app.apk",
+      "sizeBytes": 73067420
     },
     "mirrordrive": {
       "version": "0.15.0",
