@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T11:01:07.335Z",
+  "generatedAt": "2026-08-27T11:44:14.516Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.4.0",
-      "versionCode": 8,
-      "notes": "Taash Club 1.4.0 - Your own name at the table, and mute where you can reach it\n\n### Features\n- Mute is on the table itself now, next to chat. One tap silences everything; hold it to control music, card sounds and vibration separately. It used to live only in Settings, which is three taps away from a hand in progress.\n- The middle scoreboard shows what you have collected this round as well as your running total, and names your own row \"Aap\". Before it showed only the total, which does not move until a round is scored.\n- Three dots run beside \"Aapki baari\" while the table is waiting on you.\n- Picking a game is now a choice rather than a default. Nothing is selected until you tap a tile.\n- Kali Begum can be chosen from the guided setup, with its stakes and four seats.\n\n### Bug fixes\n- Fixed being seated as \"Player 098D\" instead of your own name. The first-run name box was filled in with a generated placeholder and invited you to tap past it, so people were named a serial number without realising they had been asked. It now starts empty, and anyone still carrying a placeholder is asked again.\n- Fixed the guided setup still offering Teen Patti and Rummy, which were removed two releases ago and had no screen behind them.\n- Fixed the setup summary offering a \"Variant\" row for a game that no longer exists.\n\n### Notes for existing players\n- If your name still shows as \"Player\" and some letters, the app will ask you for a real one the next time you open it. Everything else is kept.\n",
+      "version": "1.4.1",
+      "versionCode": 9,
+      "notes": "Taash Club 1.4.1 - Card sounds that actually play, and a way to prove it\n\nCard sounds were not playing on a real phone. Everything that could be checked\nfrom a desk looked correct: the samples were in the APK, the audio plugin was in\nthe build, the files were valid 16-bit PCM, and roughly fifty call sites fired at\nthe right moments. The fault was in how the effects were played, and it was\ninvisible because every failure ended in an empty catch block.\n\n### Features\n\n- Awaaz sheet ab \"Test\" button deta hai. Ek tap, saari awaazein bajti hain, aur\n  agar koi nahi baji to naam ke saath batata hai ki kaunsi. \"Koi awaaz nahi aa\n  rahi\" ab ek aisi report hai jispe kaam ho sakta hai.\n- Audio failures are reported instead of swallowed. The sound sheet shows the\n  most recent one, and it is written to the device log.\n\n### Bug fixes\n\n- Card sounds now play through the low-latency path, which is SoundPool on\n  Android. The default mode builds and prepares a media player for every single\n  play; for four-to-thirty kilobyte blips fired as fast as cards are tapped that\n  is both slow and unreliable, and when it fails the sound simply never arrives.\n  Table music stays on the streaming path, which is the only one that can loop a\n  half-megabyte track.\n- Every effect is loaded once at startup rather than at the moment it is needed.\n  Preparing a sample when it is first required is what made the first card of\n  each game silent.\n- The audio context is set once, globally, before any player exists. Previously\n  only the music player carried one, so the effect players ran under whatever the\n  plugin defaulted to and the two competed for audio focus.\n- Playing an effect no longer calls stop() on a player that has never been given\n  a source. If that threw, the empty catch swallowed it and the sound was lost.\n- Effect volume raised from 0.75 to 0.9. The samples are short and were sitting\n  under the table music.\n\n### Notes\n\nAudio sample integrity is now covered by tests: every sound in the enum must\nexist, be over a kilobyte, and be 16-bit mono PCM that Android can decode. A\nmissing or malformed sample fails the build instead of shipping as silence.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62089654
+      "sizeBytes": 62106038
     }
   }
 }
