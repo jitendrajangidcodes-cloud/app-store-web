@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T04:41:29.070Z",
+  "generatedAt": "2026-08-27T06:17:03.927Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.2.1",
-      "versionCode": 6,
-      "notes": "Taash Club 1.2.1 - The trick now gathers to whoever won it, and Kali Begum counts in minus\n\n### Features\n- Kali Begum scores in minus, the way it is written on a paper at a real table. Taking the queen shows as -12, a heart as -1, and the player closest to zero is winning. A column of positive numbers where the smallest one wins reads backwards, which is the single most confusing thing this game can do on a screen.\n- Dodging every trick in a round now shows as a gain of +5 rather than a subtraction, because that is what it is.\n- The table pauses for about three seconds after every trick, so you can see who took what before the next card appears.\n\n### Bug fixes\n- Fixed the cards staying on the table after a trick was finished, with the next player being asked to play around them. The winning card now lights up and all the cards fly to whoever won them, and the table clears itself. This animation had never once run on a device: the table was never told the trick had ended, so the screen had no moment to start it from. It affected 3-2-5 exactly as much as Kali Begum.\n- Fixed a card being playable while the previous trick was still on the table, which is what made the table look like it had skipped a turn.\n- Fixed the Kali Begum rules page and scoreboard saying the lowest score wins, which is no longer how the score is shown.\n\n### Notes for existing players\n- Nothing to do. Scores from an unfinished game are not carried over, so start a fresh game if a round is in progress.\n",
+      "version": "1.3.0",
+      "versionCode": 7,
+      "notes": "Taash Club 1.3.0 - Kali Begum online, and the last card of a trick is finally visible\n\n### Features\n- Kali Begum can now be played online against other people, not only against the computer. Four seats, and the server deals, enforces the rules and keeps the score, so nobody's app can decide it won a trick it did not.\n- Online tables fill with computer players until real ones arrive, so a game can start immediately either way.\n- The server refuses any card that is not legal - following the led suit, and the bar on leading hearts before they are broken - rather than trusting the app to have greyed it out.\n- Both house rules travel with the table online: Kali Begum or Laal Begum, and the score limit the game ends at.\n- Between rounds, an online table deals the next one on its own clock and says so, instead of showing a button that only one of four players could meaningfully press.\n\n### Bug fixes\n- Fixed the last card of a trick never appearing on the table. The fourth card went straight from a hand to nowhere, because the trick was resolved and cleared in the same instant it was completed. The complete trick is now shown, then gathered to whoever won it. This affected 3-2-5 exactly as much as Kali Begum.\n- Fixed being able to play a fifth card into a finished trick on an online table.\n- Fixed a round score of zero being able to display as \"-0\".\n\n### Notes for existing players\n- Online Kali Begum needs the server that ships with this release. If tables do not appear, the server has not been restarted yet.\n- Solo play against the computer is unchanged and needs nothing.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62073038
