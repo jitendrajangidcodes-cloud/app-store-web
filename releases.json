@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T12:04:51.828Z",
+  "generatedAt": "2026-08-27T15:17:29.772Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.4.2",
-      "versionCode": 10,
-      "notes": "Taash Club 1.4.2 - The sound files themselves were silent\n\nEvery sound in the app has been silent since sounds were added, and the cause\nwas not in the app at all. The tool that generates the samples wrote the WAV\n\"data\" chunk tag but never its size field. Node zero-fills a new buffer, so all\neight files declared \"zero bytes of audio\" while carrying a complete payload.\n\nSuch a file is a structurally valid WAVE. It opens, it reports the right format,\nthe right sample rate, the right bit depth, and the right length on disk - which\nis why nothing caught it, including the test added in 1.4.1 to catch exactly\nthis class of problem. But a decoder that honours the declared data size, which\nis every correct one including Android's, reads no samples and plays nothing.\nNo error is raised. There is simply nothing to play.\n\nThis also means the background music has never played either.\n\n### Features\n\n- Har action ki apni awaaz, ab sach mein. Patta chalna, haath jeetna, kaat,\n  aapki baari, jeet aur haar - sab alag lambai aur alag sur ke saath.\n- Table music ab bajta hai. Baara second ka halka loop.\n\n### Bug fixes\n\n- tool/make-audio.mjs now writes the data chunk size. All eight samples have\n  been regenerated and each one verified to contain the audio it declares.\n- Tests now parse the data chunk instead of trusting the format header, and\n  assert that the declared size matches the payload that follows. The previous\n  version of that test passed on all eight silent files.\n- A second test asserts the effects are actually distinguishable from one\n  another, so a future change cannot quietly collapse them into one sound.\n\n### Notes\n\nIf sounds are still missing after this, the sound sheet added in 1.4.1 - long\npress the speaker icon - has a Test button that plays every effect and names any\nthat fail.\n",
+      "version": "1.5.0",
+      "versionCode": 11,
+      "notes": "Taash Club 1.5.0 - A clock on every turn, and fireworks when the round is yours\n\nKali Begum now has a one-minute clock on each turn and a proper end-of-round\nmoment. The clock is the more important of the two: playing against computers,\na hand could sit untouched for ever, because the bots only move after you do.\n\n### Features\n\n- Har turn par ek minute ka clock, Kali Begum mein. Number bhi dikhta hai aur\n  ek patli si bar bhi, taaki ek nazar mein pata chale kitna waqt bacha hai.\n- Aakhri das second mein halki si tick-tick, sirf aapki baari par. Doosre ki\n  baari par tick karna bekaar hai - aap kuch kar hi nahi sakte.\n- Waqt khatam hone par card apne aap chal jaata hai, niyam ke hisaab se. Sabse\n  kam nuksaan wala legal card chunta hai, koi bhi random card nahi.\n- Round jeetne par aatishbaazi - teen shells, crackle ke saath, aur oopar se ek\n  chamakta hua arpeggio. Haarne par chhota sa utarta hua sur, bas itna hi.\n- Table music round ke ending par apne aap dheema ho jaata hai, taaki aatishbaazi\n  saaf sunai de.\n\n### Bug fixes\n\n- The turn clock is now shown in Kali Begum at all. It existed and was wired\n  into 3-2-5 only, so one game had a visible countdown and the other did not.\n- The clock now appears when playing offline. Neither offline engine published\n  a deadline, so the countdown rendered nothing whenever the opponents were\n  computers - which is most of the time.\n- The offline clock stops while a trick is being shown or gathered. Without\n  that, a timer armed for the player who completed the trick fires moments\n  later and plays a card for whoever is on turn by then, giving that player no\n  time at all.\n- The clock does not restart when unrelated things change on the table. It is\n  keyed to the seat on turn, so a player keeps the minute they were given.\n\n### Notes\n\nThe deadline is an absolute time, not a countdown the phone runs itself. A\nphone that sleeps for twenty seconds comes back to the deadline it left rather\nthan to a fresh minute - the same rule the online clock has always followed.\n\nThe one-minute default now matches on the server too, and the Kali Begum pass\nclock is capped at ninety seconds rather than three times the turn length.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62106038
+      "sizeBytes": 62283832
     }
   }
 }
