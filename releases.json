@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T06:17:03.927Z",
+  "generatedAt": "2026-08-27T08:14:24.488Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.3.0",
-      "versionCode": 7,
-      "notes": "Taash Club 1.3.0 - Kali Begum online, and the last card of a trick is finally visible\n\n### Features\n- Kali Begum can now be played online against other people, not only against the computer. Four seats, and the server deals, enforces the rules and keeps the score, so nobody's app can decide it won a trick it did not.\n- Online tables fill with computer players until real ones arrive, so a game can start immediately either way.\n- The server refuses any card that is not legal - following the led suit, and the bar on leading hearts before they are broken - rather than trusting the app to have greyed it out.\n- Both house rules travel with the table online: Kali Begum or Laal Begum, and the score limit the game ends at.\n- Between rounds, an online table deals the next one on its own clock and says so, instead of showing a button that only one of four players could meaningfully press.\n\n### Bug fixes\n- Fixed the last card of a trick never appearing on the table. The fourth card went straight from a hand to nowhere, because the trick was resolved and cleared in the same instant it was completed. The complete trick is now shown, then gathered to whoever won it. This affected 3-2-5 exactly as much as Kali Begum.\n- Fixed being able to play a fifth card into a finished trick on an online table.\n- Fixed a round score of zero being able to display as \"-0\".\n\n### Notes for existing players\n- Online Kali Begum needs the server that ships with this release. If tables do not appear, the server has not been restarted yet.\n- Solo play against the computer is unchanged and needs nothing.\n",
+      "version": "1.4.0",
+      "versionCode": 8,
+      "notes": "Taash Club 1.4.0 - Your own name at the table, and mute where you can reach it\n\n### Features\n- Mute is on the table itself now, next to chat. One tap silences everything; hold it to control music, card sounds and vibration separately. It used to live only in Settings, which is three taps away from a hand in progress.\n- The middle scoreboard shows what you have collected this round as well as your running total, and names your own row \"Aap\". Before it showed only the total, which does not move until a round is scored.\n- Three dots run beside \"Aapki baari\" while the table is waiting on you.\n- Picking a game is now a choice rather than a default. Nothing is selected until you tap a tile.\n- Kali Begum can be chosen from the guided setup, with its stakes and four seats.\n\n### Bug fixes\n- Fixed being seated as \"Player 098D\" instead of your own name. The first-run name box was filled in with a generated placeholder and invited you to tap past it, so people were named a serial number without realising they had been asked. It now starts empty, and anyone still carrying a placeholder is asked again.\n- Fixed the guided setup still offering Teen Patti and Rummy, which were removed two releases ago and had no screen behind them.\n- Fixed the setup summary offering a \"Variant\" row for a game that no longer exists.\n\n### Notes for existing players\n- If your name still shows as \"Player\" and some letters, the app will ask you for a real one the next time you open it. Everything else is kept.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62073038
+      "sizeBytes": 62089654
     }
   }
 }
