@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T21:05:29.982Z",
+  "generatedAt": "2026-08-28T02:35:23.719Z",
   "apps": {
     "reminder": {
       "version": "2.25.0",
@@ -10,12 +10,12 @@
       "sizeBytes": 73067420
     },
     "mirrordrive": {
-      "version": "0.15.0",
-      "versionCode": 35,
-      "notes": "# Mirror v0.15.0\n\n### Features\n- App renamed \"Mirror\" (from \"MirrorDrive\"/\"Mirror Drive\") in the launcher, app title, and app-store listing. Package id and OAuth client are unchanged, so this update installs normally over the existing app.\n- Mapping backup now lives in Drive's hidden App Data folder, one file per device install, so the same Google account signed into two phones can no longer have one phone's auto-backup silently overwrite the other's saved mappings.\n- A restore picker (Settings, or offered automatically right after a fresh sign-in with no local mappings) lists every device's backup under the account and lets you choose which one to restore.\n- Mapping backup now saves automatically on every add/edit/delete, not just when manually tapping \"Back up\" in Settings.\n- Optional fleet diagnostics reporting (Settings > Troubleshooting): sends sanitized failure and background-sync delivery signals to help diagnose device-specific issues remotely. Off by default; never sends mapping paths, file names, or account details.\n- Removed the \"beta\" label from the app-store listing and the in-app sign-in screen.\n\n### Bug fixes\n- Google Sign-In on release builds no longer fails right after install (the v0.14.0 signing-key rotation needed its new SHA-1 registered on the OAuth client; done).\n- Mapping backups now actually persist across an uninstall/reinstall. Previously the backup/restore mechanism existed but was never triggered automatically, so a reinstall lost every mapping.\n",
+      "version": "0.15.1",
+      "versionCode": 36,
+      "notes": "MirrorDrive 0.15.1 - Diagnostics finally have somewhere to go\n\nThe app has recorded technical failures for a long time and has never once been\nable to send them. They were posted to a Tailscale hostname, on a tailnet no\nphone was ever a member of, with no server behind it. Every incident queued on\nthe device to its hundred-item cap and was then dropped.\n\nNothing about the reporting changed here, because nothing about it was wrong.\nIt now has an address that exists.\n\n### Features\n\n- Diagnostics are sent to diagnostics.pnsjy.in, a real relay reached through\n  the same tunnel as everything else. Consent and content are unchanged:\n  allow-listed technical failures only, never file contents, paths or account\n  state.\n\n### Bug fixes\n\n- The relay address pointed at a tailnet host that resolves nowhere. Every\n  incident this app has ever recorded was queued and discarded.\n- Removed two unused constants naming a Google Sheet that incidents do not go\n  to. Nothing read them, and anyone reading the file would reasonably have\n  believed otherwise.\n\n### Notes\n\nDIAGNOSTICS_RELAY still overrides the address at build time, so a debug build\ncan point at a local instance.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
-      "sizeBytes": 108166064
+      "sizeBytes": 108165980
     },
     "twinclean": {
       "version": "1.3.2",
