@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T09:34:13.780Z",
+  "generatedAt": "2026-08-28T10:52:06.722Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.6.1",
-      "versionCode": 14,
-      "notes": "Taash Club 1.6.1 - One way to start a game, not three\n\n1.6.0 fixed playing with friends. This finishes the job it started: the screen\nyou actually land on still offered the old way of doing it.\n\nThe lobby carried a \"Create Table\" button that asked for a chip stake and a\npublic-or-private toggle - neither game uses chip stakes - and a floating \"Set\nup a game\" button sat on top of it opening a completely different flow. Two\nbuttons, two flows, and whichever one you pressed first became your idea of how\nthe app works. One of those ideas was wrong.\n\n### Features\n\n- Ek hi \"New game\" button. Dabao, game chuno, phir chuno kaun khel raha hai -\n  computer, apne apne phone par dost, ya sab ek hi phone par. Bas.\n- Join Code alag rehta hai, kyunki wo alag kaam hai - kisi aur ki table par\n  jaana, apni banana nahi.\n\n### Bug fixes\n\n- Removed the boot-stake create-table sheet. It asked for a chip stake that\n  neither 3-2-5 nor Kali Begum uses, and a private toggle that the invite link\n  makes meaningless.\n- Removed the floating \"Set up a game\" button that duplicated the lobby's own\n  start button with different questions behind it.\n\n### Notes\n\nNothing about how a game is played changed. This is only about how one is\nstarted: pick the game, pick who is playing, go.\n",
+      "version": "1.7.0",
+      "versionCode": 15,
+      "notes": "Taash Club 1.7.0 - Your name, your session, and the game you left running\n\nFour things from playing the app on a phone.\n\n### Features\n\n- Google se login karne par naam wahi se aata hai. Ab dobara \"What should we\n  call you?\" nahi poochha jayega - jo naam Google par hai, wahi seat par dikhega.\n- Solo game band ho jaye - galti se, ya phone ne app hi band kar diya - to ab\n  wapas milta hai. Lobby ke upar \"Adhoora game\" dikhega, Resume dabao aur wahi\n  se chalu, wahi patte, wahi score.\n- Login ab zaroori hai, aur ek baar karne ke baad saal bhar chalta hai.\n\n### Bug fixes\n\n- The name screen appeared even for signed-in players. It was decided once,\n  while the app was starting, which is before the signed-in profile arrives back\n  from the server - at that moment the local profile is still the generated\n  \"Player 098D\", so the answer was yes and nothing ever asked again when the\n  real name landed a moment later. It now follows the profile as it changes.\n- A solo game was held only in memory, so closing the app threw away a round in\n  progress with no warning. Every hand, the trick on the table, whose turn it is\n  and the running totals are now saved after each card.\n- A disconnected player's turn was played for them after 20 seconds instead of\n  the 60 everyone else gets. Backgrounding the app to take a call counted as\n  leaving. Their seat was never actually at risk - the server holds it while\n  they are in a hand - only their turn was.\n\n### Notes\n\nOnline and pass-and-play games already resumed: the server keeps the seat and\nputs you back at the table when you reconnect. This release gives the solo game\nthe same behaviour, which is the only place it was missing.\n\nA saved game that cannot be read is discarded rather than retried, so a\nhalf-written file cannot stop the app from opening.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62082563
+      "sizeBytes": 62115331
     },
     "cards": {
       "version": "2.5.1",
