@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T09:25:22.285Z",
+  "generatedAt": "2026-08-28T09:34:13.780Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.6.0",
-      "versionCode": 13,
-      "notes": "Taash Club 1.6.0 - Playing with friends actually works now\n\nThree ways to start a game, and two of them were broken.\n\n\"Everyone on their own phone\" filled every other seat with a computer the\ninstant the table was created. The table was full before the invite was even\nsent, so a friend who tapped it found nowhere to sit - and from your side it\nlooked like a game against bots you never asked for. One line decided that, and\nit was right for the other two modes.\n\nThere was also no waiting room. Once a table existed the game board was shown\nwhatever its state, so you sat looking at an empty table with no code, no\ninvite, no list of who had arrived and nothing saying anyone was expected.\n\n### Features\n\n- Dost ko ab link bhejo. WhatsApp par bhejo, wo tap kare, aur seedha table par\n  aa jaye - code type karne ki zaroorat nahi. App na ho to link ek page kholta\n  hai jahan code bada likha hota hai aur install ka button hota hai.\n- Naya waiting room: kaun aa gaya, kitni seat baaki, table ka code, aur share\n  button - sab ek jagah. Sab aate hi game apne aap shuru.\n- \"Kitne dost aa rahe hain?\" - ab ye poochha jaata hai. Baaki seats computer\n  bhar lega, aur screen batati hai kitne log aur kitne computer honge.\n\n### Bug fixes\n\n- Playing with friends no longer fills their seats with computers. Seats are\n  held for the number of friends invited, and only what is left over is filled.\n- A table that has not dealt yet shows the waiting room instead of an empty\n  game board.\n- The players step asked a question with one possible answer - both games have\n  a fixed seat count - so it now asks the one that matters.\n\n### Notes\n\nThe invite link is a real Android App Link, verified against this app's release\nsigning certificate. A debug build will not open links automatically; it falls\nback to the web page, which shows the code. That is expected.\n\nThe link carries the code in its text as well as its address, so an invite that\nlands somewhere links do not work is still usable by typing the code.\n",
+      "version": "1.6.1",
+      "versionCode": 14,
+      "notes": "Taash Club 1.6.1 - One way to start a game, not three\n\n1.6.0 fixed playing with friends. This finishes the job it started: the screen\nyou actually land on still offered the old way of doing it.\n\nThe lobby carried a \"Create Table\" button that asked for a chip stake and a\npublic-or-private toggle - neither game uses chip stakes - and a floating \"Set\nup a game\" button sat on top of it opening a completely different flow. Two\nbuttons, two flows, and whichever one you pressed first became your idea of how\nthe app works. One of those ideas was wrong.\n\n### Features\n\n- Ek hi \"New game\" button. Dabao, game chuno, phir chuno kaun khel raha hai -\n  computer, apne apne phone par dost, ya sab ek hi phone par. Bas.\n- Join Code alag rehta hai, kyunki wo alag kaam hai - kisi aur ki table par\n  jaana, apni banana nahi.\n\n### Bug fixes\n\n- Removed the boot-stake create-table sheet. It asked for a chip stake that\n  neither 3-2-5 nor Kali Begum uses, and a private toggle that the invite link\n  makes meaningless.\n- Removed the floating \"Set up a game\" button that duplicated the lobby's own\n  start button with different questions behind it.\n\n### Notes\n\nNothing about how a game is played changed. This is only about how one is\nstarted: pick the game, pick who is playing, go.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62410303
+      "sizeBytes": 62082563
     },
     "cards": {
       "version": "2.5.1",
