@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T11:06:14.913Z",
+  "generatedAt": "2026-08-28T11:52:24.825Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.7.1",
-      "versionCode": 16,
-      "notes": "Taash Club 1.7.1 - The \"how many friends\" question was never actually asked\n\n1.6.0 added a question to the new-game flow: how many friends are joining, so\nthe remaining seats can be filled with computers and no more. The arithmetic\nbehind it was right and tested. The step itself never appeared.\n\nThe flow builds its step list with \"skip the seat-count question when the game\nhas a fixed number of seats\", and both games do. So the question was skipped,\nthe answer stayed on its default of one, and every remote table from 1.6.0 to\n1.7.0 was built for exactly one friend no matter how many you meant to invite.\n\n### Features\n\n- \"Kitne dost aa rahe hain?\" ab sach mein poochha jaata hai. Do dost bulane hain\n  to do seat rukengi; ek bulana hai to ek seat aur ek computer.\n\n### Bug fixes\n\n- The friends step is now part of the flow for any remote table, fixed seat\n  count or not. For a fixed-seat game the question is not \"how many seats\" but\n  \"how many of those seats are people\", which is a different question that had\n  no way of being asked.\n- It is asked on a first run too. Everything else trimmed from the first run has\n  a working default; this one does not, because a remote table cannot be built\n  without it.\n\n### Notes\n\nThe tests added in 1.6.0 checked that a given friend count produced the right\nnumber of computers, and every one of them passed while the step that sets that\ncount was unreachable. There is now a test that the question is asked at all -\nit fails against 1.7.0 and passes here.\n",
+      "version": "1.8.0",
+      "versionCode": 17,
+      "notes": "Taash Club 1.8.0 - Starting a game is two taps, or three with friends\n\nStarting a game asked six questions. Five of them already had a correct answer\nsitting in the draft, and one of them - the stake - is a number neither game\nuses for anything a player notices.\n\n### Features\n\n- Naya game shuru karna ab do screen hai: kaunsa game, aur kiske saath. Doston\n  ke saath khelna ho to teesri - kitne dost aa rahe hain. Bas, phir patte.\n- Stake, house rules aur session length ab \"More options\" ke peeche hain,\n  aakhri step par. Chahiye to milenge, nahi to raaste se hat gaye.\n\n### Bug fixes\n\n- The new-game flow no longer asks for stake, house rules and session length on\n  the way to dealing a hand. All three have working defaults and are\n  preferences; being asked them every single time is what made starting a game\n  feel like filling in a form.\n\n### Notes\n\nThey are not gone. This flow is the only place in the app that can set any of\nthem, so removing them outright would have made three settings unreachable\nrather than optional. \"More options\" appears on the last step, and only there -\noffering it earlier would just be the long flow with an extra tap.\n\nThe step counts are now: two for playing against the computer, three for\neveryone on their own phone, three for one shared device. Tests pin each of\nthose, so a future step cannot quietly rejoin the default path.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62115331
+      "sizeBytes": 62115335
     },
     "cards": {
       "version": "2.5.1",
