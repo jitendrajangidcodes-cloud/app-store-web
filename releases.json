@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T10:52:06.722Z",
+  "generatedAt": "2026-08-28T11:06:14.913Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.7.0",
-      "versionCode": 15,
-      "notes": "Taash Club 1.7.0 - Your name, your session, and the game you left running\n\nFour things from playing the app on a phone.\n\n### Features\n\n- Google se login karne par naam wahi se aata hai. Ab dobara \"What should we\n  call you?\" nahi poochha jayega - jo naam Google par hai, wahi seat par dikhega.\n- Solo game band ho jaye - galti se, ya phone ne app hi band kar diya - to ab\n  wapas milta hai. Lobby ke upar \"Adhoora game\" dikhega, Resume dabao aur wahi\n  se chalu, wahi patte, wahi score.\n- Login ab zaroori hai, aur ek baar karne ke baad saal bhar chalta hai.\n\n### Bug fixes\n\n- The name screen appeared even for signed-in players. It was decided once,\n  while the app was starting, which is before the signed-in profile arrives back\n  from the server - at that moment the local profile is still the generated\n  \"Player 098D\", so the answer was yes and nothing ever asked again when the\n  real name landed a moment later. It now follows the profile as it changes.\n- A solo game was held only in memory, so closing the app threw away a round in\n  progress with no warning. Every hand, the trick on the table, whose turn it is\n  and the running totals are now saved after each card.\n- A disconnected player's turn was played for them after 20 seconds instead of\n  the 60 everyone else gets. Backgrounding the app to take a call counted as\n  leaving. Their seat was never actually at risk - the server holds it while\n  they are in a hand - only their turn was.\n\n### Notes\n\nOnline and pass-and-play games already resumed: the server keeps the seat and\nputs you back at the table when you reconnect. This release gives the solo game\nthe same behaviour, which is the only place it was missing.\n\nA saved game that cannot be read is discarded rather than retried, so a\nhalf-written file cannot stop the app from opening.\n",
+      "version": "1.7.1",
+      "versionCode": 16,
+      "notes": "Taash Club 1.7.1 - The \"how many friends\" question was never actually asked\n\n1.6.0 added a question to the new-game flow: how many friends are joining, so\nthe remaining seats can be filled with computers and no more. The arithmetic\nbehind it was right and tested. The step itself never appeared.\n\nThe flow builds its step list with \"skip the seat-count question when the game\nhas a fixed number of seats\", and both games do. So the question was skipped,\nthe answer stayed on its default of one, and every remote table from 1.6.0 to\n1.7.0 was built for exactly one friend no matter how many you meant to invite.\n\n### Features\n\n- \"Kitne dost aa rahe hain?\" ab sach mein poochha jaata hai. Do dost bulane hain\n  to do seat rukengi; ek bulana hai to ek seat aur ek computer.\n\n### Bug fixes\n\n- The friends step is now part of the flow for any remote table, fixed seat\n  count or not. For a fixed-seat game the question is not \"how many seats\" but\n  \"how many of those seats are people\", which is a different question that had\n  no way of being asked.\n- It is asked on a first run too. Everything else trimmed from the first run has\n  a working default; this one does not, because a remote table cannot be built\n  without it.\n\n### Notes\n\nThe tests added in 1.6.0 checked that a given friend count produced the right\nnumber of computers, and every one of them passed while the step that sets that\ncount was unreachable. There is now a test that the question is asked at all -\nit fails against 1.7.0 and passes here.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62115331
