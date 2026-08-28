@@ -110,5 +110,21 @@
         "alt": "Teen Do Paanch 3-2-5 trick-taking table with trump bidding and quota progress meters"
       }
     ]
+  },
+  {
+    "id": "cards",
+    "name": "Cards",
+    "tagline": "Scan your payment cards into an encrypted, biometric-locked vault that never touches the network.",
+    "category": "Utilities",
+    "beta": false,
+    "platform": "Android",
+    "color": "#7c3aed",
+    "requiresAccount": false,
+    "icon": "assets/icons/cards.png",
+    "repo": "jitendrajangidcodes-cloud/Cards-pub",
+    "packageId": "com.pnsjy.cards",
+    "about": "Cards keeps payment cards in a local vault that is encrypted at rest and opened with your fingerprint or PIN. Scan the front and back with the camera and on-device OCR reads the number, expiry and name -- nothing is uploaded, because there is no network code in the app at all: no cloud, no accounts, no analytics. Fields the scanner was unsure of are flagged so you can correct them before saving. The CVV is never taken from a scan; storing it is off by default, and when you do add one it is encrypted separately and shown only behind another biometric check.",
+    "requirements": "Android 7.0 (Nougat) or newer, and a device with biometric or PIN lock set up. Distributed outside the Play Store -- Android will ask permission to install from this source the first time.",
+    "screenshots": []
   }
 ]
