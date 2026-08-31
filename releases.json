@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T08:22:22.293Z",
+  "generatedAt": "2026-08-31T10:26:11.346Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.9.0",
-      "versionCode": 18,
-      "notes": "Taash Club 1.9.0 - Gochi\n\nA third game. Four players, thirteen cards each, and a promise you have to keep\nwithout keeping it too well.\n\n### Features\n\n- Gochi khelo. Pehla patta khol ke baanta jaata hai - uska rang hi kaat. Phir\n  har koi bolta hai kitne haath banayega, kam se kam do, zyada se zyada aath.\n- Score seedha hai: har bole hue haath ke das point, aur uske upar har haath ka\n  ek. Kam bane to poore minus. Aur agar theek DOUBLE bana diye - to गोची, wo\n  bhi minus.\n- बंद: apna round band karo, paanch haath banao aur seedhe sau point. Na bane to\n  pachaas minus. Dus round mein do baar, paanch round mein ek baar.\n- सुपर: aath bolo aur aath bana lo, match wahin khatam - aap pehle, chahe kisi\n  ka bhi score kuch bhi ho.\n- Teeno tarah se khel sakte ho, baaki do games ki tarah: computer ke saath,\n  dosto ke saath apne apne phone par, ya sab ek hi phone par.\n\n### Bug fixes\n\n- None. This release adds a game and changes nothing about the other two.\n\n### Notes\n\nThe table shows how close each player is to exactly doubling their bid - amber\none trick away, red when it lands. That is the whole point of the game's name,\nand without it you would only find out when the round was scored.\n\nThe cut rule that makes this game its own thing: holding neither the colour led\nnor a trump above the trump already played, you are NOT forced to cut. A trump\nthat cannot win is a trump wasted, so you may throw anything.\n\nGochi can only ever happen on a bid of two to six. Double a bid of seven is\nfourteen tricks and only thirteen exist, so the top two bids carry no gochi\nrisk at all. That is not a rule, it falls out of the deal.\n",
+      "version": "1.10.0",
+      "versionCode": 19,
+      "notes": "Taash Club 1.10.0 - You deal, you shuffle\n\nEvery table now shows who is dealing, and when it is your deal you can shuffle\nthe pack - as many times as you like.\n\n### Features\n\n- Har table par dikhega kaun baant raha hai. Aur jab aapki baari ho baantne ki,\n  \"Phento\" dabao - jitni baar chaho. Har baar patte sach mein badal jaate hain.\n- Teeno games mein: 3-2-5, Kali Begum aur Gochi.\n\n### Bug fixes\n\n- None. This adds to the deal; it changes nothing about how any game is played.\n\n### Notes\n\nThe shuffle is real, and that mattered more than it sounds. It would have been\neasy to animate a riffle and deal exactly the same cards - it would look right,\nfeel right, and nobody playing could ever have caught it.\n\nThe app already deals with a provably-fair shuffle: the server commits to a\nsecret seed before the deal and reveals it afterwards, so it cannot arrange the\ncards. Until now the other half of that seed was worked out from who was sitting\nat the table - predictable, with nobody actually contributing anything. Your\nshuffle now mixes fresh randomness into it, after the server has already\ncommitted. So the server cannot arrange the deal and cannot predict it either,\nand your contribution shows up in the seed on the fairness screen where you can\ncheck it.\n\nOffline there is no server to commit to anything, so shuffling simply deals\nagain from a fresh pack. Same gesture, same effect on the cards.\n\nShuffling is only offered between hands, to whoever is about to deal. Mid-hand\nit would either do nothing or look like it did something.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62311943
+      "sizeBytes": 62328455
     },
     "cards": {
       "version": "2.5.1",
