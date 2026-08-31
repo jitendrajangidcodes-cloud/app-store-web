@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T17:44:09.985Z",
+  "generatedAt": "2026-08-31T17:52:30.327Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -18,12 +18,12 @@
       "sizeBytes": 108165980
     },
     "twinclean": {
-      "version": "1.3.2",
-      "versionCode": 6,
-      "notes": "Show the app version and PNSJY branding in Settings\n\nSettings now ends with the current app version and the PNSJY store branding, so every\nPNSJY app presents the same footer.\n\n### Features\n\n- The Settings screen now shows the installed app version and a PNSJY brand footer as its\n  last two items, consistent across all PNSJY apps.\n\n### Bug fixes\n\nNo user-facing bug fixes in this release.\n",
+      "version": "1.3.3",
+      "versionCode": 7,
+      "notes": "TwinClean 1.3.3 - Buildable again\n\nTwinClean could not be built at all. Two separate problems, neither in this\napp's own code, and the app itself is unchanged by this release.\n\n### Features\n\n- Koi naya feature nahi. Ye release sirf isliye hai taaki app dobara ban sake.\n\n### Bug fixes\n\n- None in the app. Scanning, the duplicate rules and the UI are untouched.\n\n### Notes\n\nFirst, build_runner crashed inside the analyzer before producing a single file.\nThe Flutter SDK's own services/platform_views.dart now uses dot-shorthand\nsyntax and the pinned analyzer 7.6.0 has no visitor for it, so summarising\npackage:flutter/services.dart threw. Upgrading drift, drift_dev, drift_flutter\nand build_runner brings an analyzer that parses the current SDK.\nflutter_riverpod deliberately stays on 2.6.1 - letting the resolver choose\nfreely pulls Riverpod 3, which removed StateProvider and ChangeNotifierProvider\nand produced 60 errors here.\n\nSecond, the release build failed compiling a file nobody wrote: the generated\nplugin registrant could not find WorkmanagerPlugin. The cause was a federated\npackage resolving differently here than in the rest of the fleet - the same\nconstraint, resolved on a different day, gave workmanager_android 0.9.3 where\nthe Store and MirrorDrive both have 0.9.0+2. The class exists in both versions\nunder the same namespace, which is exactly why the error is so unhelpful. The\nwhole workmanager set is now pinned together to the versions the other apps\nbuild with; pinning only the Android half is worse than pinning none, because\nit pairs an old implementation with a newer interface.\n\nA test that split file paths on '/' was also fixed. On Windows that returns the\nwhole path, so every basename comparison failed and the suite could never go\ngreen on the machine this app is built on.\n",
       "publishedAt": "2026-07-07T10:01:03Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean.apk",
-      "sizeBytes": 60317239
+      "sizeBytes": 61255603
     },
     "family": {
       "version": "0.19.0",
