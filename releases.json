@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T16:18:35.788Z",
+  "generatedAt": "2026-08-31T17:44:09.985Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -42,12 +42,12 @@
       "sizeBytes": 62328455
     },
     "cards": {
-      "version": "2.5.1",
+      "version": "2.5.2",
       "versionCode": null,
-      "notes": "Release v2.5.1\n",
+      "notes": "Cards 2.5.2 - Buildable again, and finally listed in the store\n\nCards could not be built at all, and separately had never been listed in PNSJY\nStore - so it was publishing releases that nobody could find.\n\n### Features\n\n- Cards ab PNSJY Store mein dikhega. Install aur update wahin se, aur nayi\n  version aane par notification bhi.\n\n### Bug fixes\n\n- None in the app itself. Scanning, the vault and the encryption are unchanged.\n\n### Notes\n\nTwo build problems, neither of them in this app's own code.\n\nandroid/gradle.properties pinned org.gradle.java.home to an Android Studio path\nthat only exists on a machine with Android Studio installed in the default\nplace. On the build server there is none, so Gradle refused to start. No other\napp in this fleet pins it; this one no longer does either.\n\nflutter_tesseract_ocr - the OCR fallback for Google-free ROMs - calls jcenter()\nin its build file, which Gradle has removed, and pins an old Android Gradle\nPlugin. Either one stops the build before a single file compiles. Version\n0.4.31 is the last release that package will ever have, so there was nothing to\nupgrade to.\n\nRather than drop the fallback, a patched copy now lives in third_party/. It is\nbyte-identical to the published package apart from that one build file, where\nthe plugin's own buildscript block is removed - a Flutter plugin does not need\none, because the host app supplies the Android Gradle Plugin and the\nrepositories. Vendoring is what makes the fix survive: the package cache is not\nours and gets wiped.\n\nScanning on Google-free devices therefore still works, which it would not have\nif the dependency had simply been deleted.\n\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.1.apk",
-      "sizeBytes": 123110009
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.2.apk",
+      "sizeBytes": 123601315
     }
   }
 }
