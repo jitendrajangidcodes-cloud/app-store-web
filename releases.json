@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-01T12:26:58.814Z",
+  "generatedAt": "2026-09-01T14:31:01.293Z",
   "apps": {
     "reminder": {
-      "version": "2.26.0",
-      "versionCode": null,
-      "notes": "Reminder 2.26.0 - Update checks move to the app store hub\n\nThe in-app update check now reads the shared app-store-web release, the same\nplace the store and every other app in the fleet already read from.\n\n### Features\n\n- Update check ab app store hub se aata hai, wahi jagah jahan se baaki saari\n  apps aati hain. Aapko koi farak nahi dikhega - bas ab har app ka apna alag\n  public repo nahi chahiye.\n\n### Bug fixes\n\n- The update check pointed at this app's own public mirror. That mirror existed\n  only to be readable without a token, and it has been made private.\n\n### Notes\n\nIMPORTANT, and the reason for this release: reminder-app-pub was not a\nreleases-only mirror. It was a full public copy of this repository, and it\nincluded android/key.properties - with storePassword and keyPassword filled in\n- sitting next to the committed release keystore.\n\nandroid/.gitignore had said for a long time: \"Purge + rotate if repo goes\npublic.\" It had gone public. The password and the shared .env config are no\nlonger committed here, and the mirror is private.\n\nThe keystore should still be treated as compromised and rotated. Anyone who\ncloned that repository while it was public holds the key and its password, and\nthat is enough to sign an APK Android will accept as an update to this app.\nRotating means installed copies cannot upgrade in place - that is a real cost\nand it is a deliberate decision to make, not one to take by accident.\n\nExisting installs poll the old mirror and will not see this release. They can\nupdate through PNSJY Store, which reads the hub and is unaffected.\n",
+      "version": "2.27.0",
+      "versionCode": 146,
+      "notes": "# Reminder 2.27.0\n\n## Features\n\n- The app's signing key has been rotated. The previous key had been published,\n  along with its password, in a repository that was public — so anyone who\n  copied it could have built an app that your phone would have accepted as an\n  update to this one. It no longer can.\n- The update installs straight over your current copy. Nothing is removed and\n  nothing is signed out; your reminders, history and settings carry across\n  untouched.\n\n## Bug fixes\n\n- Update checks in older builds pointed at a location that no longer answers, so\n  they stopped reporting new versions. From this build on they read the app\n  store hub instead. Installing this version by hand once is what gets a device\n  back onto automatic checks.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.26.0.apk",
-      "sizeBytes": 76394239
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.27.0.apk",
+      "sizeBytes": 76485254
     },
     "mirrordrive": {
       "version": "0.15.1",
