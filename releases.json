@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-01T05:18:37.237Z",
+  "generatedAt": "2026-09-01T05:25:08.131Z",
   "apps": {
     "reminder": {
       "version": "2.25.1",
@@ -42,11 +42,11 @@
       "sizeBytes": 62328455
     },
     "cards": {
-      "version": "2.5.2",
+      "version": "2.5.3",
       "versionCode": null,
-      "notes": "Cards 2.5.2 - Buildable again, and finally listed in the store\n\nCards could not be built at all, and separately had never been listed in PNSJY\nStore - so it was publishing releases that nobody could find.\n\n### Features\n\n- Cards ab PNSJY Store mein dikhega. Install aur update wahin se, aur nayi\n  version aane par notification bhi.\n\n### Bug fixes\n\n- None in the app itself. Scanning, the vault and the encryption are unchanged.\n\n### Notes\n\nTwo build problems, neither of them in this app's own code.\n\nandroid/gradle.properties pinned org.gradle.java.home to an Android Studio path\nthat only exists on a machine with Android Studio installed in the default\nplace. On the build server there is none, so Gradle refused to start. No other\napp in this fleet pins it; this one no longer does either.\n\nflutter_tesseract_ocr - the OCR fallback for Google-free ROMs - calls jcenter()\nin its build file, which Gradle has removed, and pins an old Android Gradle\nPlugin. Either one stops the build before a single file compiles. Version\n0.4.31 is the last release that package will ever have, so there was nothing to\nupgrade to.\n\nRather than drop the fallback, a patched copy now lives in third_party/. It is\nbyte-identical to the published package apart from that one build file, where\nthe plugin's own buildscript block is removed - a Flutter plugin does not need\none, because the host app supplies the Android Gradle Plugin and the\nrepositories. Vendoring is what makes the fix survive: the package cache is not\nours and gets wiped.\n\nScanning on Google-free devices therefore still works, which it would not have\nif the dependency had simply been deleted.\n\n",
+      "notes": "Cards 2.5.3 - Update checks move to the app store hub\n\n### Features\n\n- Update check ab app store hub se aata hai, wahi jagah jahan se baaki saari\n  apps aati hain. Aapko farak nahi dikhega.\n\n### Bug fixes\n\n- The update check pointed at this app's own public mirror, which existed only\n  to be readable without a token. It is no longer needed.\n\n### Notes\n\nEvery app publishes its APK to app-store-web under a fixed tag, and the store\nalready reads from there. Polling a per-app public repo as well meant each app\nneeded a public repository of its own purely to be readable - and one of those,\nfor another app, turned out to be a full public source mirror. One public\nrepository for the whole fleet is fewer places for that to happen.\n\nNothing about this app changed. Same scanning, same vault, same encryption, and\nstill no network code beyond the update check.\n\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.2.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.3.apk",
       "sizeBytes": 123601315
     }
   }
