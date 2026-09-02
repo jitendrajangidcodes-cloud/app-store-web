@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T13:48:55.354Z",
+  "generatedAt": "2026-09-02T14:54:17.806Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.11.0",
-      "versionCode": 20,
-      "notes": "# Taash Club 1.11.0 — गोची: बंद ab band patton par\n\n### Features\n\n- **गोची में बंद अब पत्ते देखने से पहले बोलना है.** Patte bantne ke baad das\n  second tak sab patte band rehte hain, aur sirf usi waqt बंद bola ja sakta hai.\n  Uske baad patte khulte hain aur tab aap batate ho ki kitne haath banaoge —\n  phir khel shuru.\n- बंद ke liye ab kisi ki baari ka intezaar nahi. Us window mein chaaron seat ek\n  saath bol sakti hain, kyunki बंद kisi aur ke bolne ka jawaab nahi hai.\n- Window ke दौरान screen par ulti ginti aur band patte dikhte hain, taaki saaf\n  rahe ki patte aaye hain — bas abhi dikhe nahi.\n\n### Bug fixes\n\n- बंद pehle bidding ke waqt, saamne khule tere haath ke saath bola ja sakta tha.\n  Uska score +100 / −50 isliye hai ki woh bina patte dekhe li gayi shart hai;\n  patte dekh kar bolne par inaam waisa hi rehta tha aur risk khatam ho jata tha.\n- Patte ab window ke दौरान app ko bheje hi nahi jaate. Pehle sirf screen par na\n  dikhana kaafi samjha jaata — lekin patte phir bhi app ke andar maujood rehte,\n  jo ek shared phone par patte khule rakhne jaisa hi hai.\n- Agar chaaron ne बंद bol diya to ab bidding chhod kar seedha khel shuru hota\n  hai; pehle table wahin atak sakta tha.\n",
+      "version": "1.12.0",
+      "versionCode": 21,
+      "notes": "# Taash Club 1.12.0 — गोची: round shuru hone ki do ginti\n\n### Features\n\n- **बंद ki 10 second wali ginti ab saaf dikhti hai.** Deal ke turant baad table\n  poochta hai \"Koi बंद bolega?\" — bada number, ghatti hui patti (progress bar),\n  aur aakhri teen second mein laal. Sab seat ko ek hi ginti dikhti hai.\n- **Patte khulne ke baad har seat ke paas haath bolne ke liye 30 second hain.**\n  Apni baari par panel mein ulti ginti dikhti hai; 5 second se kam bachne par\n  laal ho jaati hai.\n- Waqt khatam hone par default **2 haath** maana jaata hai — panel mein yeh\n  niyam likha rehta hai, taaki bina bole nikalne wale ko pata ho kya hoga.\n- Khel wale card ki baari ab bhi poore ek minute ki hai; sirf haath bolna chhoti\n  ghadi par hai, kyunki woh abhi-abhi dikhaaye haath par ek hi faisla hai.\n\n### Bug fixes\n\n- Haath bolne ki ginti ki bar galat lambaai se bhari dikh sakti thi. Ab woh 30\n  second se banti hai, table ki 60-second wali baari se nahi, isliye baari ke\n  shuru mein bar poori bhari rehti hai.\n- बंद window ke दौरान upar ki turn-ghadi kuch nahi dikhati thi aur neeche ki\n  ginti chhoti thi; ab window ki ginti saaf aur badi hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62328691
+      "sizeBytes": 62324979
     },
     "cards": {
       "version": "2.5.3",
