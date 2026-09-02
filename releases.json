@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T17:59:45.878Z",
+  "generatedAt": "2026-09-02T18:18:51.604Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.13.0",
-      "versionCode": 24,
-      "notes": "# Taash Club 1.13.0 — गोची: baantne ka poora tareeka\n\n### Features\n\n- **Har round mein ek baantne wala, random se chuna hua.** Pehle round ka\n  baantne wala ab kismat se tay hota hai; uske baad har round wo ek seat aage\n  chala jaata hai.\n- **Baantne wala jitni baar chaahe patte phent sakta hai.** \"Phento\" dabao,\n  patti riffle hoti dikhti hai, ginti chadhti hai - phir \"Baant do\".\n- **काट ka patta sabke saamne khulta hai.** Jab baantne wala deta hai, pehla\n  patta bade size mein palat kar dikhta hai, thoda ruk kar - taaki sabko काट\n  ka rang saaf pata chale - phir baaki patte bant jaate hain.\n- Uske baad hi haath bolna hai, patte saamne hote hue.\n- बंद pehle jaisa hi - round shuru hote hi, patte aane se pehle.\n\n### Bug fixes\n\n- (koi nahi - yeh naya flow hai)\n\n### Notes for existing players\n\n- Sirf offline (computer ke saath) gochi ka baantna badla hai. Online tables\n  server ke hisaab se chalte hain.\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
+      "version": "1.13.1",
+      "versionCode": 25,
+      "notes": "# Taash Club 1.13.1 — गोची: patte ka rang, chhota view, aur \"Agli baazi\"\n\n### Features\n\n- **Patte ab rang ke hisaab se group ho kar dikhte hain.** काट wala rang pehle,\n  phir baaki - har rang mein bada patta pehle. Ek nazar mein saaf.\n- **Chhota view button.** Neeche daayen taraf ka button dabao aur saare 13\n  patte ek saath dikh jaate hain, scroll kiye bina. App band karke kholne par\n  bhi yaad rehta hai.\n- **Round khatam hone par \"Agli baazi\" button.** Ab table apne aap aage nahi\n  badhta - jab aap taiyaar ho tab dabao. (45 second tak na dabao to khud aage\n  chala jaata hai, taaki atke na.)\n- Chhoti-moti Hinglish: \"Total\" -> \"KUL JOD\", \"Chalo\" -> \"Phenk do\", round ke\n  points ke saath \"kul\" jod.\n\n### Bug fixes\n\n- (koi nahi - yeh sudhaar hain)\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62488895
+      "sizeBytes": 62505399
     },
     "cards": {
       "version": "2.5.3",
