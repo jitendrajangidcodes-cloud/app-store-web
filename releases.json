@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T17:44:29.262Z",
+  "generatedAt": "2026-09-02T17:59:45.878Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.12.2",
-      "versionCode": 23,
-      "notes": "# Taash Club 1.12.2 — गोची: बंद wali ginti ab sach mein ghatti hai\n\n### Features\n\n- बंद window ki ginti ab har second badalti hai - 10, 9, 8 - bade circle mein\n  aur neeche panel mein dono jagah.\n\n### Bug fixes\n\n- बंद ki das second wali ginti 10 par ruki rehti thi aur seedha khatam ho jaati\n  thi. Wajah: app ko sirf ek baar \"das second bache\" bheja jaata tha aur screen\n  wahi purana number dikhati rehti thi. Ab window ka khatm hone ka waqt bheja\n  jaata hai (jaise baari ki ghadi), to ginti device ki apni clock se ghatti hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n- Agar aap 1.12.0 par ho: is build mein haath bolte waqt apne patte aur काट bhi\n  dikhte hain (1.12.1 se) - update karke dekho.\n</content>\n",
+      "version": "1.13.0",
+      "versionCode": 24,
+      "notes": "# Taash Club 1.13.0 — गोची: baantne ka poora tareeka\n\n### Features\n\n- **Har round mein ek baantne wala, random se chuna hua.** Pehle round ka\n  baantne wala ab kismat se tay hota hai; uske baad har round wo ek seat aage\n  chala jaata hai.\n- **Baantne wala jitni baar chaahe patte phent sakta hai.** \"Phento\" dabao,\n  patti riffle hoti dikhti hai, ginti chadhti hai - phir \"Baant do\".\n- **काट ka patta sabke saamne khulta hai.** Jab baantne wala deta hai, pehla\n  patta bade size mein palat kar dikhta hai, thoda ruk kar - taaki sabko काट\n  ka rang saaf pata chale - phir baaki patte bant jaate hain.\n- Uske baad hi haath bolna hai, patte saamne hote hue.\n- बंद pehle jaisa hi - round shuru hote hi, patte aane se pehle.\n\n### Bug fixes\n\n- (koi nahi - yeh naya flow hai)\n\n### Notes for existing players\n\n- Sirf offline (computer ke saath) gochi ka baantna badla hai. Online tables\n  server ke hisaab se chalte hain.\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62341363
+      "sizeBytes": 62488895
     },
     "cards": {
       "version": "2.5.3",
