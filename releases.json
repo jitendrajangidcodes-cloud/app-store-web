@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T14:54:17.806Z",
+  "generatedAt": "2026-09-02T16:57:16.857Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.12.0",
-      "versionCode": 21,
-      "notes": "# Taash Club 1.12.0 — गोची: round shuru hone ki do ginti\n\n### Features\n\n- **बंद ki 10 second wali ginti ab saaf dikhti hai.** Deal ke turant baad table\n  poochta hai \"Koi बंद bolega?\" — bada number, ghatti hui patti (progress bar),\n  aur aakhri teen second mein laal. Sab seat ko ek hi ginti dikhti hai.\n- **Patte khulne ke baad har seat ke paas haath bolne ke liye 30 second hain.**\n  Apni baari par panel mein ulti ginti dikhti hai; 5 second se kam bachne par\n  laal ho jaati hai.\n- Waqt khatam hone par default **2 haath** maana jaata hai — panel mein yeh\n  niyam likha rehta hai, taaki bina bole nikalne wale ko pata ho kya hoga.\n- Khel wale card ki baari ab bhi poore ek minute ki hai; sirf haath bolna chhoti\n  ghadi par hai, kyunki woh abhi-abhi dikhaaye haath par ek hi faisla hai.\n\n### Bug fixes\n\n- Haath bolne ki ginti ki bar galat lambaai se bhari dikh sakti thi. Ab woh 30\n  second se banti hai, table ki 60-second wali baari se nahi, isliye baari ke\n  shuru mein bar poori bhari rehti hai.\n- बंद window ke दौरान upar ki turn-ghadi kuch nahi dikhati thi aur neeche ki\n  ginti chhoti thi; ab window ki ginti saaf aur badi hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
+      "version": "1.12.1",
+      "versionCode": 22,
+      "notes": "# Taash Club 1.12.1 — गोची: badi ginti aur patte bolne se pehle\n\n### Features\n\n- **Ab ek badi ginti table ke beech mein.** बंद wali das second aur apni baari\n  ke tees second ab ek bade circle mein 10, 9, 8 karke ghatta hai - saaf\n  dikhta hai, panel ki chhoti ginti ke saath.\n- **Haath bolne se pehle ab apne patte dikhte hain.** \"Kitne haath banaoge?\"\n  ke saath poora haath ek patti mein neeche laga rehta hai, aur \"काट: <rang>\n  (khula patta)\" bhi likha hai - to andaaza laga kar bol sako.\n\n### Bug fixes\n\n- Bidding ke waqt patte screen par aate hi nahi the. Engine patte bhej raha\n  tha, par bid panel sirf 2-8 ke button dikhata tha - to bina patte dekhe\n  haath bolna padta tha.\n- बंद ki ginti sirf neeche panel mein chhoti si thi, aasani se nazar se chuk\n  jaati thi. Ab ek badi ginti bhi hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62324979
+      "sizeBytes": 62341363
     },
     "cards": {
       "version": "2.5.3",
