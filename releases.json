@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-02T16:57:16.857Z",
+  "generatedAt": "2026-09-02T17:16:45.992Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.12.1",
-      "versionCode": 22,
-      "notes": "# Taash Club 1.12.1 — गोची: badi ginti aur patte bolne se pehle\n\n### Features\n\n- **Ab ek badi ginti table ke beech mein.** बंद wali das second aur apni baari\n  ke tees second ab ek bade circle mein 10, 9, 8 karke ghatta hai - saaf\n  dikhta hai, panel ki chhoti ginti ke saath.\n- **Haath bolne se pehle ab apne patte dikhte hain.** \"Kitne haath banaoge?\"\n  ke saath poora haath ek patti mein neeche laga rehta hai, aur \"काट: <rang>\n  (khula patta)\" bhi likha hai - to andaaza laga kar bol sako.\n\n### Bug fixes\n\n- Bidding ke waqt patte screen par aate hi nahi the. Engine patte bhej raha\n  tha, par bid panel sirf 2-8 ke button dikhata tha - to bina patte dekhe\n  haath bolna padta tha.\n- बंद ki ginti sirf neeche panel mein chhoti si thi, aasani se nazar se chuk\n  jaati thi. Ab ek badi ginti bhi hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
+      "version": "1.12.2",
+      "versionCode": 23,
+      "notes": "# Taash Club 1.12.2 — गोची: बंद wali ginti ab sach mein ghatti hai\n\n### Features\n\n- बंद window ki ginti ab har second badalti hai - 10, 9, 8 - bade circle mein\n  aur neeche panel mein dono jagah.\n\n### Bug fixes\n\n- बंद ki das second wali ginti 10 par ruki rehti thi aur seedha khatam ho jaati\n  thi. Wajah: app ko sirf ek baar \"das second bache\" bheja jaata tha aur screen\n  wahi purana number dikhati rehti thi. Ab window ka khatm hone ka waqt bheja\n  jaata hai (jaise baari ki ghadi), to ginti device ki apni clock se ghatti hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n- Agar aap 1.12.0 par ho: is build mein haath bolte waqt apne patte aur काट bhi\n  dikhte hain (1.12.1 se) - update karke dekho.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62341363
