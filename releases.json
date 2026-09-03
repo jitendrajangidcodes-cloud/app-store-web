@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T10:50:38.416Z",
+  "generatedAt": "2026-09-03T11:15:36.121Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.13.3",
-      "versionCode": 27,
-      "notes": "# Taash Club 1.13.3 — गोची: ginti beech mein, aur jhoothi काट hatai\n\n### Features\n\n- **बंद ki badi ginti ab table ke beech mein** - jahan sabke score (KUL JOD)\n  dikhte hain - upar khaali jagah ke bajaye. Us dauraan score chhup jaate hain,\n  ginti khatam hote hi wapas.\n\n### Bug fixes\n\n- **Round shuru hone par header mein \"काट ♠\" dikh raha tha, jabki abhi काट tay\n  hi nahi hui thi.** Ab jab tak baantne wala patta nahi kholta, chip \"काट abhi\n  nahi\" dikhati hai.\n- बंद window aur baantne ke dauraan upar \"Rohan ki baari\" jaisa likha aa raha\n  tha - jabki wo saanjha (shared) time hai. Ab \"Deal ka intezaar\" dikhta hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
+      "version": "1.13.4",
+      "versionCode": 28,
+      "notes": "# Taash Club 1.13.4 — गोची: phentna aur baantna, dono behtar\n\n### Features\n\n- **Patte phentna ab table ke beech mein dikhta hai** - upar khaali jagah ke\n  bajaye, wahin jahan sabke score dikhte hain.\n- **Phentne ki nayi animation.** Patte do hisson mein bat kar upar uthte hain,\n  tilt hote hain, phir zip ki tarah wapas milte hain aur seedhe ho jaate hain -\n  har \"Phento\" par.\n- **Baantne ki asli animation.** काट ka patta palat kar khulne ke baad, patte\n  ek-ek karke chaaron seat ki taraf udte hain - jaise koi haath se baantta hai.\n\n### Bug fixes\n\n- (koi nahi - dikhawe ka sudhaar hai)\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62505399
