@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T11:44:12.419Z",
+  "generatedAt": "2026-09-03T11:59:52.519Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.14.0",
-      "versionCode": 29,
-      "notes": "# Taash Club 1.14.0 — bar-bar login band, aur behtar aawaz\n\n### Features\n\n- **Google login ab bar-bar nahi maangega.** Pehle jab bhi connection toota ya\n  phone ne token bhula diya, poora Google account chooser aa jaata tha. Ab app\n  pehle chup-chaap wapas login karne ki koshish karti hai (koi screen nahi);\n  chooser sirf tab aata hai jab genuinely zaroorat ho.\n- **Login token ki ek backup copy** rakhi jaati hai, taaki kuch phones (Xiaomi,\n  Oppo, etc.) jab apna keystore saaf kar dete hain tab bhi aap logged in raho.\n- **Patta phenkne ki nayi, halki aawaz** - ek chhota \"fwip\" aur felt par halka\n  \"tap\", pehle wali tez hiss ki jagah.\n- **Round jeetne par nayi celebration** - gold flash aur phailta hua ring, zyada\n  confetti (do tarah ke), aur ek garm C-major dhun jo shor ke bajaye jashn\n  lagti hai.\n\n### Bug fixes\n\n- Round khatam hone par upar \"Aapki baari - patta chalo\" dikhta rehta tha, jabki\n  round khatam ho chuka hota tha. Ab hat jaata hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n- Ho sakta hai is update ke baad ek baar Google login maange - phir nahi.\n</content>\n",
+      "version": "1.14.1",
+      "versionCode": 30,
+      "notes": "# Taash Club 1.14.1 — गोची: kaat ke baad rang wale ko bhi chhoot\n\n### Features\n\n- **काट se chaal kat jaane ke baad, jiske paas chaal wala rang hai wo bhi bada\n  patta maarne ke liye majboor nahi.** Pehle: chaal J♥, koi ne ♠ se kaat maar\n  di, aur aapko phir bhi apni Q♥ (ya sabse badi heart) phenkni padti thi - jabki\n  woh chaal ab jeeti hi nahi ja sakti. Ab: rang toh follow karna hai, par koi\n  bhi chhota patta (7♥, 10♥) chalega.\n- Chaal trump se hi chali ho to purana niyam waise hi - upar wali trump majboor,\n  kyunki tab jeeta ja sakta hai.\n\n### Bug fixes\n\n- (koi nahi - rule ka sudhaar hai)\n\n### Notes for existing players\n\n- Sirf गोची ka niyam badla. Koi data nahi badla.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62523987
