@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T06:18:10.561Z",
+  "generatedAt": "2026-09-03T10:50:38.416Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.13.2",
-      "versionCode": 26,
-      "notes": "# Taash Club 1.13.2 — गोची: kaat ke baad chhoot, aur chaal ka nishaan\n\n### Features\n\n- **काट se chaal kat gayi to aage waale ko chhoot.** Ab jaise hi koi काट se\n  kaat maar de, uske baad jiske paas chaal wala rang nahi hai wo apni marzi se\n  khel sakta hai - upar se kaat maare, neeche se, ya koi chhota patta phenk de.\n  Badi काट ko zabardasti kharch karne ki zaroorat nahi. (Sirf pehla banda jiske\n  paas chaal ka rang nahi, usse abhi bhi kaat maarni padti hai.)\n- **Chaal kahan se shuru hui, ab saaf dikhta hai.** Round mein sabse pehla\n  phenka gaya patta ab \"chaal\" likha aur upar sunehri patti ke saath dikhta\n  hai - taaki pata rahe kaunse rang se chaal chali.\n\n### Bug fixes\n\n- (koi nahi - rule aur dikhawe ka sudhaar hai)\n\n### Notes for existing players\n\n- गोची ka khelne ka niyam badla hai (kaat ke baad ki chhoot). Baaki games waise\n  hi hain.\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
+      "version": "1.13.3",
+      "versionCode": 27,
+      "notes": "# Taash Club 1.13.3 — गोची: ginti beech mein, aur jhoothi काट hatai\n\n### Features\n\n- **बंद ki badi ginti ab table ke beech mein** - jahan sabke score (KUL JOD)\n  dikhte hain - upar khaali jagah ke bajaye. Us dauraan score chhup jaate hain,\n  ginti khatam hote hi wapas.\n\n### Bug fixes\n\n- **Round shuru hone par header mein \"काट ♠\" dikh raha tha, jabki abhi काट tay\n  hi nahi hui thi.** Ab jab tak baantne wala patta nahi kholta, chip \"काट abhi\n  nahi\" dikhati hai.\n- बंद window aur baantne ke dauraan upar \"Rohan ki baari\" jaisa likha aa raha\n  tha - jabki wo saanjha (shared) time hai. Ab \"Deal ka intezaar\" dikhta hai.\n\n### Notes for existing players\n\n- Koi data nahi badla. Chips, profile aur history server par hi rehte hain.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62505399
