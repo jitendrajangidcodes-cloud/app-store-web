@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T11:59:52.519Z",
+  "generatedAt": "2026-09-03T13:31:22.342Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.14.1",
-      "versionCode": 30,
-      "notes": "# Taash Club 1.14.1 — गोची: kaat ke baad rang wale ko bhi chhoot\n\n### Features\n\n- **काट se chaal kat jaane ke baad, jiske paas chaal wala rang hai wo bhi bada\n  patta maarne ke liye majboor nahi.** Pehle: chaal J♥, koi ne ♠ se kaat maar\n  di, aur aapko phir bhi apni Q♥ (ya sabse badi heart) phenkni padti thi - jabki\n  woh chaal ab jeeti hi nahi ja sakti. Ab: rang toh follow karna hai, par koi\n  bhi chhota patta (7♥, 10♥) chalega.\n- Chaal trump se hi chali ho to purana niyam waise hi - upar wali trump majboor,\n  kyunki tab jeeta ja sakta hai.\n\n### Bug fixes\n\n- (koi nahi - rule ka sudhaar hai)\n\n### Notes for existing players\n\n- Sirf गोची ka niyam badla. Koi data nahi badla.\n</content>\n",
+      "version": "1.14.2",
+      "versionCode": 31,
+      "notes": "# Taash Club 1.14.2 — login ab pnsjy auth se (bar-bar nahi maangega)\n\n### Features\n\n- **Sign-in ab shared PNSJY auth service se hota hai** (`google-auth.pnsjy.in`).\n  Google se ek baar login karo; uske baad app khud chup-chaap apna token refresh\n  karti rehti hai. Connection tootne par ya token expire hone par ab Google ka\n  account chooser nahi aata - background mein hi kaam ho jaata hai.\n- Token (refresh wala) device par surakshit rakha jaata hai, ek backup copy ke\n  saath - taaki phone ka keystore saaf ho jaaye tab bhi logged in raho.\n\n### Bug fixes\n\n- (koi nahi - yeh auth ka naya tareeka hai)\n\n### Notes for existing players\n\n- Is update ke baad ek baar Google login maang sakta hai - phir nahi. Chips,\n  profile aur history sab wahi rehte hain (email se account jud jaata hai).\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62523987
