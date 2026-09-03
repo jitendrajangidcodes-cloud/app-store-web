@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:55:21.727Z",
+  "generatedAt": "2026-09-03T14:00:47.575Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.14.3",
-      "versionCode": 32,
-      "notes": "# Taash Club 1.14.3 — गोची: बंद haarne par ab -100\n\n### Features\n\n- **बंद fail karne par ab -100, pehle -50 tha.** बंद jeetne par +100 milta hai,\n  to haarne par bhi utna hi - ek trick se bhi reh gaye to poora -100. Isse बंद\n  ek asli जुआ rehta hai, sasti chaal nahi.\n\n### Bug fixes\n\n- (koi nahi - niyam ka sudhaar hai)\n\n### Notes for existing players\n\n- Sirf गोची ka बंद scoring badla. Koi data nahi badla.\n</content>\n",
+      "version": "1.14.4",
+      "versionCode": 33,
+      "notes": "# Taash Club 1.14.4 — गोची: haath bolne ke liye ab 60 second\n\n### Features\n\n- **\"Kitne haath banaoge?\" wala time 30 se badha kar 60 second kar diya** - 13\n  patton ko gin kar काट ke hisaab se andaaza lagane mein poora minute milta hai\n  ab, khel wali baari jitna. Time khatam hone par abhi bhi 2 haath maana jaata\n  hai.\n\n### Bug fixes\n\n- (koi nahi - time badhaya hai)\n\n### Notes for existing players\n\n- Sirf गोची ka bid clock badla. Koi data nahi badla.\n</content>\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 62523987
