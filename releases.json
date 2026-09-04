@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T16:58:30.787Z",
+  "generatedAt": "2026-09-04T17:51:27.263Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.15.0",
-      "versionCode": 35,
-      "notes": "# Taash Club 1.14.5 — गोची: बंद fail wapas -50\n\n### Features\n\n- **बंद fail karne par phir se -50** (1.14.3 mein -100 kiya tha, wo galat tha).\n  बंद: 5 haath bana liye to +100, nahi bana paye to -50.\n\n### Bug fixes\n\n- (koi nahi - niyam wapas theek kiya)\n\n### Notes for existing players\n\n- Sirf गोची ka बंद scoring badla. Koi data nahi badla.\n</content>\n",
+      "version": "1.16.0",
+      "versionCode": null,
+      "notes": "# Taash Club 1.16.0 — Voice chat table par aa gaya\n\n### Features\n\n- **Table voice chat.** Kisi bhi online table par (गोची, Kali Begum, 3-2-5,\n  aur waiting room mein bhi) ab mic on karke doosre players se baat kar\n  sakte ho - jaise ek real table par baithe ho. Mic hamesha OFF start\n  hota hai, tap karke bolo. Ek master switch se poori table ki awaaz band\n  ho sakti hai bina call chhode. Kisi ek player ko mute/block/report bhi\n  kar sakte ho (long-press unke gol icon par) - block hamesha ke liye\n  yaad rehta hai, kisi bhi table par. Settings mein poora on/off switch\n  bhi hai.\n  Abhi ke liye ye sirf tumhare apne device par kaam karega - server par\n  bhi voice on karna padega, uske baad hi doosre players ko sunai/dikhai\n  dega. Tab tak mic button dikhega hi nahi.\n\n### Bug fixes\n\n- **Baar-baar Google sign-in maangna band.** ~1 ghante baad ya wifi jaane\n  par app phir se Google account maangta tha, kyunki purana (stale)\n  access token reconnect ke waqt bhej diya jaata tha. Ab reconnect se\n  pehle token refresh hota hai, aur ek proactive timer expiry se ~1 min\n  pehle hi refresh kar deta hai - ab background mein baithe rehne se bhi\n  session nahi tootega.\n\n### Notes for existing players\n\n- Chips, history, sab wahi rahega - koi data nahi badla.\n- Voice chat ke liye pehli baar mic maangega - manaa karne par bhi baaki\n  game bilkul normal chalega.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 62605911
+      "sizeBytes": 93886788
     },
     "cards": {
       "version": "2.5.3",
