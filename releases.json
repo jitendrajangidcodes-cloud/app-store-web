@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T07:05:35.439Z",
+  "generatedAt": "2026-09-09T10:46:37.560Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.17.2",
-      "versionCode": 39,
-      "notes": "# Taash Club 1.17.2 — Voice button ab sahi jagah\n\n### Features\n\n- (koi naya nahi)\n\n### Bug fixes\n\n- **Voice button game ke buttons ke upar nahi aata ab.** Pehle wo neeche\n  beech mein aa jaata tha - action bar aur haath ke patton ke upar. Ab\n  upar-baayen, back arrow ke neeche, jahan teeno game screens par jagah\n  khali hai.\n\n### Notes for existing players\n\n- Chips, history sab wahi. 1.16.0 ya purane par ho to update zaroori hai.\n",
+      "version": "1.17.3",
+      "versionCode": 40,
+      "notes": "# Taash Club 1.17.3 — Seat khud chuno, host set kare\n\n### Features\n\n- **Waiting room mein seat chuno.** Khaali ya computer wali seat par tap\n  karke wahan baith jao. Seat ka order hi baari ka order hai.\n- **Host seat set kar sakta hai.** Har bhari hui row par upar/neeche ke\n  teer se seat ko aage-peeche karo (ya computer \"Hatao\" / \"＋ Computer\").\n- Apni seat ab gold border se dikhti hai.\n\n### Bug fixes\n\n- **गोची ka 10-second बंद counter ab ghatta hai.** Remote table par wo\n  \"10\" par atka rehta tha - server sirf bacha hua time bhejta tha, deadline\n  nahi. Ab deadline bhi jaata hai to screen use ghata sakti hai. (Server\n  update ke baad chalu.)\n\n### Notes for existing players\n\n- Chips, history sab wahi. 1.16.0 ya purane par ho to update zaroori hai.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 94017864
+      "sizeBytes": 94017944
     },
     "cards": {
       "version": "2.5.3",
