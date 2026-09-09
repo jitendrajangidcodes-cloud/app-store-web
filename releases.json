@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T05:18:48.142Z",
+  "generatedAt": "2026-09-09T05:56:35.816Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.17.0",
-      "versionCode": null,
-      "notes": "# Taash Club 1.17.0 — Dost table par: ab aap decide karo kab shuru ho\n\n### Features\n\n- **Private table ab khud shuru nahi hota.** Pehle jaise hi ek seat bharti,\n  computer baaki seat le leta aur game 3 second mein chalu ho jaata - dost\n  ke join karne se pehle hi. Ab aap host ho: waiting room khula rehta hai,\n  koi computer apne aap nahi aata, aur game tabhi chalu hota hai jab aap\n  \"Shuru karo\" dabao.\n- **Seat aap set karte ho.** Khaali seat par \"＋ Computer\" dabao computer\n  bithane ke liye, bot seat par \"Hatao\" dabao insaan ka intezaar karne ke\n  liye. Jitni seat khaali reh jaati hain, \"Shuru karo\" dabate hi computer\n  le leta hai.\n- Baaki sab ko \"Host ke shuru karne ka intezaar\" dikhta hai.\n- Quick-play (public table) pehle jaisa hi - turant chalu.\n- Waiting room ka title theek kiya: Gochi table par ab \"Gochi\" dikhta hai,\n  \"Kali Begum\" nahi.\n\n### Bug fixes\n\n- (feature hi fix hai - \"dost ke saath khelo\" jo computer ke saath khel\n  jaata tha)\n\n### Notes for existing players\n\n- **App update zaroori hai.** Server ka protocol badla hai; purana app\n  \"out of date\" bolega aur chalega nahi jab tak aap yeh version install\n  nahi karte. Chips, history sab wahi rahega.\n",
+      "version": "1.17.1",
+      "versionCode": 38,
+      "notes": "# Taash Club 1.17.1 — Reconnect loop theek, dost-table sach mein rukta hai ab\n\n### Features\n\n- (koi naya nahi - 1.17.0 ke do bugs theek kiye)\n\n### Bug fixes\n\n- **Dost ke saath table ab sach mein rukta hai.** 1.17.0 mein \"host ke\n  start karne ka intezaar\" wala gate lagaya tha, par guided setup dost-table\n  ko private mark nahi karta tha, to gate lagta hi nahi tha - Bunty/Chotu\n  aa jaate aur game 3 second mein chalu ho jaata. Ab har banaya hua table\n  (dost / ek phone / solo) private hai; sirf lobby ka quick-play public hai.\n- **Reconnect loop khatam.** Connection tootne par app baar-baar\n  \"Send auth first\" error deta aur reconnect karta rehta tha - table jam\n  jaata, apni seat par \"D\" (disconnected) dikhta, purana screen atka rehta.\n  Wajah: reconnect ke turant baad app auth se pehle ek message bhej deta\n  tha. Ab kuch bhi tab tak nahi jaata jab tak server session confirm na\n  kare, aur handshake ke waqt aaya error nazarandaaz hota hai.\n- **3-2-5 / Kali Begum / Gochi par Teen Patti ke nishaan nahi.** Seat ke\n  neeche \"pack\", \"raise 200\", \"+50\", \"SEEN\" - ye Teen Patti ki cheezein\n  trick games par galti se dikh rahi thi (purane snapshot se). Ab sirf\n  Teen Patti / Rummy mein dikhengi.\n- Error toast ab 4 second baad khud hat jaata hai (pehle poori game atka\n  rehta tha).\n\n### Notes for existing players\n\n- Chips, history sab wahi. Agar 1.16.0 ya purane par ho to update zaroori\n  hai (server ka protocol 1.17.0 mein badla tha).\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 94017864
