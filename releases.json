@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T01:06:07.585Z",
+  "generatedAt": "2026-09-09T05:12:03.862Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.16.0",
+      "version": "1.17.0",
       "versionCode": null,
-      "notes": "# Taash Club 1.16.0 — Voice chat table par aa gaya\n\n### Features\n\n- **Table voice chat.** Kisi bhi online table par (गोची, Kali Begum, 3-2-5,\n  aur waiting room mein bhi) ab mic on karke doosre players se baat kar\n  sakte ho - jaise ek real table par baithe ho. Mic hamesha OFF start\n  hota hai, tap karke bolo. Ek master switch se poori table ki awaaz band\n  ho sakti hai bina call chhode. Kisi ek player ko mute/block/report bhi\n  kar sakte ho (long-press unke gol icon par) - block hamesha ke liye\n  yaad rehta hai, kisi bhi table par. Settings mein poora on/off switch\n  bhi hai.\n  Abhi ke liye ye sirf tumhare apne device par kaam karega - server par\n  bhi voice on karna padega, uske baad hi doosre players ko sunai/dikhai\n  dega. Tab tak mic button dikhega hi nahi.\n\n### Bug fixes\n\n- **Baar-baar Google sign-in maangna band.** ~1 ghante baad ya wifi jaane\n  par app phir se Google account maangta tha, kyunki purana (stale)\n  access token reconnect ke waqt bhej diya jaata tha. Ab reconnect se\n  pehle token refresh hota hai, aur ek proactive timer expiry se ~1 min\n  pehle hi refresh kar deta hai - ab background mein baithe rehne se bhi\n  session nahi tootega.\n\n### Notes for existing players\n\n- Chips, history, sab wahi rahega - koi data nahi badla.\n- Voice chat ke liye pehli baar mic maangega - manaa karne par bhi baaki\n  game bilkul normal chalega.\n",
+      "notes": "# Taash Club 1.17.0 — Dost table par: ab aap decide karo kab shuru ho\n\n### Features\n\n- **Private table ab khud shuru nahi hota.** Pehle jaise hi ek seat bharti,\n  computer baaki seat le leta aur game 3 second mein chalu ho jaata - dost\n  ke join karne se pehle hi. Ab aap host ho: waiting room khula rehta hai,\n  koi computer apne aap nahi aata, aur game tabhi chalu hota hai jab aap\n  \"Shuru karo\" dabao.\n- **Seat aap set karte ho.** Khaali seat par \"＋ Computer\" dabao computer\n  bithane ke liye, bot seat par \"Hatao\" dabao insaan ka intezaar karne ke\n  liye. Jitni seat khaali reh jaati hain, \"Shuru karo\" dabate hi computer\n  le leta hai.\n- Baaki sab ko \"Host ke shuru karne ka intezaar\" dikhta hai.\n- Quick-play (public table) pehle jaisa hi - turant chalu.\n- Waiting room ka title theek kiya: Gochi table par ab \"Gochi\" dikhta hai,\n  \"Kali Begum\" nahi.\n\n### Bug fixes\n\n- (feature hi fix hai - \"dost ke saath khelo\" jo computer ke saath khel\n  jaata tha)\n\n### Notes for existing players\n\n- **App update zaroori hai.** Server ka protocol badla hai; purana app\n  \"out of date\" bolega aur chalega nahi jab tak aap yeh version install\n  nahi karte. Chips, history sab wahi rahega.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 93886788
+      "sizeBytes": 94017864
     },
     "cards": {
       "version": "2.5.3",
