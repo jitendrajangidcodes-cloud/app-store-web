@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T06:29:40.841Z",
+  "generatedAt": "2026-09-09T07:05:35.439Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,9 +34,9 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.17.1",
-      "versionCode": 38,
-      "notes": "# Taash Club 1.17.1 — Reconnect loop theek, dost-table sach mein rukta hai ab\n\n### Features\n\n- (koi naya nahi - 1.17.0 ke do bugs theek kiye)\n\n### Bug fixes\n\n- **Dost ke saath table ab sach mein rukta hai.** 1.17.0 mein \"host ke\n  start karne ka intezaar\" wala gate lagaya tha, par guided setup dost-table\n  ko private mark nahi karta tha, to gate lagta hi nahi tha - Bunty/Chotu\n  aa jaate aur game 3 second mein chalu ho jaata. Ab har banaya hua table\n  (dost / ek phone / solo) private hai; sirf lobby ka quick-play public hai.\n- **Reconnect loop khatam.** Connection tootne par app baar-baar\n  \"Send auth first\" error deta aur reconnect karta rehta tha - table jam\n  jaata, apni seat par \"D\" (disconnected) dikhta, purana screen atka rehta.\n  Wajah: reconnect ke turant baad app auth se pehle ek message bhej deta\n  tha. Ab kuch bhi tab tak nahi jaata jab tak server session confirm na\n  kare, aur handshake ke waqt aaya error nazarandaaz hota hai.\n- **3-2-5 / Kali Begum / Gochi par Teen Patti ke nishaan nahi.** Seat ke\n  neeche \"pack\", \"raise 200\", \"+50\", \"SEEN\" - ye Teen Patti ki cheezein\n  trick games par galti se dikh rahi thi (purane snapshot se). Ab sirf\n  Teen Patti / Rummy mein dikhengi.\n- Error toast ab 4 second baad khud hat jaata hai (pehle poori game atka\n  rehta tha).\n\n### Notes for existing players\n\n- Chips, history sab wahi. Agar 1.16.0 ya purane par ho to update zaroori\n  hai (server ka protocol 1.17.0 mein badla tha).\n",
+      "version": "1.17.2",
+      "versionCode": 39,
+      "notes": "# Taash Club 1.17.2 — Voice button ab sahi jagah\n\n### Features\n\n- (koi naya nahi)\n\n### Bug fixes\n\n- **Voice button game ke buttons ke upar nahi aata ab.** Pehle wo neeche\n  beech mein aa jaata tha - action bar aur haath ke patton ke upar. Ab\n  upar-baayen, back arrow ke neeche, jahan teeno game screens par jagah\n  khali hai.\n\n### Notes for existing players\n\n- Chips, history sab wahi. 1.16.0 ya purane par ho to update zaroori hai.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 94017864
