@@ -1,4 +1,4 @@
-# jitendrajangidcodes-cloud/app-store-web — Workflows
+# jitendrajangidcodes-cloud/pnsjy-store-web — Workflows
 
 _Exact, copy-pasteable commands. Read for build/test/deploy/debug tasks._
 

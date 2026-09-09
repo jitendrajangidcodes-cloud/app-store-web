@@ -1,4 +1,4 @@
-# jitendrajangidcodes-cloud/app-store-web — Domain
+# jitendrajangidcodes-cloud/pnsjy-store-web — Domain
 
 _Business vocabulary and invariants. Read when a term is unclear._
 

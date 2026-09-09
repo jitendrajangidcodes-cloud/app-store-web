@@ -25,4 +25,4 @@ patterns in `AGENTS.md`.
 Added AI Scanner (`ai-scanner`) as the first app using this pattern, listed
 under category "Beta" (pre-release).
 
-- Hub: https://github.com/jitendrajangidcodes-cloud/app-store-web
+- Hub: https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web

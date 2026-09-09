@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
-const hub = process.env.HUB_REPO || "jitendrajangidcodes-cloud/app-store-web";
+const hub = process.env.HUB_REPO || "jitendrajangidcodes-cloud/pnsjy-store-web";
 const token = process.env.GITHUB_TOKEN || "";
 
 const headers = {

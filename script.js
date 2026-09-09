@@ -4,7 +4,7 @@ const THEME_EXPLICIT_KEY = "theme-explicit";
 // This hub repo -- apps published directly here (apps.json `repo` field
 // equals this) need tag-specific release lookups, never "latest". See
 // getRelease() below.
-const HUB_REPO = "jitendrajangidcodes-cloud/app-store-web";
+const HUB_REPO = "jitendrajangidcodes-cloud/pnsjy-store-web";
 
 // ── Download info-gate + logging ─────────────────────────────────────────
 // Scoped to this site's download buttons only -- the apps themselves (AI
@@ -335,12 +335,12 @@ function appIconHTML(app, size) {
 // The primary path is the in-page modal in feedback.js, which POSTs to the
 // feedback Worker so users never touch GitHub. feedbackUrl below stays as the
 // modal's fallback link when the Worker or Turnstile is unreachable.
-const FEEDBACK_REPO = "jitendrajangidcodes-cloud/app-store-web";
+const FEEDBACK_REPO = "jitendrajangidcodes-cloud/pnsjy-store-web";
 
 // Every APK lives in this hub repo. The store app's own build sits under the
 // stable "store" tag; the "Get the Store app" banner pulls its live version/
 // size/download straight from that release.
-const STORE_REPO = "jitendrajangidcodes-cloud/app-store-web";
+const STORE_REPO = "jitendrajangidcodes-cloud/pnsjy-store-web";
 const STORE_TAG = "store";
 
 function feedbackUrl(type, app) {

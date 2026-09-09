@@ -6,7 +6,7 @@
       "versionCode": 146,
       "notes": "# Reminder 2.27.0\n\n## Features\n\n- The app's signing key has been rotated. The previous key had been published,\n  along with its password, in a repository that was public — so anyone who\n  copied it could have built an app that your phone would have accepted as an\n  update to this one. It no longer can.\n- The update installs straight over your current copy. Nothing is removed and\n  nothing is signed out; your reminders, history and settings carry across\n  untouched.\n\n## Bug fixes\n\n- Update checks in older builds pointed at a location that no longer answers, so\n  they stopped reporting new versions. From this build on they read the app\n  store hub instead. Installing this version by hand once is what gets a device\n  back onto automatic checks.\n",
       "publishedAt": "2026-07-04T09:27:07Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/reminder/reminder-app-v2.27.0.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/reminder/reminder-app-v2.27.0.apk",
       "sizeBytes": 76485254
     },
     "mirrordrive": {
@@ -14,7 +14,7 @@
       "versionCode": 36,
       "notes": "MirrorDrive 0.15.1 - Diagnostics finally have somewhere to go\n\nThe app has recorded technical failures for a long time and has never once been\nable to send them. They were posted to a Tailscale hostname, on a tailnet no\nphone was ever a member of, with no server behind it. Every incident queued on\nthe device to its hundred-item cap and was then dropped.\n\nNothing about the reporting changed here, because nothing about it was wrong.\nIt now has an address that exists.\n\n### Features\n\n- Diagnostics are sent to diagnostics.pnsjy.in, a real relay reached through\n  the same tunnel as everything else. Consent and content are unchanged:\n  allow-listed technical failures only, never file contents, paths or account\n  state.\n\n### Bug fixes\n\n- The relay address pointed at a tailnet host that resolves nowhere. Every\n  incident this app has ever recorded was queued and discarded.\n- Removed two unused constants naming a Google Sheet that incidents do not go\n  to. Nothing read them, and anyone reading the file would reasonably have\n  believed otherwise.\n\n### Notes\n\nDIAGNOSTICS_RELAY still overrides the address at build time, so a debug build\ncan point at a local instance.\n",
       "publishedAt": "2026-07-17T11:09:43Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/mirrordrive/mirrordrive.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/mirrordrive/mirrordrive.apk",
       "sizeBytes": 108165980
     },
     "twinclean": {
@@ -22,7 +22,7 @@
       "versionCode": 7,
       "notes": "TwinClean 1.3.3 - Buildable again\n\nTwinClean could not be built at all. Two separate problems, neither in this\napp's own code, and the app itself is unchanged by this release.\n\n### Features\n\n- Koi naya feature nahi. Ye release sirf isliye hai taaki app dobara ban sake.\n\n### Bug fixes\n\n- None in the app. Scanning, the duplicate rules and the UI are untouched.\n\n### Notes\n\nFirst, build_runner crashed inside the analyzer before producing a single file.\nThe Flutter SDK's own services/platform_views.dart now uses dot-shorthand\nsyntax and the pinned analyzer 7.6.0 has no visitor for it, so summarising\npackage:flutter/services.dart threw. Upgrading drift, drift_dev, drift_flutter\nand build_runner brings an analyzer that parses the current SDK.\nflutter_riverpod deliberately stays on 2.6.1 - letting the resolver choose\nfreely pulls Riverpod 3, which removed StateProvider and ChangeNotifierProvider\nand produced 60 errors here.\n\nSecond, the release build failed compiling a file nobody wrote: the generated\nplugin registrant could not find WorkmanagerPlugin. The cause was a federated\npackage resolving differently here than in the rest of the fleet - the same\nconstraint, resolved on a different day, gave workmanager_android 0.9.3 where\nthe Store and MirrorDrive both have 0.9.0+2. The class exists in both versions\nunder the same namespace, which is exactly why the error is so unhelpful. The\nwhole workmanager set is now pinned together to the versions the other apps\nbuild with; pinning only the Android half is worse than pinning none, because\nit pairs an old implementation with a newer interface.\n\nA test that split file paths on '/' was also fixed. On Windows that returns the\nwhole path, so every basename comparison failed and the suite could never go\ngreen on the machine this app is built on.\n",
       "publishedAt": "2026-07-07T10:01:03Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/twinclean/twinclean.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/twinclean/twinclean.apk",
       "sizeBytes": 61255603
     },
     "family": {
@@ -30,7 +30,7 @@
       "versionCode": 20,
       "notes": "## Bug fixes\n\n- **Fixed the app being told there was no update when there was one.** The list of published versions is cached for ten minutes by the network it comes from, and the app was reading whichever copy it was handed. So for at least ten minutes after a release — and longer if a phone or network held the file — checking for updates confidently reported that the current version was the newest. The app now always asks for a fresh copy.\n\n  An update check that answers wrongly is worse than one that does not run: it stops you looking.\n",
       "publishedAt": "2026-08-25T13:53:06Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/family/familylive.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/family/familylive.apk",
       "sizeBytes": 71772967
     },
     "taashclub": {
@@ -38,7 +38,7 @@
       "versionCode": null,
       "notes": "# Taash Club 1.17.0 — Dost table par: ab aap decide karo kab shuru ho\n\n### Features\n\n- **Private table ab khud shuru nahi hota.** Pehle jaise hi ek seat bharti,\n  computer baaki seat le leta aur game 3 second mein chalu ho jaata - dost\n  ke join karne se pehle hi. Ab aap host ho: waiting room khula rehta hai,\n  koi computer apne aap nahi aata, aur game tabhi chalu hota hai jab aap\n  \"Shuru karo\" dabao.\n- **Seat aap set karte ho.** Khaali seat par \"＋ Computer\" dabao computer\n  bithane ke liye, bot seat par \"Hatao\" dabao insaan ka intezaar karne ke\n  liye. Jitni seat khaali reh jaati hain, \"Shuru karo\" dabate hi computer\n  le leta hai.\n- Baaki sab ko \"Host ke shuru karne ka intezaar\" dikhta hai.\n- Quick-play (public table) pehle jaisa hi - turant chalu.\n- Waiting room ka title theek kiya: Gochi table par ab \"Gochi\" dikhta hai,\n  \"Kali Begum\" nahi.\n\n### Bug fixes\n\n- (feature hi fix hai - \"dost ke saath khelo\" jo computer ke saath khel\n  jaata tha)\n\n### Notes for existing players\n\n- **App update zaroori hai.** Server ka protocol badla hai; purana app\n  \"out of date\" bolega aur chalega nahi jab tak aap yeh version install\n  nahi karte. Chips, history sab wahi rahega.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/taashclub/taash-club.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
       "sizeBytes": 94017864
     },
     "cards": {
@@ -46,7 +46,7 @@
       "versionCode": null,
       "notes": "Cards 2.5.3 - Update checks move to the app store hub\n\n### Features\n\n- Update check ab app store hub se aata hai, wahi jagah jahan se baaki saari\n  apps aati hain. Aapko farak nahi dikhega.\n\n### Bug fixes\n\n- The update check pointed at this app's own public mirror, which existed only\n  to be readable without a token. It is no longer needed.\n\n### Notes\n\nEvery app publishes its APK to app-store-web under a fixed tag, and the store\nalready reads from there. Polling a per-app public repo as well meant each app\nneeded a public repository of its own purely to be readable - and one of those,\nfor another app, turned out to be a full public source mirror. One public\nrepository for the whole fleet is fewer places for that to happen.\n\nNothing about this app changed. Same scanning, same vault, same encryption, and\nstill no network code beyond the update check.\n\n",
       "publishedAt": "2026-07-04T09:29:52Z",
-      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/app-store-web/releases/download/cards/Cards-v2.5.3.apk",
+      "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/cards/Cards-v2.5.3.apk",
       "sizeBytes": 123601315
     }
   }

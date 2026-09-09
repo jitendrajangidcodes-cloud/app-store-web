@@ -37,7 +37,7 @@ There is nothing to compile — this is a static GitHub Pages site served at `st
 - **Regenerate the manifest locally** (needs network + `gh` auth):
   `bash scripts/sync-releases.sh && node scripts/build-manifest.mjs`, then inspect `releases.json`.
 - **Trigger the hub rebuild remotely:** `gh workflow run sync-releases.yml --repo
-  jitendrajangidcodes-cloud/app-store-web`. An app's `scripts/release.sh` kicks this at the end of
+  jitendrajangidcodes-cloud/pnsjy-store-web`. An app's `scripts/release.sh` kicks this at the end of
   every release so the site/store pick up the new version without waiting for the 30-min cron.
 - **Publishing an app's release into the hub** is done from the app's own repo, not here — see
   `~/.claude/CORE.md` → "Canonical per-app release script".
