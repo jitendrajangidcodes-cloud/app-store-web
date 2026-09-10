@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T03:52:49.856Z",
+  "generatedAt": "2026-09-10T04:34:54.944Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.17.4",
-      "versionCode": 41,
-      "notes": "# Taash Club 1.17.4 — Aawaz behtar, layout har phone par theek\n\n### Features\n\n- **Sounds naye sire se.** Ab 44.1 kHz (pehle 22 tha, kirkira lagta tha),\n  har sound ke shuru/ant mein halka fade taaki \"click\" na ho. \"Aapki\n  baari\" ab neechi, garam do-sur ki hai; ghadi ka \"tick\" lakdi jaisa halka\n  click hai, beep nahi. Kul awaaz thodi kam.\n- **Baat-ne ki awaaz theek.** Deal ke waqt har patte par ek hi blip\n  baar-baar toot ke bajti thi; ab do-teen halke \"tap\" bajte hain.\n\n### Bug fixes\n\n- **3-2-5 aur Kali Begum ka layout chhoti screen par theek.** Header,\n  ghadi aur seat ring fixed pixel par set the - chhote phone par tang aa\n  jaate the. Ab screen ki height ke hisaab se scale hote hain (Gochi\n  jaise).\n\n### Notes for existing players\n\n- Chips, history sab wahi. 1.16.0 ya purane par ho to update zaroori hai.\n",
+      "version": "1.17.5",
+      "versionCode": 42,
+      "notes": "Taash Club 1.17.5 - Cleaner top bar, longer think time, working invite links\n\n### Features\n- The table top bar is redesigned so it no longer crowds or overlaps on some phones. In Gochi the dealer name, the काट, and the round count each have their own space; the voice control now sits inline in the header instead of floating over it.\n- More time to think before playing: the per-turn clock for online games (and Gochi bidding) is now 35 seconds, up from 20. Offline play is unchanged.\n- Tapping an invite link now shows a \"Join table?\" prompt with Join and Cancel, so you can see the app react instead of it trying to join silently.\n- New: when the app opens and a newer version is available, it shows an Update / Skip prompt. Update opens the download; Skip asks again next time you open the app.\n\n### Bug fixes\n- Invite links opened the app but often failed to join, because the join was sent before the server had signed the session in. It now waits until the connection is authenticated, and a failed join shows a message instead of nothing.\n- The voice button no longer overlaps the header controls on the game screens.\n- A long player name no longer squashes the काट chip and the round counter together in the Gochi header.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 94879428
+      "sizeBytes": 95169219
     },
     "cards": {
       "version": "2.5.3",
