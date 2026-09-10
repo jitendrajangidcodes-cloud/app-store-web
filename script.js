@@ -230,9 +230,15 @@ function formatDate(iso) {
   return new Date(iso).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
 }
 
-async function loadApps() {
-  const res = await fetch("apps.json");
-  return res.json();
+// Both files are served by GitHub Pages with `cache-control: max-age=600`,
+// behind two CDNs. Without a per-load cache-buster the store shows the previous
+// release for up to ten minutes after a publish -- exactly when someone opens
+// it looking for the update they were just told about. The query param varies
+// the URL so no cache can match.
+function loadApps() {
+  return fetch(`apps.json?t=${Date.now()}`, { cache: "no-store" }).then((r) =>
+    r.json(),
+  );
 }
 
 // releases.json is generated in CI from every app's Releases, so the listing
@@ -240,7 +246,7 @@ async function loadApps() {
 let _manifestPromise = null;
 function loadManifest() {
   if (!_manifestPromise) {
-    _manifestPromise = fetch("releases.json")
+    _manifestPromise = fetch(`releases.json?t=${Date.now()}`, { cache: "no-store" })
       .then((r) => (r.ok ? r.json() : null))
       .catch(() => null);
   }
