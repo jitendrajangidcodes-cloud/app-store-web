@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T13:26:03.570Z",
+  "generatedAt": "2026-09-10T14:47:22.988Z",
   "apps": {
     "reminder": {
       "version": "2.27.0",
@@ -34,12 +34,12 @@
       "sizeBytes": 71772967
     },
     "taashclub": {
-      "version": "1.17.7",
-      "versionCode": 44,
-      "notes": "Taash Club 1.17.7 - No more coins, and a Sign out button\n\n### Features\n- The chip/coin display is gone everywhere - the lobby balance badge, the balances under each player at the table, and the Chips Wallet card on the Profile screen (with its daily bonus and free refill). These games are scored on tricks and points, not money, so the coins were only decoration.\n- The setup \"stake\" step is now a plain points multiplier (1 to 25) - \"points per trick\" or \"points per penalty point\" - with no balance to run out of.\n- New: Settings > Account > Sign out. It disconnects the Google account on this device and takes you back to the sign-in screen, so you can sign in with a different account. Your progress stays on the account.\n\n### Bug fixes\n- No user-facing bug fixes in this release.\n",
+      "version": "1.17.8",
+      "versionCode": 45,
+      "notes": "Taash Club 1.17.8 - Leave any game, a computer takes your seat, and गोची deals properly online\n\n### Features\n- You can now leave a game at any time, from every game. गोची had no way out at all before this - once you were at a table the only exit was closing the app. Leaving asks first, so a stray tap does not drop you out of a hand.\n- If you leave in the middle of a round, a computer takes your seat and finishes the round. Everyone still playing carries on instead of the round being thrown away.\n- गोची online now deals the way it always has offline: the dealer shuffles as many times as they like, presses \"Baant do\", and the काट is turned over and the cards fly out to each seat. Multiplayer used to skip all of it and jump straight to बंद.\n- Played cards now sit next to the player who threw them instead of lining up in the middle of the table, so it is clear at a glance who played what and where the chaal started.\n\n### Bug fixes\n- Leaving a गोची round mid-hand used to abandon it for the other three players. It no longer does.\n- The dealer cannot stall a table any more: if nobody presses \"Baant do\", the deal goes ahead on its own.\n",
       "publishedAt": "2026-08-24T13:20:56Z",
       "apkUrl": "https://github.com/jitendrajangidcodes-cloud/pnsjy-store-web/releases/download/taashclub/taash-club.apk",
-      "sizeBytes": 95242875
+      "sizeBytes": 95259259
     },
     "cards": {
       "version": "2.5.3",
